@@ -17,9 +17,6 @@
         <h1 class="title">
             <?php echo $result['Name'] ?>
         </h1>
-        <h1 class="title">
-            <?php echo $result['Name_JP'] ?>
-        </h1>
         <h3 class="artist">Artist:
             <?php echo $result['Artist'] ?>
         </h3>

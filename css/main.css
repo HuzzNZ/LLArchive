@@ -28,6 +28,11 @@ h3 {
     display: inline;
 }
 
+.flex-break {
+    flex-basis: 100%;
+    height: 0;
+}
+
 .download-icon {
     height: 20px;
     width: auto;
@@ -57,7 +62,7 @@ a.download.flac {
 }
 
 a.download.flac:hover{
-    background: linear-gradient(to right, #ff6a00, #ee0979);
+    background: linear-gradient(to right, #da5b00, #de0871);
 }
 
 a.download.cue {
@@ -67,7 +72,25 @@ a.download.cue {
 }
 
 a.download.cue:hover {
-    background: linear-gradient(to right, #3e4d99, #ff00cc);
+    background: linear-gradient(to right, #4758af, #ff00cc);
+}
+
+a.download.mp3 {
+    background: #ff00cc;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #008a79, #689a32);
+    background: linear-gradient(to right, #008a79, #689a32);;
+}
+
+a.download.mp3:hover {
+    background: linear-gradient(to right, #00b09b, #96c93d);;
+}
+
+a.download.small {
+    width: 40px;
+    height: 18px;
+    padding: 3px;
+    margin: 0 3px;
+    border-radius: 3px;
 }
 
 .nav-wrapper {
@@ -104,7 +127,7 @@ a.download.cue:hover {
 .nav-link {
     opacity: 0.7;
     display: block;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     text-decoration: none;
     transition: 100ms;
@@ -223,6 +246,103 @@ a.download.cue:hover {
     margin-bottom: 6px;
 }
 
-.song * {
-    display: inline;
+.album-listing {
+    width: 100%;
+}
+
+.list-header {
+    width: 100%;
+    height: 12px;
+    background-color: rgba(0, 6, 12, 0.08);
+    border-radius: 5px 5px 0 0;
+}
+
+.tl-grid {
+    display: grid;
+    grid-template-columns: 0.7fr 3fr 5.5fr 1fr 125px;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.track {
+    height: 36px;
+    font-size: 13px;
+}
+
+.track-id {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.track-artist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.track-artist-wrapper {
+    margin-left: 5px;
+}
+
+.jp {
+    color: #999;
+    font-size: 8px;
+}
+
+.track-artist p {
+    display: block;
+}
+
+.track-title {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.track-title-wrapper {
+    margin-left: 5px;
+}
+
+.track-title p {
+    display: block;
+}
+
+.track-type {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 9px;
+    font-weight: 400;
+    font-style: italic;
+    padding: 2px 3px;
+    margin: 0 4px;
+    border-radius: 2px;
+}
+
+.instrumental {
+    background-color: #3759ad;
+}
+
+.radio {
+    background-color: #a2611f;
+}
+
+.track-duration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.track-downloads {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

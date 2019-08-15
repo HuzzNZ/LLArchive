@@ -1,14 +1,18 @@
 <?php
 do {
     ?>
-    <div class="result">
+    <div class="result" style="
+        background-image: url('/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/cover.jpg');
+        background-color: rgba(255, 255, 255, 0.1);
+        background-blend-mode: lighten;
+        background-repeat: no-repeat;
+    ">
         <h1 class="title">
             <?php echo $result['Name'] ?>
         </h1>
         <p class="title-jp">
             <?php echo $result['Name_JP'] ?>
         </p>
-        <img class="cover-art" src="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/cover.jpg" alt="Album <?php echo $result['ID'] ?> Cover">
         <h3 class="artist">Artist:
             <?php echo $result['Artist'] ?>
         </h3>

@@ -32,6 +32,31 @@
         <p class="comments">
             <?php echo $result['Comments'] ?>
         </p>
+        <?php
+            $album_id = $result['ID'];
+            $song_sql = "SELECT * FROM `$album_id`";
+            $song_query = mysqli_query($albums, $song_sql);
+            $song_result = mysqli_fetch_assoc($song_query);
+            $song_count = mysqli_num_rows($song_query);
+            do {
+                $song_id = $song_result["ID"];
+                ?>
+                <div class="song">
+                    <p class="song-id">
+                        <?php echo $song_result['ID'] ?>
+                    </p>
+                    <h3 class="song-name">
+                        <?php echo $song_result['Name'] ?>
+                    </h3>
+                    <p class="song-duration">
+                        <?php echo $song_result['Duration'] ?>
+                    </p>
+                    <a href="/love-live/media/<?php echo $album_id ?>/<?php echo $song_id ?>.flac" download>Download</a>
+                </div>
+                <?php
+            }
+            while ($song_result = mysqli_fetch_assoc($song_query));
+        ?>
     </div>
     <?php
         }

@@ -2,6 +2,11 @@
     font-family: sans-serif;
 }
 
+.cover-art {
+    height: 100px;
+    width: auto;
+}
+
 .result {
     border: solid black 1px;
     background-color: rgba(0, 0, 0, 0.1);

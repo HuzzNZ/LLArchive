@@ -51,7 +51,7 @@
                     <p class="song-duration"> Length:
                         <?php echo $song_result['Length'] ?>
                     </p>
-                    <a href="/love-live/media/uranohoshi/<?php echo $album_id ?>/<?php echo $song_id ?>.flac" download="<?php echo $song_result['Name']?>">Download</a>
+                    <a href="/love-live/media/uranohoshi/<?php echo $album_id ?>/<?php echo $song_id ?>.flac" download="<?php echo $song_result['Name']?>.flac">Download</a>
                 </div>
                 <?php
             }

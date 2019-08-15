@@ -18,6 +18,10 @@
     margin-bottom: 25px;
 }
 
+.title-jp {
+    color: darkgray;
+}
+
 .song * {
     display: inline;
 }

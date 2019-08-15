@@ -2,19 +2,72 @@
 
 * {
     font-family: Lato, sans-serif;
-    color: white;
+    color: #eee;
     margin: 0;
     padding: 0;
 }
 
-*:active {
-    border: none;
-    outline: none;
-    text-decoration: none;
+a {
+    outline: 0;
 }
 
 body {
     background-color: #36393f;
+}
+
+h1 {
+    font-size: 24px;
+    color: #fff
+}
+
+h3 {
+    font-size: 16px;
+}
+
+.inline {
+    display: inline;
+}
+
+.download-icon {
+    height: 20px;
+    width: auto;
+    display: inline;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+a.download {
+    border-radius: 5px;
+    width: 56px;
+    height: 22px;
+    margin: 0 5px;
+    padding: 5px 5px;
+    display: inline-block;
+    text-align: center;
+    opacity: 1;
+    user-select: none;
+    text-decoration: none;
+    text-underline: none;
+}
+
+a.download.flac {
+    background: #ee0979;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #945c30, #8f3e69);
+    background: linear-gradient(to right, #945c30, #8f3e69);
+}
+
+a.download.flac:hover{
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+}
+
+a.download.cue {
+    background: #ff00cc;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3f4f8a, #934a8b);
+    background: linear-gradient(to right, #3f4f8a, #934a8b);
+}
+
+a.download.cue:hover {
+    background: linear-gradient(to right, #3e4d99, #ff00cc);
 }
 
 .nav-wrapper {
@@ -79,7 +132,7 @@ body {
 }
 
 .website-logo {
-    height: 30px;
+    height: 25px;
 }
 
 .link-icon {
@@ -130,7 +183,7 @@ body {
 }
 
 .result-header {
-    display:grid;
+    display: grid;
     grid-template-columns: 150px 1fr;
     grid-column-gap: 25px;
 }
@@ -140,7 +193,34 @@ body {
 }
 
 .title-jp {
-    color: #aaa;
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.artist {
+    display: inline;
+    font-weight: 700;
+}
+
+.catalog-number {
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.release-date {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.comment {
+    font-size: 12px;
+    font-weight: 200;
+    font-style: italic;
+    color: #999;
+    margin-bottom: 8px;
 }
 
 .song * {

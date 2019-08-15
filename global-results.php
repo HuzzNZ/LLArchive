@@ -13,23 +13,29 @@ do {
                     <p class="title-jp">
                         <?php echo $result['Name_JP'] ?>
                     </p>
-                    <h3 class="artist">Artist:
+                    <h3 class="artist">
                         <?php echo $result['Artist'] ?>
                     </h3>
-                    <p class="album-id">Album ID:
-                        <?php echo $result['ID'] ?>
-                    </p>
-                    <p class="catalog-number">Catalog Number:
+                    <p class="catalog-number"> /
                         <?php echo $result['Catalog_Number'] ?>
                     </p>
-                    <p class="release-date">Release Date:
-                        <?php echo $result['Release_Date'] ?>
+                    <p class="release-date">
+                        <?php
+                            $date  = date_create($result['Release_Date']);
+                            echo date_format($date,"F jS, Y");
+                        ?>
                     </p>
-                    <p class="comments">
-                        <?php echo $result['Comments'] ?>
+                    <p class="comment">
+                        *<?php echo $result['Comments'] ?>
                     </p>
+                    <div class="album-download">
+                        <img class="download-icon" alt="Download Icon" src="/love-live/assets/download.png">
+                        <a class="download flac" href="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/cd.flac" download="<?php echo $result['Catalog_Number'] ?>.flac">.flac</a>
+                        <a class="download cue" href="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/cd.cue" download="<?php echo $result['Catalog_Number'] ?>.cue">.cue</a>
+                    </div>
                 </div>
             </div>
+            <!--
             <?php
             $album_id = $result['ID'];
             $song_sql = "SELECT * FROM `$album_id`";
@@ -55,6 +61,7 @@ do {
             }
             while ($song_result = mysqli_fetch_assoc($song_query));
             ?>
+            -->
         </div>
     </div>
     <?php

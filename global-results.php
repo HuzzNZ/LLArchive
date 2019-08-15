@@ -4,28 +4,32 @@ do {
     <div class="result-wrapper">
         <div class="top-strip"></div>
         <div class="result">
-            <img class="cover-art" src='/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/cover.jpg' alt="Album <?php echo $result['ID'] ?> Cover">
-            <h1 class="title">
-                <?php echo $result['Name'] ?>
-            </h1>
-            <p class="title-jp">
-                <?php echo $result['Name_JP'] ?>
-            </p>
-            <h3 class="artist">Artist:
-                <?php echo $result['Artist'] ?>
-            </h3>
-            <p class="album-id">Album ID:
-                <?php echo $result['ID'] ?>
-            </p>
-            <p class="catalog-number">Catalog Number:
-                <?php echo $result['Catalog_Number'] ?>
-            </p>
-            <p class="release-date">Release Date:
-                <?php echo $result['Release_Date'] ?>
-            </p>
-            <p class="comments">
-                <?php echo $result['Comments'] ?>
-            </p>
+            <div class="result-header">
+                <img class="cover-art" src='/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/cover.jpg' alt="Album <?php echo $result['ID'] ?> Cover">
+                <div class="result-album-data">
+                    <h1 class="title">
+                        <?php echo $result['Name'] ?>
+                    </h1>
+                    <p class="title-jp">
+                        <?php echo $result['Name_JP'] ?>
+                    </p>
+                    <h3 class="artist">Artist:
+                        <?php echo $result['Artist'] ?>
+                    </h3>
+                    <p class="album-id">Album ID:
+                        <?php echo $result['ID'] ?>
+                    </p>
+                    <p class="catalog-number">Catalog Number:
+                        <?php echo $result['Catalog_Number'] ?>
+                    </p>
+                    <p class="release-date">Release Date:
+                        <?php echo $result['Release_Date'] ?>
+                    </p>
+                    <p class="comments">
+                        <?php echo $result['Comments'] ?>
+                    </p>
+                </div>
+            </div>
             <?php
             $album_id = $result['ID'];
             $song_sql = "SELECT * FROM `$album_id`";

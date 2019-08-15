@@ -115,6 +115,7 @@ body {
 .cover-art {
     height: 150px;
     width: auto;
+    border-radius: 5px;
 }
 
 .result-wrapper {
@@ -125,7 +126,13 @@ body {
 }
 
 .result {
-    padding: 20px 30px 30px 30px;
+    padding: 25px;
+}
+
+.result-header {
+    display:grid;
+    grid-template-columns: 150px 1fr;
+    grid-column-gap: 25px;
 }
 
 .title {

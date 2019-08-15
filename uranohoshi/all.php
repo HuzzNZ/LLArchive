@@ -43,15 +43,15 @@
                 ?>
                 <div class="song">
                     <p class="song-id">
-                        <?php echo $song_result['ID'] ?>
+                        <?php echo $song_result['ID'] ?>.
                     </p>
                     <h3 class="song-name">
                         <?php echo $song_result['Name'] ?>
                     </h3>
-                    <p class="song-duration">
-                        <?php echo $song_result['Duration'] ?>
+                    <p class="song-duration"> Length:
+                        <?php echo $song_result['Length'] ?>
                     </p>
-                    <a href="/love-live/media/<?php echo $album_id ?>/<?php echo $song_id ?>.flac" download>Download</a>
+                    <a href="/love-live/media/uranohoshi/<?php echo $album_id ?>/<?php echo $song_id ?>.flac" download>Download</a>
                 </div>
                 <?php
             }

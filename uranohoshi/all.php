@@ -3,7 +3,7 @@
 <?php
     include "db-config/db-connect.php";
     $sql = "SELECT * FROM `albums`";
-    $query = mysqli_query($albums, $sql);
+    $query = mysqli_query($album_meta, $sql);
     $result = mysqli_fetch_assoc($query);
     $count = mysqli_num_rows($query);
 ?>

@@ -10,7 +10,7 @@
         <a class="nav-link" id="link-3" href="#">Recent</a>
         <div></div>
         <a class="nav-link" id="link-4" href="#">Otonokizaka</a>
-        <a class="nav-link" id="link-5" href="/love-live/uranohoshi/">Uranohoshi</a>
+        <a class="nav-link" id="link-5" href="/love-live/uranohoshi/all.php">Uranohoshi</a>
         <a class="nav-link" id="link-6" href="#">Nijigasaki</a>
         <div></div>
         <div class="nav-icon">

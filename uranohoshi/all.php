@@ -18,7 +18,7 @@
             <?php echo $result['Name'] ?>
         </h1>
         <p class="title-jp">
-            <?php echo $result['Name-JP'] ?>
+            <?php echo $result['Name_JP'] ?>
         </p>
         <img class="cover-art" src="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/cover.jpg" alt="Album <?php echo $result['ID'] ?> Cover">
         <h3 class="artist">Artist:

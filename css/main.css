@@ -1,10 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700&display=swap&subset=latin-ext');
+
 * {
-    font-family: sans-serif;
+    font-family: Lato, sans-serif;
     color: white;
+    margin: 0;
+    padding: 0;
+}
+
+*:active {
+    border: none;
+    outline: none;
+    text-decoration: none;
 }
 
 body {
     background-color: #36393f;
+}
+
+.nav-wrapper {
+    position: sticky;
+    height: 70px;
+    background: #4568DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-box-shadow: 0 -12px 20px 12px #222;
+    -moz-box-shadow: 0 -12px 20px 12px #222;
+    box-shadow: 0 -12px 20px 12px #222;
+    margin-bottom: 25px;
+}
+
+.nav {
+    margin: 0 100px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1.8fr repeat(3, 0.7fr) 0.5fr repeat(3, 0.7fr) 0.5fr repeat(4, 0.33fr) 0.5fr
+}
+
+.nav div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav a {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.nav-link {
+    opacity: 0.7;
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: 100ms;
+}
+
+.nav-link:hover {
+    opacity: 1;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.link-logo {
+    transition: 100ms;
+}
+
+.link-icon {
+    transition: 100ms;
+}
+
+.link-logo:hover {
+    opacity: 0.8;
+}
+
+.link-icon:hover {
+    opacity: 0.8;
+}
+
+.website-logo {
+    height: 30px;
+}
+
+.link-icon {
+    height: 25px;
+    width: auto;
+}
+
+.content-wrapper {
+    width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 800px 275px;
+    grid-column-gap: 25px;
+}
+
+.side-search {
+    grid-column: 2;
+}
+
+.main-content {
+    grid-column: 1;
 }
 
 .cover-art {
@@ -14,12 +110,10 @@ body {
 }
 
 .result {
-    border: solid black 1px;
-    background-color: rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    width: 50%;
+    background-color: rgba(0, 0, 0, 0.07);
+    padding: 30px;
+    width: 740px;
     border-radius: 25px;
-    margin-left: 100px;
     margin-bottom: 25px;
 }
 

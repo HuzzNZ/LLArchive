@@ -1,0 +1,6 @@
+.result {
+    border: solid black 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    width: 50%;
+}

@@ -158,7 +158,7 @@ a.download.locked {
     margin: 0 100px;
     height: 100%;
     display: grid;
-    grid-template-columns: 1.8fr repeat(3, 0.7fr) 0.5fr repeat(3, 0.7fr) 0.5fr repeat(4, 0.33fr) 0.5fr
+    grid-template-columns: 2.3fr repeat(3, 0.7fr) 0.5fr repeat(3, 0.27fr) 0.5fr repeat(4, 0.33fr) 1fr
 }
 
 .nav div {

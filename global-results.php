@@ -14,7 +14,7 @@ do {
                         <?php echo $result['Name_JP'] ?>
                     </p>
                     <h3 class="artist">
-                        <?php echo $result['Artist'] ?>
+                        <?php echo trim(str_replace(",", ", ", $result['Artist']))?>
                     </h3>
                     <p class="catalog-number">
                         <?php if ($result['Catalog_Number']){
@@ -69,18 +69,18 @@ do {
                             <p class="no-wrap">
                                 <?php
                                     if($song_result["Artist"]){
-                                        echo $song_result["Artist"];
+                                        echo trim(str_replace(",", ", ", $song_result["Artist"]));
                                     } else {
-                                        echo $result["Artist"];
+                                        echo trim(str_replace(",", ", ", $result["Artist"]));
                                     }
                                 ?>
                             </p>
                             <p class="jp no-wrap">
                                 <?php
                                 if($song_result["Artist_JP"]){
-                                    echo $song_result["Artist_JP"];
+                                    echo trim(str_replace(",", ", ", $song_result["Artist_JP"]));
                                 } else {
-                                    echo $result["Artist_JP"];
+                                    echo trim(str_replace(",", ", ", $result["Artist_JP"]));
                                 }
                                 ?>
                             </p>

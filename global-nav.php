@@ -10,9 +10,9 @@
         <a class="nav-link" id="link-2" href="#">Random</a>
         <a class="nav-link" id="link-3" href="#">Recent</a>
         <div></div>
-        <a class="nav-link" id="link-4" href="#">Otonokizaka</a>
-        <a class="nav-link" id="link-5" href="/love-live/uranohoshi/all.php">Uranohoshi</a>
-        <a class="nav-link" id="link-6" href="#">Nijigasaki</a>
+        <a class="nav-link" id="link-4" href="#">Oto</a>
+        <a class="nav-link" id="link-5" href="/love-live/uranohoshi/all.php">Ura</a>
+        <a class="nav-link" id="link-6" href="#">Niji</a>
         <div></div>
         <div class="nav-icon">
             <a class="link-icon" href="#">

@@ -41,10 +41,32 @@ h3 {
 }
 
 .download-icon {
-    height: 20px;
-    width: auto;
+    height: 22px;
+    width: 22px;
     display: inline;
     vertical-align: middle;
+    margin-right: 10px;
+}
+
+a.permalink-icon {
+    height: 34px;
+    width: 34px;
+    vertical-align: top;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a.permalink-icon:hover {
+    opacity: 1;
+}
+
+.permalink-icon {
+    display: inline-block;
+    opacity: 0.6;
+    height: 18px;
+    width: auto;
+    vertical-align: center;
     margin-right: 10px;
 }
 

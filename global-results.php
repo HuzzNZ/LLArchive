@@ -14,7 +14,7 @@ do {
                         <?php echo $result['Name_JP'] ?>
                     </p>
                     <h3 class="artist">
-                        <?php echo $result['Artist'] ?>
+                        <?php echo trim(str_replace(",", ", ", $result['Artist']))?>
                     </h3>
                     <p class="catalog-number">
                         <?php if ($result['Catalog_Number']){
@@ -35,8 +35,11 @@ do {
                     </p>
                     <div class="album-download">
                         <img class="download-icon" alt="Download Icon" src="/love-live/assets/download.png">
-                        <a class="download flac" href="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/cd.flac" download="<?php echo $result['Catalog_Number'] ?>.flac">.flac</a>
-                        <a class="download cue" href="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/cd.cue" download="<?php echo $result['Catalog_Number'] ?>.cue">.cue</a>
+                        <a class="download flac <?php if ($result["Has_CUE"] != 1) {echo "locked";}?>" <?php if ($result["Has_CUE"]) {?>href="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/cd.flac" download="<?php echo $result['Catalog_Number'] ?>.flac"<?php } ?>>.flac</a>
+                        <a class="download cue <?php if ($result["Has_CUE"] != 1) {echo "locked";}?>" <?php if ($result["Has_CUE"]) {?>href="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/cd.cue" download="<?php echo $result['Catalog_Number'] ?>.cue"<?php } ?>>.cue</a>
+                        <a class="permalink-icon" title="Copy Permalink" href="/love-live/uranohoshi/album.php?id=<?php echo $result['ID'] ?>">
+                            <img style="margin-left: 10px;" class="permalink-icon" alt="Link Icon" src="/love-live/assets/link.png">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -63,21 +66,21 @@ do {
                         </p></div>
                     <div class="track-artist">
                         <div class="track-artist-wrapper">
-                            <p>
+                            <p class="no-wrap">
                                 <?php
                                     if($song_result["Artist"]){
-                                        echo $song_result["Artist"];
+                                        echo trim(str_replace(",", ", ", $song_result["Artist"]));
                                     } else {
-                                        echo $result["Artist"];
+                                        echo trim(str_replace(",", ", ", $result["Artist"]));
                                     }
                                 ?>
                             </p>
-                            <p class="jp">
+                            <p class="jp no-wrap">
                                 <?php
                                 if($song_result["Artist_JP"]){
-                                    echo $song_result["Artist_JP"];
+                                    echo trim(str_replace(",", ", ", $song_result["Artist_JP"]));
                                 } else {
-                                    echo $result["Artist_JP"];
+                                    echo trim(str_replace(",", ", ", $result["Artist_JP"]));
                                 }
                                 ?>
                             </p>
@@ -90,7 +93,7 @@ do {
                                     echo $song_result['Name'];
                                     if($song_result["Is_Instrumental"]){
                                 ?>
-                                        <span class="track-type instrumental">OFF VOCAL</span>
+                                        <span class="track-type instrumental">INSTRUMENTAL</span>
                                 <?php
                                     }
                                     if($song_result["Is_Radio"]){
@@ -136,5 +139,5 @@ while ($result = mysqli_fetch_assoc($query));
 ?>
 <!--
 <span class="track-type radio">RADIO DRAMA</span>
-<span class="track-type instrumental">OFF VOCAL</span>
+<span class="track-type instrumental">INSTRUMENTAL</span>
 -->

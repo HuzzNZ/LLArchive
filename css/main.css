@@ -33,11 +33,40 @@ h3 {
     height: 0;
 }
 
+.no-wrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 155px;
+}
+
 .download-icon {
-    height: 20px;
-    width: auto;
+    height: 22px;
+    width: 22px;
     display: inline;
     vertical-align: middle;
+    margin-right: 10px;
+}
+
+a.permalink-icon {
+    height: 34px;
+    width: 34px;
+    vertical-align: top;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a.permalink-icon:hover {
+    opacity: 1;
+}
+
+.permalink-icon {
+    display: inline-block;
+    opacity: 0.6;
+    height: 18px;
+    width: auto;
+    vertical-align: center;
     margin-right: 10px;
 }
 
@@ -91,6 +120,11 @@ a.download.small {
     padding: 3px;
     margin: 0 3px;
     border-radius: 3px;
+}
+
+a.download.locked {
+    background: linear-gradient(to right, #6e6b6a, #787d7f) !important;
+    cursor: not-allowed;
 }
 
 .nav-wrapper {
@@ -224,7 +258,7 @@ a.download.small {
 
 .artist {
     display: inline;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
 }
 
@@ -236,7 +270,7 @@ a.download.small {
 }
 
 .release-date {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .comment {
@@ -244,7 +278,7 @@ a.download.small {
     font-weight: 200;
     font-style: italic;
     color: #999;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
 }
 
 .album-listing {
@@ -297,6 +331,7 @@ a.download.small {
 
 .track-artist-wrapper {
     margin-left: 5px;
+    width: 100%;
 }
 
 .jp {

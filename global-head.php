@@ -1,7 +1,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-    <title>h/LoveLive! - Home</title>
+    <title>h/LoveLive!</title>
 
     <meta name="description" content="Love Live! Music Archive">
     <meta name="author" content="Huzz#0009">

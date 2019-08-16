@@ -113,8 +113,8 @@ do {
                     </div>
                     <div class="track-downloads">
                         <div class="track-downloads-wrapper">
-                            <a class="download flac small" href="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/<?php echo $song_id ?>.flac" download="<?php echo $song_id ?>. <?php echo $song_result['Name'] ?>.flac">.flac</a>
-                            <a class="download mp3 small" href="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/<?php echo $song_id ?>.mp3" download="<?php echo $song_id ?>. <?php echo $song_result['Name'] ?>.mp3">.mp3</a>
+                            <a class="download flac small" href="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/<?php echo $song_id ?>.flac" download="<?php echo $song_id ?>. <?php echo $song_result['Name']; if($song_result["Is_Instrumental"]){echo " (Off Vocal)"} ?>.flac">.flac</a>
+                            <a class="download mp3 small" href="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/<?php echo $song_id ?>.mp3" download="<?php echo $song_id ?>. <?php echo $song_result['Name']; if($song_result["Is_Instrumental"]){echo " (Off Vocal)"} ?>.mp3">.mp3</a>
                         </div>
                     </div>
                 </div>

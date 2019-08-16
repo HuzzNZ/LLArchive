@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<title>h/LoveLive! - Uranohoshi</title>
 <?php include "../global-head.php" ?>
 <?php
     include "db-config/db-connect.php";
@@ -7,7 +8,6 @@
     $result = mysqli_fetch_assoc($query);
     $count = mysqli_num_rows($query);
 ?>
-<title>h/LoveLive! - Uranohoshi</title>
 <body>
 <?php include "../global-nav.php" ?>
 <div class="content-wrapper">

@@ -3,7 +3,7 @@
 <title>h/LoveLive! - Uranohoshi</title>
 <body>
 <?php include "../global-nav.php" ?>
-<div class="content">
+<div class="content-wrapper">
 
 </div>
 </body>

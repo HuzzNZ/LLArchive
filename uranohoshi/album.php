@@ -16,7 +16,7 @@
 
     </div>
     <div class="main-content">
-        <?php include "../global-results.php" ?>
+        <?php include "../global-check-results.php"; ?>
     </div>
 </div>
 </body>

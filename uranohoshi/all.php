@@ -7,6 +7,7 @@
     $result = mysqli_fetch_assoc($query);
     $count = mysqli_num_rows($query);
 ?>
+<title>h/LoveLive! - Uranohoshi</title>
 <body>
 <?php include "../global-nav.php" ?>
 <div class="content-wrapper">

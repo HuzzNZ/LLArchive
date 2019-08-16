@@ -16,8 +16,11 @@ do {
                     <h3 class="artist">
                         <?php echo $result['Artist'] ?>
                     </h3>
-                    <p class="catalog-number"> /
-                        <?php echo $result['Catalog_Number'] ?>
+                    <p class="catalog-number">
+                        <?php if ($result['Catalog_Number']){
+                            echo "/ ";
+                            echo $result['Catalog_Number'];
+                        } ?>
                     </p>
                     <p class="release-date">
                         <?php

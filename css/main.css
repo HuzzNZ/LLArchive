@@ -33,6 +33,13 @@ h3 {
     height: 0;
 }
 
+.no-wrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
 .download-icon {
     height: 20px;
     width: auto;

@@ -63,7 +63,7 @@ do {
                         </p></div>
                     <div class="track-artist">
                         <div class="track-artist-wrapper">
-                            <p>
+                            <p class="no-wrap">
                                 <?php
                                     if($song_result["Artist"]){
                                         echo $song_result["Artist"];
@@ -72,7 +72,7 @@ do {
                                     }
                                 ?>
                             </p>
-                            <p class="jp">
+                            <p class="jp no-wrap">
                                 <?php
                                 if($song_result["Artist_JP"]){
                                     echo $song_result["Artist_JP"];

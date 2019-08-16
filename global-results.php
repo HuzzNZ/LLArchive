@@ -15,8 +15,7 @@ do {
                     </p>
                     <h3 class="artist">
                         <?php echo $result['Artist'] ?>
-                    </h3>
-                    <p class="catalog-number">
+                    </h3><p class="catalog-number">&nbsp;
                         <?php if ($result['Catalog_Number']){
                             echo "/ ";
                             echo $result['Catalog_Number'];

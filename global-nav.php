@@ -1,3 +1,4 @@
+<div class="nav-wrapper" id="nav-displacement"></div>
 <div class="nav-wrapper">
     <div class="nav">
         <div class="nav-logo">

@@ -48,6 +48,14 @@ h3 {
     margin-right: 10px;
 }
 
+.normal-weight {
+    font-weight: 200;
+}
+
+.small-text {
+    font-size: 20px;
+}
+
 a.permalink-icon {
     height: 34px;
     width: 34px;
@@ -141,6 +149,11 @@ a.download.locked {
     margin-bottom: 50px;
 }
 
+#nav-displacement {
+    position: relative;
+    opacity: 0;
+}
+
 .nav {
     margin: 0 100px;
     height: 100%;
@@ -197,6 +210,20 @@ a.download.locked {
 .link-icon {
     height: 25px;
     width: auto;
+}
+
+.results-title {
+    margin-bottom: 25px;
+}
+
+.results-title span {
+    font-style: italic;
+}
+
+.tip {
+    font-size: 18px;
+    font-style: italic;
+    color: #999;
 }
 
 .content-wrapper {

@@ -12,10 +12,9 @@
 <?php include "../global-nav.php" ?>
 <div class="content-wrapper">
     <div class="side-search">
-
     </div>
     <div class="main-content">
-        <?php include "../global-results.php" ?>
+        <?php include "../global-check-results.php"; ?>
     </div>
 </div>
 </body>

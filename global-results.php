@@ -93,7 +93,7 @@ do {
                                     echo $song_result['Name'];
                                     if($song_result["Is_Instrumental"]){
                                 ?>
-                                        <span class="track-type instrumental">OFF VOCAL</span>
+                                        <span class="track-type instrumental">INSTRUMENTAL</span>
                                 <?php
                                     }
                                     if($song_result["Is_Radio"]){
@@ -139,5 +139,5 @@ while ($result = mysqli_fetch_assoc($query));
 ?>
 <!--
 <span class="track-type radio">RADIO DRAMA</span>
-<span class="track-type instrumental">OFF VOCAL</span>
+<span class="track-type instrumental">INSTRUMENTAL</span>
 -->

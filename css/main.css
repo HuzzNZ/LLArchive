@@ -37,7 +37,7 @@ h3 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 100%;
+    max-width: 1fr;
 }
 
 .download-icon {
@@ -304,6 +304,7 @@ a.download.small {
 
 .track-artist-wrapper {
     margin-left: 5px;
+    width: 100%;
 }
 
 .jp {

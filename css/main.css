@@ -236,6 +236,9 @@ a.download.locked {
 
 .side-search {
     grid-column: 2;
+    position: fixed;
+    top: 120px;
+    left: calc(((100% - 1100px) / 2) + 825px);
 }
 
 .search-wrapper {

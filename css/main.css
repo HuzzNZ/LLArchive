@@ -56,16 +56,16 @@ h3 {
     font-size: 20px;
 }
 
-a.permalink-icon {
+a.copy-link {
     height: 34px;
-    width: 34px;
+    width: 118px;
     vertical-align: top;
     display: inline-flex;
     align-items: center;
     justify-content: center;
 }
 
-a.permalink-icon:hover {
+a.copy-link:hover .permalink-icon {
     opacity: 1;
 }
 

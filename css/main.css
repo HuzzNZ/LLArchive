@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i&display=swap&subset=latin-ext');
 
 * {
     font-family: Lato, sans-serif;
@@ -22,11 +22,6 @@ h1 {
 
 h3 {
     font-size: 16px;
-}
-
-hr {
-    color: #999;
-    width: 50%;
 }
 
 .inline {
@@ -276,11 +271,20 @@ a.download.locked {
 .search {
     height: 495px;
     width: calc(100% - 50px);
-    margin: 25px;
+    margin: 20px 25px 25px 25px;
 }
 
 .search h1 {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+.search hr {
+    color: #999;
+    width: 50%;
+    border-left-width: 0;
+    border-bottom-width: 0;
+    border-right-width: 0;
 }
 
 .main-content {

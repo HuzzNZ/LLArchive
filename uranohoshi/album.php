@@ -9,8 +9,8 @@
         $count = mysqli_num_rows($query);
     ?>
     <title>h/LoveLive! - <?php echo $result['Name'] ?></title>
-    <meta name="description" content="Album by <?php echo $result['Artist'] ?>">
     <?php include "../global-head.php" ?>
+    <meta name="description" content=":cd: An Album by **<?php echo $result['Artist'] ?>**\n:calendar_spiral: Released on <?php echo $result['Release_Date'] ?>">
 </head>
 
 <body>

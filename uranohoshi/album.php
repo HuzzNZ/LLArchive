@@ -2,12 +2,12 @@
 <head>
     <?php
         include "db-config/db-connect.php";
-        $album_ID = $_GET["id"];
-        $sql = "SELECT * FROM `albums` WHERE `ID` = (int)$album_ID ";
-        $sql->bind_param();
-        $query = mysqli_query($album_meta, $sql);
-        $result = mysqli_fetch_assoc($query);
-        $count = mysqli_num_rows($query);
+        $query = $album_meta->prepare("SELECT * FROM `albums` WHERE `ID` = ?");
+        $query->bind_param("i", $_GET["id"]);
+        $query->execute();
+        $query_results = $query->get_result();
+        $result = mysqli_fetch_assoc($query_results);
+        $count = mysqli_num_rows($query_results);
     ?>
     <title>h/LoveLive! - <?php echo $result['Name'] ?></title>
     <?php include "../global-head.php" ?>

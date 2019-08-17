@@ -24,6 +24,11 @@ h3 {
     font-size: 16px;
 }
 
+hr {
+    color: #999;
+    width: 50%;
+}
+
 .inline {
     display: inline;
 }
@@ -266,6 +271,16 @@ a.download.locked {
     width: 100%;
     background-color: rgba(0, 6, 12, 0.085);
     border-radius: 5px 5px 8px 8px;
+}
+
+.search {
+    height: 495px;
+    width: calc(100% - 50px);
+    margin: 25px;
+}
+
+.search h1 {
+    margin-bottom: 10px;
 }
 
 .main-content {

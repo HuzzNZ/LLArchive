@@ -3,7 +3,8 @@
     <?php
         include "db-config/db-connect.php";
         $album_ID = $_GET["id"];
-        $sql = "SELECT * FROM `albums` WHERE `ID` = $album_ID ";
+        $sql = "SELECT * FROM `albums` WHERE `ID` = (int)$album_ID ";
+        $sql->bind_param();
         $query = mysqli_query($album_meta, $sql);
         $result = mysqli_fetch_assoc($query);
         $count = mysqli_num_rows($query);

@@ -37,7 +37,7 @@ do {
                         <img class="download-icon" alt="Download Icon" src="/love-live/assets/download.png">
                         <a class="download flac <?php if ($result["Has_CUE"] != 1) {echo "locked";}?>" <?php if ($result["Has_CUE"]) {?>href="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/cd.flac" download="<?php echo $result['Catalog_Number'] ?>.flac"<?php } ?>>.flac</a>
                         <a class="download cue <?php if ($result["Has_CUE"] != 1) {echo "locked";}?>" <?php if ($result["Has_CUE"]) {?>href="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/cd.cue" download="<?php echo $result['Catalog_Number'] ?>.cue"<?php } ?>>.cue</a>
-                        <a class="permalink-icon" title="Copy Permalink" href="javascript:copyToClipboard('<?php echo $base_url ?>/love-live/uranohoshi/album.php?id=<?php echo $result['ID'] ?>')">
+                        <a class="permalink-icon copy-link" title="Copy Permalink" data-clipboard-text="<?php echo $base_url ?>/love-live/uranohoshi/album.php?id=<?php echo $result['ID'] ?>">
                             <img style="margin-left: 10px;" class="permalink-icon" alt="Link Icon" src="/love-live/assets/link.png">
                         </a>
                     </div>
@@ -138,11 +138,11 @@ do {
 while ($result = mysqli_fetch_assoc($query));
 ?>
 
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script>
-    function copyToClipboard(textToCopy) {
-        textToCopy.execCommand("copy");
-    }
+    new ClipboardJS('.copy-link');
 </script>
+
 <!--
 <span class="track-type radio">RADIO DRAMA</span>
 <span class="track-type instrumental">INSTRUMENTAL</span>

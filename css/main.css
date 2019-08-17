@@ -252,8 +252,8 @@ a.download.locked {
 }
 
 .cover-art {
-    height: 150px;
-    width: auto;
+    height: auto;
+    width: 150px;
     border-radius: 5px;
 }
 

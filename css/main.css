@@ -63,6 +63,7 @@ a.copy-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 }
 
 a.copy-link:hover .permalink-icon {
@@ -76,15 +77,16 @@ a.copy-link:hover .permalink-icon {
     width: auto;
     vertical-align: center;
     margin-right: 10px;
+    transition: 100ms;
 }
 
 .copy-tooltip {
     opacity: 0;
-    transition: 100ms, 2s ease-out;
+    transition: 2s cubic-bezier(.9,.03,.69,.22);;
 }
 
 .copy-link:active .copy-tooltip {
-    opacity: 0.8;
+    opacity: 0.7;
     text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
 }
 

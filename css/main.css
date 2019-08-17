@@ -78,6 +78,16 @@ a.permalink-icon:hover {
     margin-right: 10px;
 }
 
+.copy-tooltip {
+    opacity: 0;
+    transition: 100ms, 2s ease-out;
+}
+
+.copy-link:active .copy-tooltip {
+    opacity: 0.8;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
 a.download {
     border-radius: 5px;
     width: 56px;

@@ -239,7 +239,7 @@ a.download.locked {
 }
 
 .search-wrapper {
-    height: 700px;
+    height: 550px;
     width: 100%;
     background-color: rgba(0, 6, 12, 0.085);
     border-radius: 5px 5px 8px 8px;
@@ -247,6 +247,7 @@ a.download.locked {
 
 .main-content {
     grid-column: 1;
+    grid-row: 1;
 }
 
 .top-strip {

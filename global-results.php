@@ -39,7 +39,7 @@ do {
                         <a class="download cue <?php if ($result["Has_CUE"] != 1) {echo "locked";}?>" <?php if ($result["Has_CUE"]) {?>href="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/cd.cue" download="<?php echo $result['Catalog_Number'] ?>.cue"<?php } ?>>.cue</a>
                         <div class="permalink-wrapper">
                             <a class="copy-link" title="Copy Permalink" data-clipboard-text="<?php echo $base_url ?>/love-live/uranohoshi/album.php?id=<?php echo $result['ID'] ?>" href="javascript:void(0);">
-                                <img style="margin-left: 5px;" class="permalink-icon" alt="Link Icon" src="/love-live/assets/link.png">
+                                <img class="permalink-icon" alt="Link Icon" src="/love-live/assets/link.png">
                             </a>
                             <p class="copy-tooltip">Copied to Clipboard!</p>
                         </div>

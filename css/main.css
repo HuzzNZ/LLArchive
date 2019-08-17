@@ -239,6 +239,8 @@ a.download.locked {
     position: fixed;
     top: 120px;
     left: calc(((100% - 1100px) / 2) + 825px);
+    width: calc(100% - (((100% - 1100px) / 2) + 825px) - ((100% - 1100px) / 2));
+    z-index: 1;
 }
 
 .search-wrapper {
@@ -279,6 +281,7 @@ a.download.locked {
     width: 775px;
     margin-bottom: 25px;
     border-radius: 5px 5px 8px 8px;
+    z-index: 10;
 }
 
 .result {

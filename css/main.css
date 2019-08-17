@@ -238,6 +238,13 @@ a.download.locked {
     grid-column: 2;
 }
 
+.search-wrapper {
+    height: 700px;
+    width: 100%;
+    background-color: rgba(0, 6, 12, 0.085);
+    border-radius: 5px 5px 8px 8px;
+}
+
 .main-content {
     grid-column: 1;
 }
@@ -251,6 +258,12 @@ a.download.locked {
     border-radius: 5px 5px 0 0;
 }
 
+.top-strip#search-top-strip {
+    background: #e65c00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F9D423, #e65c00);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F9D423, #e65c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 .cover-art {
     height: auto;
     width: 150px;
@@ -258,10 +271,10 @@ a.download.locked {
 }
 
 .result-wrapper {
-    background-color: rgba(0, 6, 12, 0.075);
-    width: 740px;
+    background-color: rgba(0, 6, 12, 0.085);
+    width: 775px;
     margin-bottom: 25px;
-    border-radius: 8px;
+    border-radius: 5px 5px 8px 8px;
 }
 
 .result {

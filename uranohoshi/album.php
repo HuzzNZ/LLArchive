@@ -10,7 +10,7 @@
     ?>
     <title>h/LoveLive! - <?php echo $result['Name'] ?></title>
     <?php include "../global-head.php" ?>
-    <meta name="description" content="An Album by <?php echo $result['Artist'] ?>, released <?php $date  = date_create($result['Release_Date']); echo date_format($date,"M jS, Y"); ?>">
+    <meta name="description" content="Album by <?php echo $result['Artist'] ?>, released <?php $date  = date_create($result['Release_Date']); echo date_format($date,"M j Y"); ?>">
 </head>
 
 <body>

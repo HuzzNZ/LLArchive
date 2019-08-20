@@ -6,9 +6,9 @@
                 <img class="website-logo link-logo" alt="Website Logo" src="/love-live/assets/logo-medium.png">
             </a>
         </div>
-        <a class="nav-link" id="link-1" href="/love-love/search.php">Search!</a>
-        <a class="nav-link" id="link-2" href="#">Random!</a>
-        <a class="nav-link" id="link-3" href="#">Recent!</a>
+        <a class="nav-link" id="link-1" href="/love-live/search.php">Search!</a>
+        <a class="nav-link" id="link-2" href="/love-live/random.php">Random!</a>
+        <a class="nav-link" id="link-3" href="/love-live/recent.php">Recent!</a>
         <div></div>
         <a class="nav-link" id="link-4" href="#">Oto</a>
         <a class="nav-link" id="link-5" href="/love-live/uranohoshi/all.php">Ura</a>

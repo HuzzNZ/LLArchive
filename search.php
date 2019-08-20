@@ -20,7 +20,7 @@
     <div class="main-content">
         <h1 class="results-title">Feature not implemented yet! :(</h1>
         <p class="tip">Please check back later.</p>
-        <!-- <?php include "global-check-results.php"; ?> -->
+        <?php # include "global-check-results.php"; ?>
     </div>
 </div>
 </body>

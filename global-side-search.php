@@ -3,15 +3,15 @@
     <div class="search">
         <h1>Keyword Search</h1>
         <hr>
-        <form action="search.php" method="GET">
+        <form action="/love-live/search.php" method="GET">
             <h3 class="form-label">Song/Album Title</h3>
             <label>
-                <input type="text">
+                <input type="text" name="title">
             </label>
             <hr class="form-body-hr">
             <h3 class="form-label">By Artist</h3>
             <label>
-                <select>
+                <select name="artist">
                     <option selected></option>
                     <optgroup label="Main Units">
                         <option>μ's</option>
@@ -24,7 +24,7 @@
                     </optgroup>
                     <optgroup label="Subunits">
                         <option>Printemps</option>
-                        <option>lily white</option>
+                        <option >lily white</option>
                         <option>BiBi</option>
                         <option>CYaRon!</option>
                         <option>AZALEA</option>
@@ -34,7 +34,7 @@
             </label>
             <h3 class="form-label">...or with Solo/Duo/Trios including</h3>
             <label>
-                <select>
+                <select name="solo">
                     <option selected></option>
                     <optgroup label="μ's">
                         <option>Honoka Kousaka</option>
@@ -74,11 +74,28 @@
             <hr class="form-body-hr">
             <h3 class="form-label">Released after</h3>
             <label class="date-label">
-                <input class="date-input" type="date" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+                <input class="date-input" type="date" name="rl_after" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
             </label>
             <h3 class="form-label">..and/or before</h3>
             <label class="date-label">
-                <input class="date-input" type="date" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+                <input class="date-input" type="date" name="rl_before"  pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+            </label>
+            <label class="submit">
+                <input type="submit" value="Go!">
+            </label>
+        </form>
+    </div>
+</div>
+
+<div class="search-wrapper">
+    <div class="top-strip" id="search-top-strip"></div>
+    <div class="search">
+        <h1>Catalog Search</h1>
+        <hr>
+        <form action="/love-live/search.php" method="GET">
+            <h3 class="form-label">Catalog Number</h3>
+            <label>
+                <input name="catalog" type="text" required>
             </label>
             <label class="submit">
                 <input type="submit" value="Go!">

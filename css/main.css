@@ -573,3 +573,8 @@ option {
     align-items: center;
     justify-content: center;
 }
+
+.no-track {
+    font-style: italic;
+    margin: 10px 0;
+}

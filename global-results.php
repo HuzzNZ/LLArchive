@@ -46,7 +46,16 @@ do {
                     </div>
                 </div>
             </div>
+            <?php
+                $album_id = $result['ID'];
+                $song_sql = "SELECT * FROM `$album_id`";
+                $song_query = mysqli_query($albums, $song_sql);
+                $song_result = mysqli_fetch_assoc($song_query);
+                $song_count = mysqli_num_rows($song_query);
+            ?>
             <div class="album-listing">
+            <?php
+            if ($song_result) { ?>
                 <div class="list-header tl-grid">
                     <div class="header-title">No.</div>
                     <div class="header-title">Artist</div>
@@ -55,12 +64,6 @@ do {
                     <div class="header-title">Download</div>
                 </div>
             <?php
-            $album_id = $result['ID'];
-            $song_sql = "SELECT * FROM `$album_id`";
-            $song_query = mysqli_query($albums, $song_sql);
-            $song_result = mysqli_fetch_assoc($song_query);
-            $song_count = mysqli_num_rows($song_query);
-            if ($song_result) {
                 do {
                     $song_id = $song_result["ID"];
                     ?>
@@ -143,7 +146,7 @@ do {
                     <?php
                 } while ($song_result = mysqli_fetch_assoc($song_query));
             } else { ?>
-                <h3>There doesn't seem to be anything here yet...</h3>
+                <h3 class="no-track">There doesn't seem to be anything here yet...</h3>
             <?php } ?>
             </div>
         </div>

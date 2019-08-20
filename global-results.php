@@ -60,79 +60,91 @@ do {
             $song_query = mysqli_query($albums, $song_sql);
             $song_result = mysqli_fetch_assoc($song_query);
             $song_count = mysqli_num_rows($song_query);
-            do {
-                $song_id = $song_result["ID"];
-                ?>
-                <div class="track tl-grid">
-                    <div class="track-id"><p>
-                            <?php echo str_pad(strval($song_id), 2, "0", STR_PAD_LEFT) ?>
-                        </p></div>
-                    <div class="track-artist">
-                        <div class="track-artist-wrapper">
-                            <p class="no-wrap">
-                                <?php
-                                    if($song_result["Artist"]){
+            if ($song_result) {
+                do {
+                    $song_id = $song_result["ID"];
+                    ?>
+                    <div class="track tl-grid">
+                        <div class="track-id"><p>
+                                <?php echo str_pad(strval($song_id), 2, "0", STR_PAD_LEFT) ?>
+                            </p></div>
+                        <div class="track-artist">
+                            <div class="track-artist-wrapper">
+                                <p class="no-wrap">
+                                    <?php
+                                    if ($song_result["Artist"]) {
                                         echo trim(str_replace(",", ", ", $song_result["Artist"]));
                                     } else {
                                         echo trim(str_replace(",", ", ", $result["Artist"]));
                                     }
-                                ?>
-                            </p>
-                            <p class="jp no-wrap">
-                                <?php
-                                if($song_result["Artist_JP"]){
-                                    echo trim(str_replace(",", ", ", $song_result["Artist_JP"]));
-                                } else {
-                                    echo trim(str_replace(",", ", ", $result["Artist_JP"]));
-                                }
-                                ?>
-                            </p>
+                                    ?>
+                                </p>
+                                <p class="jp no-wrap">
+                                    <?php
+                                    if ($song_result["Artist_JP"]) {
+                                        echo trim(str_replace(",", ", ", $song_result["Artist_JP"]));
+                                    } else {
+                                        echo trim(str_replace(",", ", ", $result["Artist_JP"]));
+                                    }
+                                    ?>
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="track-title">
-                        <div class="track-title-wrapper">
+                        <div class="track-title">
+                            <div class="track-title-wrapper">
+                                <p>
+                                    <?php
+                                    echo $song_result['Name'];
+                                    if ($song_result["Is_Instrumental"]) {
+                                        ?>
+                                        <span class="track-type instrumental">INSTRUMENTAL</span>
+                                        <?php
+                                    }
+                                    if ($song_result["Is_Radio"]) {
+                                        ?>
+                                        <span class="track-type radio">RADIO DRAMA</span>
+                                        <?php
+                                    }
+                                    ?>
+                                </p>
+                                <p class="jp">
+                                    <?php echo $song_result['Name_JP'] ?>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="track-duration">
                             <p>
                                 <?php
-                                    echo $song_result['Name'];
-                                    if($song_result["Is_Instrumental"]){
-                                ?>
-                                        <span class="track-type instrumental">INSTRUMENTAL</span>
-                                <?php
-                                    }
-                                    if($song_result["Is_Radio"]){
-                                ?>
-                                        <span class="track-type radio">RADIO DRAMA</span>
-                                <?php
-                                    }
-                                ?>
-                            </p>
-                            <p class="jp">
-                                <?php echo $song_result['Name_JP'] ?>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="track-duration">
-                        <p>
-                            <?php
                                 $minutes = intdiv($song_result['Length'], 60);
                                 $seconds = $song_result["Length"] - ($minutes * 60);
                                 echo str_pad(strval($minutes), 2, "0", STR_PAD_LEFT);
                                 echo ":";
                                 echo str_pad(strval($seconds), 2, "0", STR_PAD_LEFT);
-                            ?>
-                        </p>
-                    </div>
-                    <div class="track-downloads">
-                        <div class="track-downloads-wrapper">
-                            <a class="download flac small" href="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/<?php echo $song_id ?>.flac" download="<?php echo $song_id ?>. <?php echo $song_result['Name']; if($song_result["Is_Instrumental"]){echo " (Off Vocal)";} ?>.flac">.flac</a>
-                            <a class="download mp3 small" href="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/<?php echo $song_id ?>.mp3" download="<?php echo $song_id ?>. <?php echo $song_result['Name']; if($song_result["Is_Instrumental"]){echo " (Off Vocal)";} ?>.mp3">.mp3</a>
+                                ?>
+                            </p>
+                        </div>
+                        <div class="track-downloads">
+                            <div class="track-downloads-wrapper">
+                                <a class="download flac small"
+                                   href="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/<?php echo $song_id ?>.flac"
+                                   download="<?php echo $song_id ?>. <?php echo $song_result['Name'];
+                                   if ($song_result["Is_Instrumental"]) {
+                                       echo " (Off Vocal)";
+                                   } ?>.flac">.flac</a>
+                                <a class="download mp3 small"
+                                   href="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/<?php echo $song_id ?>.mp3"
+                                   download="<?php echo $song_id ?>. <?php echo $song_result['Name'];
+                                   if ($song_result["Is_Instrumental"]) {
+                                       echo " (Off Vocal)";
+                                   } ?>.mp3">.mp3</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <?php
-            }
-            while ($song_result = mysqli_fetch_assoc($song_query));
-            ?>
+                    <?php
+                } while ($song_result = mysqli_fetch_assoc($song_query));
+            } else { ?>
+                <h3>There doesn't seem to be anything here yet...</h3>
+            <?php } ?>
             </div>
         </div>
     </div>

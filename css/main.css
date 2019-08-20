@@ -176,6 +176,7 @@ a.download.locked {
     margin: 0 100px;
     height: 100%;
     display: grid;
+    z-index: 9898;
     grid-template-columns: 2.3fr repeat(3, 0.7fr) 0.5fr repeat(3, 0.27fr) 0.5fr repeat(4, 0.33fr) 1fr
 }
 

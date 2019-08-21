@@ -73,6 +73,7 @@ head {
 .copy-link {
     margin-left: 3px;
     margin-right: 10px;
+    z-index: -5;
 }
 
 .copy-link:hover .permalink-icon {

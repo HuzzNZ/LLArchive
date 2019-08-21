@@ -73,7 +73,7 @@ head {
 .copy-link {
     margin-left: 3px;
     margin-right: 10px;
-    z-index: -5;
+    z-index: 6;
 }
 
 .copy-link:hover .permalink-icon {
@@ -170,6 +170,7 @@ a.download.locked {
     -moz-box-shadow: 0 -12px 20px 12px #222;
     box-shadow: 0 -12px 20px 12px #222;
     margin-bottom: 50px;
+    z-index: 98;
 }
 
 #nav-displacement {

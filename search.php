@@ -2,6 +2,11 @@
 <head>
     <?php
     include "uranohoshi/db-config/db-connect.php";
+    if ($_GET){
+        $has_query = true;
+    } else {
+        $has_query = false;
+    }
     $title = "%".$_GET["title"]."%";
     $artist = "%".$_GET["artist"]."%";
     $solo = "%".$_GET["solo"]."%";
@@ -59,11 +64,38 @@
     <div class="side-search">
         <?php include "global-side-search.php"; ?>
     </div>
-    <div class="main-content">
+    <div class="main-content <?php if ($has_query) {null;} else {echo "text-only";} ?>">
         <!--
         <h1 class="results-title">Feature not implemented yet! :(</h1>
         <p class="tip">Please check back later.</p> -->
-        <?php include "global-check-results.php"; ?>
+        <?php if ($has_query){
+            include "global-check-results.php";
+        } else { ?>
+            <h1 class="main-title">
+                Search
+            </h1>
+            <hr class="main-separator">
+            <p>Find your favourite Love Live albums - they're all here on this website! <b>FLAC & MP3 320kbps</b> downloads to
+                the riiiiiiiiiight~ <br><br>There might even be raw <b>FLAC+CUE</b> album downloads too!</p>
+            <h3>Search by Keyword:</h3>
+            <p class="indent">Search for albums by keyword on the right sidebar!<br><br>Note that the title only returns
+                results for album titles, for example: The song <b>SKY JOURNEY</b>, which is part of the <b>HAPPY PARTY TRAIN</b>
+                album will not be returned when you search for <i>"SKY JOURNEY"</i>.<br><br>For song search, please use the
+                All page for each generation and <b>CTRL+F</b> to find in page for a specific song.<br><br>
+                <a href="otonokizaka/all.php">Otonokizaka All Page</a><br>
+                <a href="uranohoshi/all.php">Uranohoshi All Page</a><br>
+                <a href="nijigasaki/all.php">Nijigasaki All Page</a>
+            </p>
+            <h3>Search by Catalog Number:</h3>
+            <p class="indent">
+                For you enthusiasts there who know exactly what you're looking for, enter the Catalog Number on the bottom
+                search element to get there quick!<br><br>Catalog Numbers come in the format of: <b>[4 Letters]-[4-5 Digits]</b>.
+                Some examples include:<br><br><b>LACM-14470</b> - <a href="/love-live/search.php?catalog=LACM-14470">Koi ni
+                Naritai AQUARIUM</a><br><b>BCXA-1175</b> - <a href="/love-live/search.php?catalog=BCXA-1175">Thrilling
+                · One Way</a><br><b>LACA-9580</b> - <a href="/love-live/search.php?catalog=LACA-9580">Journey to the Sunshine
+                (CD 1)</a>
+            </p>
+        <?php } ?>
     </div>
 </div>
 </body>

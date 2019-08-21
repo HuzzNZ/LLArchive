@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <head>
-    <title>h/LoveLive! - Home</title>
+    <title>h/LoveLive! - Contact</title>
     <?php include "global-head.php" ?>
 </head>
 
@@ -11,9 +11,9 @@
         <?php include "global-side-search.php"; ?>
     </div>
     <div class="main-content text-only">
-        <h1 class="main-title">h/LoveLive - Home</h1>
+        <h1 class="main-title">Contact</h1>
         <hr class="main-separator">
-        <p>Welcome to Huzz's Love Live CD Archive Website!</p>
+        <p>Page not implemented yet :(</p>
     </div>
 </div>
 </body>

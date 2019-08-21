@@ -8,4 +8,13 @@
 <link rel="stylesheet" type="text/css" href="/love-live/css/main.css">
 <link rel="icon" type="png/ico" href="/love-live/assets/favicon.png">
 
-<?php $base_url = "http://huzz.xyz" ?>
+<?php $base_url = "http://huzz.xyz" ;
+
+    $title = "";
+    $artist = "";
+    $solo = "";
+    $rl_after = "";
+    $rl_before = "";
+
+    $catalog = "";
+?>

@@ -15,22 +15,22 @@
         <a class="nav-link" id="link-6" href="#">Niji</a>
         <div></div>
         <div class="nav-icon">
-            <a class="link-icon" href="#">
+            <a class="link-icon" href="/love-live/search.php">
                 <img class="link-icon" alt="Search Icon" src="/love-live/assets/magnifying-glass-icon.png">
             </a>
         </div>
         <div class="nav-icon">
-            <a class="link-icon" href="#">
+            <a class="link-icon" href="/love-live/about.php">
                 <img class="link-icon" alt="Search Icon" src="/love-live/assets/information.png">
             </a>
         </div>
         <div class="nav-icon">
-            <a class="link-icon" href="#">
+            <a class="link-icon" href="/love-live/contact.php">
                 <img class="link-icon" alt="Search Icon" src="/love-live/assets/phone-contact.png">
             </a>
         </div>
         <div class="nav-icon">
-            <a class="link-icon" href="#">
+            <a class="link-icon" href="/love-live/contribute.php">
                 <img class="link-icon" alt="Search Icon" src="/love-live/assets/github.png">
             </a>
         </div>

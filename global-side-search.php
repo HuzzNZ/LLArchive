@@ -6,7 +6,7 @@
         <form action="/love-live/search.php" method="GET">
             <h3 class="form-label">Album Title</h3>
             <label>
-                <input type="text" name="title" value="<?php if ($title != "%") { echo $title; } ?>">
+                <input type="text" name="title" value="<?php if ($title != "%") { echo str_replace("%", "", $title); } ?>">
             </label>
             <hr class="form-body-hr">
             <h3 class="form-label">By Artist</h3>

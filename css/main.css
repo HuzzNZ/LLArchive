@@ -24,6 +24,10 @@ h3 {
     font-size: 16px;
 }
 
+head {
+    z-index: 1000000;
+}
+
 .inline {
     display: inline;
 }

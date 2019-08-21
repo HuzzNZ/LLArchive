@@ -81,7 +81,7 @@
                 <input class="date-input" type="date" name="rl_before"  pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
             </label>
             <label class="submit">
-                <input type="submit" value="Go!">
+                <input type="submit" value="Go!" onsubmit="SubmitForm(this)">
             </label>
         </form>
     </div>
@@ -98,7 +98,7 @@
                 <input name="catalog" type="text" required>
             </label>
             <label class="submit">
-                <input type="submit" value="Go!">
+                <input type="submit" value="Go!" onsubmit="SubmitForm(this)">
             </label>
         </form>
     </div>

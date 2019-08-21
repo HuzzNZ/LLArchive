@@ -10,9 +10,9 @@
         <a class="nav-link" id="link-2" href="/love-live/random.php">Random!</a>
         <a class="nav-link" id="link-3" href="/love-live/recent.php">Recent!</a>
         <div></div>
-        <a class="nav-link" id="link-4" href="#">Oto</a>
+        <a class="nav-link" id="link-4" href="/love-live/otonokizaka/all.php">Oto</a>
         <a class="nav-link" id="link-5" href="/love-live/uranohoshi/all.php">Ura</a>
-        <a class="nav-link" id="link-6" href="#">Niji</a>
+        <a class="nav-link" id="link-6" href="/love-live/nijigasaki/all.php">Niji</a>
         <div></div>
         <div class="nav-icon">
             <a class="link-icon" href="/love-live/search.php">

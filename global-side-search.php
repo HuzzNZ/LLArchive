@@ -4,15 +4,15 @@
         <h1>Keyword Search</h1>
         <hr>
         <form action="/love-live/search.php" method="GET">
-            <h3 class="form-label">Song/Album Title</h3>
+            <h3 class="form-label">Album Title</h3>
             <label>
-                <input type="text" name="title">
+                <input type="text" name="title" value="<?php if ($title != "%") { echo $title; } ?>">
             </label>
             <hr class="form-body-hr">
             <h3 class="form-label">By Artist</h3>
             <label>
                 <select name="artist">
-                    <option selected></option>
+                    <option selected disabled hidden></option>
                     <optgroup label="Main Units">
                         <option>μ's</option>
                         <option>Aqours</option>
@@ -20,11 +20,11 @@
                     </optgroup>
                     <optgroup label="Side Units">
                         <option>A-RISE</option>
-                        <option>Saint Snow</option>
+                        <option>Saint Aqours Snow</option>
                     </optgroup>
                     <optgroup label="Subunits">
                         <option>Printemps</option>
-                        <option >lily white</option>
+                        <option>lily white</option>
                         <option>BiBi</option>
                         <option>CYaRon!</option>
                         <option>AZALEA</option>
@@ -35,7 +35,7 @@
             <h3 class="form-label">...or with Solo/Duo/Trios including</h3>
             <label>
                 <select name="solo">
-                    <option selected></option>
+                    <option selected disabled hidden></option>
                     <optgroup label="μ's">
                         <option>Honoka Kousaka</option>
                         <option>Kotori Minami</option>
@@ -74,14 +74,14 @@
             <hr class="form-body-hr">
             <h3 class="form-label">Released after</h3>
             <label class="date-label">
-                <input class="date-input" type="date" name="rl_after" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+                <input class="date-input" type="date" name="rl_after" value="<?php if ($rl_after != "1970-01-01") { echo $rl_after; } ?>" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
             </label>
             <h3 class="form-label">..and/or before</h3>
             <label class="date-label">
-                <input class="date-input" type="date" name="rl_before"  pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+                <input class="date-input" type="date" name="rl_before" value="<?php if ($rl_before != "2069-12-31") { echo $rl_before; } ?>" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
             </label>
             <label class="submit">
-                <input type="submit" value="Go!" onsubmit="SubmitForm(this)">
+                <input type="submit" value="Go!">
             </label>
         </form>
     </div>
@@ -95,10 +95,10 @@
         <form action="/love-live/search.php" method="GET">
             <h3 class="form-label">Catalog Number</h3>
             <label>
-                <input name="catalog" type="text" required>
+                <input name="catalog" value="<?php echo $catalog ?>" type="text" required>
             </label>
             <label class="submit">
-                <input type="submit" value="Go!" onsubmit="SubmitForm(this)">
+                <input type="submit" value="Go!">
             </label>
         </form>
     </div>

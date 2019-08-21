@@ -3,9 +3,9 @@
     <?php
         include "db-config/db-connect.php";
         $sql = "SELECT * FROM `albums` ORDER BY `ID`";
-        $query = mysqli_query($album_meta, $sql);
-        $result = mysqli_fetch_assoc($query);
-        $count = mysqli_num_rows($query);
+        $query_results = mysqli_query($album_meta, $sql);
+        $result = mysqli_fetch_assoc($query_results);
+        $count = mysqli_num_rows($query_results);
     ?>
     <title>h/LoveLive! - Uranohoshi - All Albums</title>
     <?php include "../global-head.php" ?>

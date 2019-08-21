@@ -153,7 +153,7 @@ do {
     </div>
     <?php
 }
-while ($result = mysqli_fetch_assoc($query));
+while ($result = mysqli_fetch_assoc($query_results));
 ?>
 
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>

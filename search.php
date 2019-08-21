@@ -39,10 +39,10 @@
     }
 
     if ($catalog) {
-        $query = $album_meta->prepare("SELECT * FROM `albums` WHERE (CONVERT(`Catalog_Number` USING utf8) LIKE ?)");
+        $query = $album_meta->prepare("SELECT * FROM `albums` WHERE (CONVERT(`Catalog_Number` USING utf8) LIKE ?) ORDER BY `Release_Date` DESC");
         $query->bind_param("s", $catalog);
     } else {
-        $query = $album_meta->prepare("SELECT * FROM `albums` WHERE (CONVERT(`Name` USING utf8) LIKE ?) AND ((CONVERT(`Artist` USING utf8) LIKE ?) OR (CONVERT(`Artist` USING utf8) LIKE ?)) AND `Release_Date` BETWEEN ? AND ?");
+        $query = $album_meta->prepare("SELECT * FROM `albums` WHERE (CONVERT(`Name` USING utf8) LIKE ?) AND ((CONVERT(`Artist` USING utf8) LIKE ?) OR (CONVERT(`Artist` USING utf8) LIKE ?)) AND `Release_Date` BETWEEN ? AND ? ORDER BY `Release_Date` DESC");
         $query->bind_param("sssss", $title, $artist, $solo, $rl_after, $rl_before);
     }
     $query->execute();

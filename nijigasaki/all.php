@@ -4,8 +4,13 @@
         include "db-config/db-connect.php";
         $sql = "SELECT * FROM `albums` ORDER BY `ID`";
         $query_results = mysqli_query($n_album_meta, $sql);
-        $result = mysqli_fetch_assoc($query_results);
         $count = mysqli_num_rows($query_results);
+        $results = array();
+        $single_result = mysqli_fetch_assoc($query_results);
+        do {
+            array_push($results, $single_result);
+        } while (
+            $single_result = mysqli_fetch_assoc($query_results));
         $real_count = $count;
     ?>
     <title>h/LoveLive! - Nijigasaki - All Albums</title>

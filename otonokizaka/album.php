@@ -6,8 +6,12 @@
         $query->bind_param("i", $_GET["id"]);
         $query->execute();
         $query_results = $query->get_result();
-        $result = mysqli_fetch_assoc($query_results);
-        $count = mysqli_num_rows($query_results);
+        $results = array();
+        $single_result = mysqli_fetch_assoc($query_results);
+        do {
+            array_push($results, $single_result);
+        } while (
+            $single_result = mysqli_fetch_assoc($query_results));
         $real_count = $count;
     ?>
     <title>h/LoveLive! - <?php echo $result['Name'] ?></title>

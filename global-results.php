@@ -21,7 +21,7 @@ for ($i = 0; $i < $count; $i++) {
         <div class="top-strip"></div>
         <div class="result">
             <div class="result-header">
-                <img class="cover-art" src='/love-live/media/<?php echo $generation ?>/<?= $result['ID']?>/cover.jpg' alt="Album <?php echo $result['ID'] ?> Cover">
+                <img class="cover-art" src='/love-live/media/<?php echo $generation ?>/<?= $result['ID']?>/cover-small.jpg' alt="Album <?php echo $result['ID'] ?> Cover">
                 <div class="result-album-data">
                     <h1 class="title">
                         <?php echo $result['Name'] ?>

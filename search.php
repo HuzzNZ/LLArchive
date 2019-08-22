@@ -163,14 +163,14 @@
                 results for album titles, for example: The song <b>SKY JOURNEY</b>, which is part of the <b>HAPPY PARTY TRAIN</b>
                 album will not be returned when you search for <i>"SKY JOURNEY"</i>.<br><br>For song search, please use the
                 All page for each generation and <b>CTRL+F</b> to find in page for a specific song.<br><br>
-                <a href="otonokizaka/all.php">Otonokizaka All Page</a><br>
-                <a href="uranohoshi/all.php">Uranohoshi All Page</a><br>
-                <a href="nijigasaki/all.php">Nijigasaki All Page</a>
+                <a href="otonokizaka/all.php">Otonokizaka - All</a><br>
+                <a href="uranohoshi/all.php">Uranohoshi - All</a><br>
+                <a href="nijigasaki/all.php">Nijigasaki - All</a>
             </p>
             <h3>Search by Catalog Number:</h3>
             <p class="indent">
                 For you enthusiasts there who know exactly what you're looking for, enter the Catalog Number on the bottom
-                search element to get there quick!<br><br>Catalog Numbers come in the format of: <b>[4 Letters]-[4-5 Digits]</b>.
+                search element to get there quick!<br><br>Catalog Numbers come in the format of: <b>[Some Letters]-[4-5 Digits]</b>.
                 Some examples include:<br><br><b>LACM-14470</b> - <a href="/love-live/search.php?catalog=LACM-14470">Koi ni
                 Naritai AQUARIUM</a><br><b>BCXA-1175</b> - <a href="/love-live/search.php?catalog=BCXA-1175">Thrilling
                 · One Way</a><br><b>LACA-9580</b> - <a href="/love-live/search.php?catalog=LACA-9580">Journey to the Sunshine

@@ -24,7 +24,7 @@
         <?php include "../global-side-search.php"; ?>
     </div>
     <div class="main-content">
-        <?php include "global-check-results.php"; ?>
+        <?php include "../global-check-results.php"; ?>
     </div>
 </div>
 </body>

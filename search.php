@@ -1,59 +1,140 @@
 <!DOCTYPE HTML>
 <head>
     <?php
+    include "otonokizaka/db-config/db-connect.php";
     include "uranohoshi/db-config/db-connect.php";
+    include "nijigasaki/db-config/db-connect.php";
     if ($_GET){
         $has_query = true;
     } else {
         $has_query = false;
     }
-    $title = "%".$_GET["title"]."%";
-    $artist = "%".$_GET["artist"]."%";
-    $solo = "%".$_GET["solo"]."%";
-    $rl_after = $_GET["rl_after"];
-    $rl_before = $_GET["rl_before"];
 
-    $catalog = $_GET['catalog'];
+    if ($has_query) {
+        $title = "%" . $_GET["title"] . "%";
+        $artist = "%" . $_GET["artist"] . "%";
+        $solo = "%" . $_GET["solo"] . "%";
+        $rl_after = $_GET["rl_after"];
+        $rl_before = $_GET["rl_before"];
 
-    if ($title === "%%") {
-        $title = "%";
-    }
+        $catalog = $_GET["catalog"];
 
-    if ($artist === "%%") {
-        $artist = "%";
-    } else {
+        if ($title === "%%") {
+            $title = "%";
+        }
+
+        if ($artist === "%%") {
+            $artist = "%";
+        } else {
+            if ($solo === "%%") {
+                $solo = "HAHA_MIKAN_98_:DDD";
+            }
+        }
+
         if ($solo === "%%") {
-            $solo = "HAHA_MIKAN_98_:DDD";
+            $solo = "%";
+        } else {
+            if ($artist === "%") {
+                $artist = "KANAN_WHO??????_LOOOL_XDDDD";
+            }
         }
-    }
 
-    if ($solo === "%%") {
-        $solo = "%";
-    } else {
-        if ($artist === "%") {
-            $artist = "KANAN_WHO??????_LOOOL_XDDDD";
+        if ($rl_after === "") {
+            $rl_after = "1970-01-01";
         }
-    }
 
-    if ($rl_after === "") {
-        $rl_after = "1970-01-01";
-    }
+        if ($rl_before === "") {
+            $rl_before = "2069-12-31";
+        }
 
-    if ($rl_before === "") {
-        $rl_before = "2069-12-31";
-    }
+        $results = array();
 
-    if ($catalog) {
-        $query = $album_meta->prepare("SELECT * FROM `albums` WHERE (CONVERT(`Catalog_Number` USING utf8) LIKE ?) ORDER BY `Release_Date` DESC");
-        $query->bind_param("s", $catalog);
+        if ($catalog) {
+            # OTONOKIZAKA QUERY
+            $o_query = $o_album_meta->prepare("SELECT * FROM `albums` WHERE (CONVERT(`Catalog_Number` USING utf8) LIKE ?) ORDER BY `Release_Date` DESC");
+            $o_query->bind_param("s", $catalog);
+            $o_query->execute();
+            $o_query_results = $o_query->get_result();
+            $single_result = mysqli_fetch_assoc($o_query_results);
+            do {
+                array_push($results, $single_result);
+            } while (
+                $single_result = mysqli_fetch_assoc($o_query_results));
+
+            # URANOHOSHI QUERY
+            $u_query = $u_album_meta->prepare("SELECT * FROM `albums` WHERE (CONVERT(`Catalog_Number` USING utf8) LIKE ?) ORDER BY `Release_Date` DESC");
+            $u_query->bind_param("s", $catalog);
+            $u_query->execute();
+            $u_query_results = $u_query->get_result();
+            $single_result = mysqli_fetch_assoc($u_query_results);
+            do {
+                array_push($results, $single_result);
+            } while (
+                $single_result = mysqli_fetch_assoc($u_query_results));
+
+            # NIJIGASAKI QUERY
+            $n_query = $n_album_meta->prepare("SELECT * FROM `albums` WHERE (CONVERT(`Catalog_Number` USING utf8) LIKE ?) ORDER BY `Release_Date` DESC");
+            $n_query->bind_param("s", $catalog);
+            $n_query->execute();
+            $n_query_results = $n_query->get_result();
+            $single_result = mysqli_fetch_assoc($n_query_results);
+            do {
+                array_push($results, $single_result);
+            } while (
+                $single_result = mysqli_fetch_assoc($n_query_results));
+
+        } else {
+
+            # OTONOKIZAKA QUERY
+            $o_query = $o_album_meta->prepare("SELECT * FROM `albums` WHERE (CONVERT(`Name` USING utf8) LIKE ?) AND ((CONVERT(`Artist` USING utf8) LIKE ?) OR (CONVERT(`Artist` USING utf8) LIKE ?)) AND `Release_Date` BETWEEN ? AND ? ORDER BY `Release_Date` DESC");
+            $o_query->bind_param("sssss", $title, $artist, $solo, $rl_after, $rl_before);
+            $o_query->execute();
+            $o_query_results = $o_query->get_result();
+            $single_result = mysqli_fetch_assoc($o_query_results);
+            do {
+                array_push($results, $single_result);
+            } while (
+                $single_result = mysqli_fetch_assoc($o_query_results));
+
+            # URANOHOSHI QUERY
+            $u_query = $u_album_meta->prepare("SELECT * FROM `albums` WHERE (CONVERT(`Name` USING utf8) LIKE ?) AND ((CONVERT(`Artist` USING utf8) LIKE ?) OR (CONVERT(`Artist` USING utf8) LIKE ?)) AND `Release_Date` BETWEEN ? AND ? ORDER BY `Release_Date` DESC");
+            $u_query->bind_param("sssss", $title, $artist, $solo, $rl_after, $rl_before);
+            $u_query->execute();
+            $u_query_results = $u_query->get_result();
+            $single_result = mysqli_fetch_assoc($u_query_results);
+            do {
+                array_push($results, $single_result);
+            } while (
+                $single_result = mysqli_fetch_assoc($u_query_results));
+
+            # NIJIGASAKI QUERY
+            $n_query = $n_album_meta->prepare("SELECT * FROM `albums` WHERE (CONVERT(`Name` USING utf8) LIKE ?) AND ((CONVERT(`Artist` USING utf8) LIKE ?) OR (CONVERT(`Artist` USING utf8) LIKE ?)) AND `Release_Date` BETWEEN ? AND ? ORDER BY `Release_Date` DESC");
+            $n_query->bind_param("sssss", $title, $artist, $solo, $rl_after, $rl_before);
+            $n_query->execute();
+            $n_query_results = $n_query->get_result();
+            $single_result = mysqli_fetch_assoc($n_query_results);
+            do {
+                array_push($results, $single_result);
+            } while (
+                $single_result = mysqli_fetch_assoc($n_query_results));
+        }
+        # array_multisort($results["Release_Date"], SORT_DESC);
+
+        $count = count($results);
+        $real_count = $count;
+        for ($i = 0; $i < $count; $i++) {
+            $result = $results[$i];
+            if ($result) {
+                null;
+            } else {
+                $real_count--;
+            }
+        }
+
     } else {
-        $query = $album_meta->prepare("SELECT * FROM `albums` WHERE (CONVERT(`Name` USING utf8) LIKE ?) AND ((CONVERT(`Artist` USING utf8) LIKE ?) OR (CONVERT(`Artist` USING utf8) LIKE ?)) AND `Release_Date` BETWEEN ? AND ? ORDER BY `Release_Date` DESC");
-        $query->bind_param("sssss", $title, $artist, $solo, $rl_after, $rl_before);
+        null;
     }
-    $query->execute();
-    $query_results = $query->get_result();
-    $result = mysqli_fetch_assoc($query_results);
-    $count = mysqli_num_rows($query_results);
+
     ?>
     <title>h/LoveLive! - Search</title>
     <?php include "global-head.php" ?>

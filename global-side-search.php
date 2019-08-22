@@ -12,7 +12,7 @@
             <h3 class="form-label">By Artist</h3>
             <label>
                 <select name="artist">
-                    <option selected disabled hidden></option>
+                    <option selected></option>
                     <optgroup label="Main Units">
                         <option>μ's</option>
                         <option>Aqours</option>
@@ -35,7 +35,7 @@
             <h3 class="form-label">...or with Solo/Duo/Trios including</h3>
             <label>
                 <select name="solo">
-                    <option selected disabled hidden></option>
+                    <option selected></option>
                     <optgroup label="μ's">
                         <option>Honoka Kousaka</option>
                         <option>Kotori Minami</option>

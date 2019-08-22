@@ -1,9 +1,9 @@
 <?php
 include "db-config-albums.php";
-$albums = mysqli_connect(servername_a, username_a, password_a, db_name_a);
-mysqli_set_charset($albums, "UTF-8");
-mysqli_query($albums, "SET NAMES 'utf8'");
+$n_albums = mysqli_connect(n_servername_a, n_username_a, n_password_a, n_db_name_a);
+mysqli_set_charset($n_albums, "UTF-8");
+mysqli_query($n_albums, "SET NAMES 'utf8'");
 include "db-config-album-meta.php";
-$album_meta = mysqli_connect(servername_am, username_am, password_am, db_name_am);
-mysqli_set_charset($album_meta, "UTF-8");
-mysqli_query($album_meta, "SET NAMES 'utf8'");
+$n_album_meta = mysqli_connect(n_servername_am, n_username_am, n_password_am, n_db_name_am);
+mysqli_set_charset($n_album_meta, "UTF-8");
+mysqli_query($n_album_meta, "SET NAMES 'utf8'");

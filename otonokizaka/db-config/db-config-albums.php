@@ -2,7 +2,7 @@
 
 ini_set("display_errors", "Off");
 
-define("servername_a", "localhost");
-define("username_a", "root");
-define("password_a", "");
-define("db_name_a", "oto_albums");
+define("o_servername_a", "localhost");
+define("o_username_a", "root");
+define("o_password_a", "");
+define("o_db_name_a", "oto_albums");

@@ -1,11 +1,27 @@
 <?php
-do {
+for ($i = 0; $i < $count; $i++) {
+    $result = $results[$i];
+    if ($result) {
+        null;
+    } else {
+        continue;
+    }
+    $generation = "";
+    if ($result["Parent"] === "o") {
+        $generation = "otonokizaka";
+    } elseif ($result["Parent"] === "u") {
+        $generation = "uranohoshi";
+    } elseif ($result["Parent"] === "n") {
+        $generation = "nijigasaki";
+    } else {
+        echo $result["Parent"];
+    }
     ?>
     <div class="result-wrapper" id="album-<?php echo $result['ID'] ?>">
         <div class="top-strip"></div>
         <div class="result">
             <div class="result-header">
-                <img class="cover-art" src='/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/cover.jpg' alt="Album <?php echo $result['ID'] ?> Cover">
+                <img class="cover-art" src='/love-live/media/<?php echo $generation ?>/<?= $result['ID']?>/cover.jpg' alt="Album <?php echo $result['ID'] ?> Cover">
                 <div class="result-album-data">
                     <h1 class="title">
                         <?php echo $result['Name'] ?>
@@ -35,10 +51,10 @@ do {
                     </p>
                     <div class="album-download">
                         <img class="download-icon" alt="Download Icon" src="/love-live/assets/download.png">
-                        <a class="download flac <?php if ($result["Has_CUE"] != 1) {echo "locked";}?>" <?php if ($result["Has_CUE"]) {?>href="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/cd.flac" download="<?php echo $result['Catalog_Number'] ?>.flac"<?php } ?>>.flac</a>
-                        <a class="download cue <?php if ($result["Has_CUE"] != 1) {echo "locked";}?>" <?php if ($result["Has_CUE"]) {?>href="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/cd.cue" download="<?php echo $result['Catalog_Number'] ?>.cue"<?php } ?>>.cue</a>
+                        <a class="download flac <?php if ($result["Has_CUE"] != 1) {echo "locked";}?>" <?php if ($result["Has_CUE"]) {?>href="/love-live/media/<?php echo $generation ?>/<?php echo $result['ID'] ?>/cd.flac" download="<?php echo $result['Catalog_Number'] ?>.flac"<?php } ?>>.flac</a>
+                        <a class="download cue <?php if ($result["Has_CUE"] != 1) {echo "locked";}?>" <?php if ($result["Has_CUE"]) {?>href="/love-live/media/<?php echo $generation ?>/<?php echo $result['ID'] ?>/cd.cue" download="<?php echo $result['Catalog_Number'] ?>.cue"<?php } ?>>.cue</a>
                         <div class="permalink-wrapper">
-                            <a class="copy-link" title="Copy Permalink" data-clipboard-text="<?php echo $base_url ?>/love-live/uranohoshi/album.php?id=<?php echo $result['ID'] ?>" href="javascript:void(0);">
+                            <a class="copy-link" title="Copy Permalink" data-clipboard-text="<?php echo $base_url ?>/love-live/<?php echo $generation ?>/album.php?id=<?php echo $result['ID'] ?>" href="javascript:void(0);">
                                 <img class="permalink-icon" alt="Link Icon" src="/love-live/assets/link.png">
                             </a>
                             <p class="copy-tooltip">Copied to Clipboard!</p>
@@ -49,7 +65,13 @@ do {
             <?php
                 $album_id = $result['ID'];
                 $song_sql = "SELECT * FROM `$album_id`";
-                $song_query = mysqli_query($albums, $song_sql);
+                if ($result["Parent"] === "o") {
+                    $song_query = mysqli_query($o_albums, $song_sql);
+                } elseif ($result["Parent"] === "u") {
+                    $song_query = mysqli_query($u_albums, $song_sql);
+                } elseif ($result["Parent"] === "n") {
+                    $song_query = mysqli_query($n_albums, $song_sql);
+                }
                 $song_result = mysqli_fetch_assoc($song_query);
                 $song_count = mysqli_num_rows($song_query);
             ?>
@@ -129,13 +151,13 @@ do {
                         <div class="track-downloads">
                             <div class="track-downloads-wrapper">
                                 <a class="download flac small"
-                                   href="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/<?php echo $song_id ?>.flac"
+                                   href="/love-live/media/<?php echo $generation ?>/<?php echo $result['ID'] ?>/<?php echo $song_id ?>.flac"
                                    download="<?php echo $song_id ?>. <?php echo $song_result['Name'];
                                    if ($song_result["Is_Instrumental"]) {
                                        echo " (Off Vocal)";
                                    } ?>.flac">.flac</a>
                                 <a class="download mp3 small"
-                                   href="/love-live/media/uranohoshi/<?php echo $result['ID'] ?>/<?php echo $song_id ?>.mp3"
+                                   href="/love-live/media/<?php echo $generation ?>/<?php echo $result['ID'] ?>/<?php echo $song_id ?>.mp3"
                                    download="<?php echo $song_id ?>. <?php echo $song_result['Name'];
                                    if ($song_result["Is_Instrumental"]) {
                                        echo " (Off Vocal)";
@@ -153,7 +175,6 @@ do {
     </div>
     <?php
 }
-while ($result = mysqli_fetch_assoc($query_results));
 ?>
 
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>

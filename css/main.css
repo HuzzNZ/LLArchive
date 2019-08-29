@@ -237,12 +237,21 @@ a.download.locked {
     width: auto;
 }
 
-.results-title {
+.results-title, span.result-count {
     margin-bottom: 25px;
+    display: inline-block;
 }
 
-.results-title span {
+.results-title.has-header {
+    color: #cccccc;
+}
+
+span.result-count {
     font-style: italic;
+}
+
+span.result-count.has-header {
+    color: #999999;
 }
 
 .tip {

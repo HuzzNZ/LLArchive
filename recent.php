@@ -53,8 +53,9 @@
                 $real_count--;
             }
         }
+        $has_header = "has-header";
     ?>
-    <title>h/LoveLive! - Random</title>
+    <title>h/LoveLive! - Recently Added</title>
     <?php include "global-head.php" ?>
 </head>
 
@@ -65,6 +66,11 @@
         <?php include "global-side-search.php"; ?>
     </div>
     <div class="main-content">
+        <h1 class="main-title">
+            Recently Released
+        </h1>
+        <hr class="main-separator">
+        <span class="result-count has-header normal-weight small-text">Sorted by Release Date -&nbsp;</span>
         <?php include "global-check-results.php"; ?>
     </div>
 </div>

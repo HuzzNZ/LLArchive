@@ -125,7 +125,7 @@ for ($i = 0; $i < $count; $i++) {
                                             ?>
                                             <span class="track-type instrumental">INSTRUMENTAL</span>
                                         <? } else { ?>
-                                            <span class="track-type instrumental">OFF TOPIC</span>
+                                            <span class="track-type instrumental">OFF VOCAL</span>
                                         <? }}
                                     if ($song_result["Is_Radio"]) {
                                         ?>
@@ -154,7 +154,14 @@ for ($i = 0; $i < $count; $i++) {
                             <div class="track-downloads-wrapper">
                                 <a class="download flac small"
                                    href="/love-live/media/<?php echo $generation ?>/<?php echo $result['ID'] ?>/<?php echo $song_id ?>.flac"
-                                   download="<?php echo $song_id ?>. <?= $song_result["Artist"] ?> - <?php echo str_replace("\"", "&quot;", $song_result['Name']);
+                                   download="<?php echo $song_id ?>. <?php
+                                       if ($song_result["Artist"]) {
+                                           echo trim(str_replace(",", ", ", $song_result["Artist"]));
+                                       } else {
+                                           echo trim(str_replace(",", ", ", $result["Artist"]));
+                                       }
+                                   ?> - <?php echo str_replace("\"", "&quot;", $song_result['Name']);
+
                                    if ($song_result["Is_Instrumental"]) {
                                        if (!$result["Is_OST"]) {
                                            echo " (Off Vocal)";
@@ -162,7 +169,13 @@ for ($i = 0; $i < $count; $i++) {
                                    } ?>.flac">.flac</a>
                                 <a class="download mp3 small"
                                    href="/love-live/media/<?php echo $generation ?>/<?= $result['ID'] ?>/<?= $song_id ?>.mp3"
-                                   download="<?php echo $song_id ?>. <?= $song_result["Artist"] ?> - <?php echo str_replace("\"", "&quot;", $song_result['Name']);
+                                   download="<?php echo $song_id ?>. <?php
+                                       if ($song_result["Artist"]) {
+                                           echo trim(str_replace(",", ", ", $song_result["Artist"]));
+                                       } else {
+                                           echo trim(str_replace(",", ", ", $result["Artist"]));
+                                       }
+                                   ?> - <?php echo str_replace("\"", "&quot;", $song_result['Name']);
                                    if ($song_result["Is_Instrumental"]) {
                                        if (!$result["Is_OST"]) {
                                            echo " (Off Vocal)";

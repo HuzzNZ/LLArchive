@@ -118,7 +118,12 @@
             } while (
                 $single_result = mysqli_fetch_assoc($n_query_results));
         }
-        # array_multisort($results["Release_Date"], SORT_DESC);
+
+        usort($results, function($a, $b) {
+            return $a['Release_Date'] <=> $b['Release_Date'];
+        });
+
+        $results = array_reverse($results);
 
         $count = count($results);
         $real_count = $count;

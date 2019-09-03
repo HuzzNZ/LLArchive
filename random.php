@@ -7,7 +7,7 @@
     $result = mysqli_fetch_assoc($query);
     $count = mysqli_num_rows($query);
     ?>
-    <title>h/LoveLive! - Random</title>
+    <title>h/LoveLive! - Randomly Selected</title>
     <?php include "global-head.php" ?>
 </head>
 

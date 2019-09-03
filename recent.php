@@ -2,12 +2,60 @@
 <head>
     <?php
     include "uranohoshi/db-config/db-connect.php";
-    $sql = "SELECT * FROM `albums` ORDER BY `ID`";
-    $query = mysqli_query($album_meta, $sql);
-    $result = mysqli_fetch_assoc($query);
-    $count = mysqli_num_rows($query);
+    include "otonokizaka/db-config/db-connect.php";
+    include "nijigasaki/db-config/db-connect.php";
+
+        $results = array();
+
+        # OTONOKIZAKA QUERY
+        $o_query = $o_album_meta->prepare("SELECT * FROM `albums` ORDER BY `Release_Date` DESC");
+        $o_query->execute();
+        $o_query_results = $o_query->get_result();
+        $single_result = mysqli_fetch_assoc($o_query_results);
+        do {
+            array_push($results, $single_result);
+        } while (
+            $single_result = mysqli_fetch_assoc($o_query_results));
+
+        # URANOHOSHI QUERY
+        $u_query = $u_album_meta->prepare("SELECT * FROM `albums` ORDER BY `Release_Date` DESC");
+        $u_query->execute();
+        $u_query_results = $u_query->get_result();
+        $single_result = mysqli_fetch_assoc($u_query_results);
+        do {
+            array_push($results, $single_result);
+        } while (
+            $single_result = mysqli_fetch_assoc($u_query_results));
+
+        # NIJIGASAKI QUERY
+        $n_query = $n_album_meta->prepare("SELECT * FROM `albums` ORDER BY `Release_Date` DESC");
+        $n_query->execute();
+        $n_query_results = $n_query->get_result();
+        $single_result = mysqli_fetch_assoc($n_query_results);
+        do {
+            array_push($results, $single_result);
+        } while (
+            $single_result = mysqli_fetch_assoc($n_query_results));
+
+        usort($results, function($a, $b) {
+            return $a['Release_Date'] <=> $b['Release_Date'];
+        });
+
+        $results = array_reverse($results);
+
+        $count = count($results);
+        $real_count = $count;
+        for ($i = 0; $i < $count; $i++) {
+            $result = $results[$i];
+            if ($result) {
+                null;
+            } else {
+                $real_count--;
+            }
+        }
+        $has_header = "has-header";
     ?>
-    <title>h/LoveLive! - Random</title>
+    <title>h/LoveLive! - Recently Added</title>
     <?php include "global-head.php" ?>
 </head>
 
@@ -18,9 +66,12 @@
         <?php include "global-side-search.php"; ?>
     </div>
     <div class="main-content">
-        <h1 class="results-title">Feature not implemented yet! :(</h1>
-        <p class="tip">Please check back later.</p>
-        <?php # include "global-check-results.php"; ?>
+        <h1 class="main-title">
+            Recently Released
+        </h1>
+        <hr class="main-separator">
+        <span class="result-count has-header normal-weight small-text">Sorted by Release Date -&nbsp;</span>
+        <?php include "global-check-results.php"; ?>
     </div>
 </div>
 </body>

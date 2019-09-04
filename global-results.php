@@ -10,7 +10,7 @@ for ($i = 0; $i < $count; $i++) {
     $generation = "";
     if ($result["Parent"] === "o") {
         $generation = "otonokizaka";
-        $placeholder_image = "/love-live/assets/placeholder-sip.png";
+        $placeholder_image = "";
     } elseif ($result["Parent"] === "u") {
         $generation = "uranohoshi";
         $placeholder_image = "/love-live/assets/placeholder-aqours.png";
@@ -22,17 +22,19 @@ for ($i = 0; $i < $count; $i++) {
     }
     $a_id = $result["ID"];
     ?>
-    <script>
-        function placeholder(source){
-            source.onerror = null;
-            source.src=<?php echo $placeholder_image ?>;
-        }
-    </script>
     <div class="result-wrapper" id="album-<?php echo $result['ID'] ?>">
         <div class="top-strip"></div>
         <div class="result">
             <div class="result-header">
-                <img class="cover-art" id="album-<?php echo $result['ID'] ?>-cover" src='/love-live/media/<?= $generation?>/<?= $a_id ?>/cover-small.jpg' alt="Album <?php echo $result['ID'] ?> Cover" onerror="placeholder(this)">
+                <img class="cover-art" id="album-<?php echo $result['ID'] ?>-cover" src='/love-live/media/<?= $generation?>/<?= $a_id ?>/cover-small.jpg' alt="Album <?php echo $result['ID'] ?> Cover"
+                    <?php if ($generation === "otonokizaka") {?>
+                     onerror="this.onerror = null; this.src='/love-live/assets/placeholder-sip.png'"
+                    <?php } elseif ($generation === "uranohoshi") { ?>
+                     onerror="this.onerror = null; this.src='/love-live/assets/placeholder-aqours.png'"
+                    <?php } elseif ($generation === "nijigasaki") { ?>
+                     onerror="this.onerror = null; this.src = '/love-live/assets/placeholder-pdp.png'"
+                    <?php } ?>
+                >
                 <div class="result-album-data">
                     <h1 class="title">
                         <?php echo $result['Name'] ?>

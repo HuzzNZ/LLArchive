@@ -1,3 +1,4 @@
+
 <?php
 for ($i = 0; $i < $count; $i++) {
     $result = $results[$i];
@@ -9,13 +10,13 @@ for ($i = 0; $i < $count; $i++) {
     $generation = "";
     if ($result["Parent"] === "o") {
         $generation = "otonokizaka";
-        $placeholder_image = "/assets/placeholder-sip.png";
+        $placeholder_image = "/love-live/assets/placeholder-sip.png";
     } elseif ($result["Parent"] === "u") {
         $generation = "uranohoshi";
-        $placeholder_image = "/assets/placeholder-aqours.png";
+        $placeholder_image = "/love-live/assets/placeholder-aqours.png";
     } elseif ($result["Parent"] === "n") {
         $generation = "nijigasaki";
-        $placeholder_image = "/assets/placeholder-pdp.png";
+        $placeholder_image = "/love-live/assets/placeholder-pdp.png";
     } else {
         echo $result["Parent"];
     }
@@ -25,15 +26,7 @@ for ($i = 0; $i < $count; $i++) {
         <div class="top-strip"></div>
         <div class="result">
             <div class="result-header">
-                <img class="cover-art" id="album-<?php echo $result['ID'] ?>-cover" src='/love-live/media/<?= $generation?>/<?= $a_id ?>/cover-small.jpg' alt="Album <?php echo $result['ID'] ?> Cover">
-                <script>
-                    let album_cover_id = <?php echo $result['ID'] ?>;
-                    let album_cover_element = "album-" + album_cover_id + "-cover";
-                    let placeholder_image = <?php echo $placeholder_image ?>;
-                    document.getElementById(album_cover_element).onerror = function() {
-                        document.getElementById(album_cover_element).src = placeholder_image;
-                    }
-                </script>
+                <img class="cover-art" id="album-<?php echo $result['ID'] ?>-cover" src='/love-live/media/<?= $generation?>/<?= $a_id ?>/cover-small.jpg' alt="Album <?php echo $result['ID'] ?> Cover" onerror="placeholder(this)">
                 <div class="result-album-data">
                     <h1 class="title">
                         <?php echo $result['Name'] ?>
@@ -211,6 +204,10 @@ for ($i = 0; $i < $count; $i++) {
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script>
     new ClipboardJS('.copy-link');
+    function placeholder(source){
+        source.onerror = null;
+        source.src=<?php echo $placeholder_image ?>;
+    }
 </script>
 
 <!--

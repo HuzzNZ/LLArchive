@@ -22,6 +22,12 @@ for ($i = 0; $i < $count; $i++) {
     }
     $a_id = $result["ID"];
     ?>
+    <script>
+        function placeholder(source){
+            source.onerror = null;
+            source.src=<?php echo $placeholder_image ?>;
+        }
+    </script>
     <div class="result-wrapper" id="album-<?php echo $result['ID'] ?>">
         <div class="top-strip"></div>
         <div class="result">
@@ -204,10 +210,6 @@ for ($i = 0; $i < $count; $i++) {
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script>
     new ClipboardJS('.copy-link');
-    function placeholder(source){
-        source.onerror = null;
-        source.src=<?php echo $placeholder_image ?>;
-    }
 </script>
 
 <!--

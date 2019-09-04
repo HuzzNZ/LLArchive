@@ -3,7 +3,7 @@
     <div class="search">
         <h1>Keyword Search</h1>
         <hr>
-        <form action="/love-live/search.php" method="GET">
+        <form action="/love-live/search" method="GET">
             <h3 class="form-label">Album Title</h3>
             <label>
                 <input type="text" name="title" value="<?php if ($title != "%") { echo str_replace("%", "", $title); } ?>">
@@ -92,7 +92,7 @@
     <div class="search">
         <h1>Catalog Search</h1>
         <hr>
-        <form action="/love-live/search.php" method="GET">
+        <form action="/love-live/search" method="GET">
             <h3 class="form-label">Catalog Number</h3>
             <label>
                 <input name="catalog" value="<?php echo $catalog ?>" type="text" required>

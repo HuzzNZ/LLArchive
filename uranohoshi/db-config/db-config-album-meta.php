@@ -1,6 +1,6 @@
 <?php
 
-ini_set("display_errors", "On");
+ini_set("display_errors", "Off");
 
 define("u_servername_am", "localhost");
 define("u_username_am", "root");

@@ -66,7 +66,7 @@
             Randomly Selected
         </h1>
         <hr class="main-separator">
-        <span class="result-count has-header normal-weight small-text">Out of a total of&nbsp;</span>
+        <span class="result-count has-header normal-weight small-text">Out of a total of</span>
         <?php include "global-check-results.php"; ?>
     </div>
 </div>

@@ -9,18 +9,18 @@ for ($i = 0; $i < $count; $i++) {
     $generation = "";
     if ($result["Parent"] === "o") {
         $generation = "otonokizaka";
-        $placeholder_image = "assets/placeholder-sip.png";
+        $placeholder_image = "/love-live/assets/placeholder-sip.png";
     } elseif ($result["Parent"] === "u") {
         $generation = "uranohoshi";
-        $placeholder_image = "assets/placeholder-aqours.png";
+        $placeholder_image = "/love-live/assets/placeholder-aqours.png";
     } elseif ($result["Parent"] === "n") {
         $generation = "nijigasaki";
-        $placeholder_image = "assets/placeholder-pdp.png";
+        $placeholder_image = "/love-live/assets/placeholder-pdp.png";
     } else {
         echo $result["Parent"];
     }
     $a_id = $result["ID"];
-    $album_cover = "media/$generation/$a_id/cover-small.jpg";
+    $album_cover = "/love-live/media/$generation/$a_id/cover-small.jpg";
 
     $album_cover_path = file_exists($album_cover) ? $album_cover : $placeholder_image;
     ?>
@@ -28,7 +28,7 @@ for ($i = 0; $i < $count; $i++) {
         <div class="top-strip"></div>
         <div class="result">
             <div class="result-header">
-                <img class="cover-art" src='/love-live/<?= $album_cover_path ?>' alt="Album <?php echo $result['ID'] ?> Cover">
+                <img class="cover-art" src='<?= $album_cover_path ?>' alt="Album <?php echo $result['ID'] ?> Cover">
                 <div class="result-album-data">
                     <h1 class="title">
                         <?php echo $result['Name'] ?>

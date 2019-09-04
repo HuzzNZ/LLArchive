@@ -20,7 +20,7 @@ for ($i = 0; $i < $count; $i++) {
         echo $result["Parent"];
     }
     $a_id = $result["ID"];
-    $album_cover = "/love-live/media/$generation/$a_id/cover-small.jpg";
+    $album_cover = "$base_url/love-live/media/$generation/$a_id/cover-small.jpg";
 
     $album_cover_path = file_exists($album_cover) ? $album_cover : $placeholder_image;
     ?>

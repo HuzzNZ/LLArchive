@@ -20,15 +20,20 @@ for ($i = 0; $i < $count; $i++) {
         echo $result["Parent"];
     }
     $a_id = $result["ID"];
-    $album_cover = "/media/$generation/$a_id/cover-small.jpg";
-
-    $album_cover_path = file_exists($album_cover) ? $album_cover : $placeholder_image;
     ?>
     <div class="result-wrapper" id="album-<?php echo $result['ID'] ?>">
         <div class="top-strip"></div>
         <div class="result">
             <div class="result-header">
-                <img class="cover-art" src='/love-live<?= $album_cover_path ?>' alt="Album <?php echo $result['ID'] ?> Cover">
+                <img class="cover-art" id="album-<?php echo $result['ID'] ?>-cover" src='/love-live/media/<?= $generation?>/<?= $a_id ?>/cover-small.jpg' alt="Album <?php echo $result['ID'] ?> Cover">
+                <script>
+                    let album_cover_id = <?php echo $result['ID'] ?>;
+                    let album_cover_element = "album-" + album_cover_id + "-cover";
+                    let placeholder_image = <?php echo $placeholder_image ?>;
+                    document.getElementById(album_cover_element).onerror = function() {
+                        document.getElementById(album_cover_element).src = placeholder_image;
+                    }
+                </script>
                 <div class="result-album-data">
                     <h1 class="title">
                         <?php echo $result['Name'] ?>

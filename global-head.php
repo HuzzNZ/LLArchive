@@ -10,7 +10,19 @@
 <link rel="stylesheet" type="text/css" href="/love-live/css/main.css">
 <link rel="icon" type="png/ico" href="/love-live/assets/favicon.png">
 
-<?php $base_url = "http://huzz.xyz" ;
+<?php $base_url = "https://huzz.io" ;
+
+    if (!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] !== 'on') {
+        if(!headers_sent()) {
+            header("Status: 301 Moved Permanently");
+            header(sprintf(
+                'Location: https://%s%s',
+                $_SERVER['HTTP_HOST'],
+                $_SERVER['REQUEST_URI']
+            ));
+            exit();
+        }
+    }
 
     $title = "";
     $artist = "";

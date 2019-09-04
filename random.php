@@ -8,7 +8,7 @@
     $results = array();
 
     # OTONOKIZAKA QUERY
-    $o_query = $o_album_meta->prepare("SELECT * FROM `albums` ORDER BY `Release_Date` DESC");
+    $o_query = $o_album_meta->prepare("SELECT * FROM `albums`");
     $o_query->execute();
     $o_query_results = $o_query->get_result();
     $single_result = mysqli_fetch_assoc($o_query_results);
@@ -18,7 +18,7 @@
         $single_result = mysqli_fetch_assoc($o_query_results));
 
     # URANOHOSHI QUERY
-    $u_query = $u_album_meta->prepare("SELECT * FROM `albums` ORDER BY `Release_Date` DESC");
+    $u_query = $u_album_meta->prepare("SELECT * FROM `albums`");
     $u_query->execute();
     $u_query_results = $u_query->get_result();
     $single_result = mysqli_fetch_assoc($u_query_results);
@@ -28,7 +28,7 @@
         $single_result = mysqli_fetch_assoc($u_query_results));
 
     # NIJIGASAKI QUERY
-    $n_query = $n_album_meta->prepare("SELECT * FROM `albums` ORDER BY `Release_Date` DESC");
+    $n_query = $n_album_meta->prepare("SELECT * FROM `albums`");
     $n_query->execute();
     $n_query_results = $n_query->get_result();
     $single_result = mysqli_fetch_assoc($n_query_results);
@@ -37,12 +37,6 @@
     } while (
         $single_result = mysqli_fetch_assoc($n_query_results));
 
-    usort($results, function($a, $b) {
-        return $a['Release_Date'] <=> $b['Release_Date'];
-    });
-
-    $results = array_reverse($results);
-
     $count_total = count($results);
     $has_header = "has-header";
     $is_random_page = true;
@@ -50,6 +44,7 @@
     $count = 1;
     $real_count = $count;
     $result = $results[$rand_key];
+    $results = array($result);
     ?>
     <title>h/LoveLive! - Randomly Selected</title>
     <?php include "global-head.php" ?>

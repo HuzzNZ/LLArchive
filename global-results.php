@@ -2,9 +2,7 @@
 <?php
 for ($i = 0; $i < $count; $i++) {
     $result = $results[$i];
-    if ($result) {
-        null;
-    } else {
+    if (!$result) {
         continue;
     }
     $generation = "";

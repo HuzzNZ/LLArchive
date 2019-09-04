@@ -49,7 +49,7 @@
     $rand_key = array_rand($results);
     $count = 1;
     $real_count = $count;
-    $result = $result[$rand_key];
+    $result = $results[$rand_key];
     ?>
     <title>h/LoveLive! - Randomly Selected</title>
     <?php include "global-head.php" ?>

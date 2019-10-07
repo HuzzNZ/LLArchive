@@ -21,6 +21,7 @@
         }
     ?>
     <title>h/LoveLive! - Track</title>
-    <?php header("Location: $base_url/love-live/media/$generation/$album_id/$track.$file_type"); ?>
     <?php include "global-head.php" ?>
+    <?php include "global-track-head.php" ?>
+    <?php header("Location: $base_url/love-live/media/$generation/$album_id/$track.$file_type"); ?>
 </head>

@@ -25,15 +25,4 @@
 </head>
 
 <body>
-<?php include "global-nav.php" ?>
-<div class="content-wrapper">
-    <div class="side-search">
-        <?php include "global-side-search.php"; ?>
-    </div>
-    <div class="main-content text-only">
-        <audio controls src="<?= $base_url ?>/love-live/media/<?= $generation ?>/<?= $album_id ?>/<?= $track ?>.<?= $file_type?>">
-        </audio>
-    </div>
-</div>
-</body>
-
+<audio controls src="<?= $base_url ?>/love-live/media/<?= $generation ?>/<?= $album_id ?>/<?= $track ?>.<?= $file_type?>"></audio>

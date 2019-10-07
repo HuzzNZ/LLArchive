@@ -60,6 +60,7 @@
     <meta content="<?= $base_url ?>/love-live/media/<?= $generation ?>/<?= $album_result['ID'] ?>/cover-small.jpg" property="og:image">
 </head>
 <body>
+    some text
     <?php // header("Location: $base_url/love-live/media/$generation/$album_id/$track.$file_type");
         $file = "media/$generation/$album_id/$track.$file_type";
         $off_vocal_label = "";
@@ -68,7 +69,7 @@
                 $off_vocal_label = " (Off Vocal)";
             }
         }
-        $file_name = $track." "."".trim(str_replace(",", ", ", $artist))." - ".$track_result["Name"].$off_vocal_label.".".$file_type;
+        $file_name = $track.". "."".trim(str_replace(",", ", ", $artist))." - ".$track_result["Name"].$off_vocal_label.".".$file_type;
         if (file_exists($file)) {
             header('Content-Description: File Transfer');
             header('Content-Type: application/octet-stream');
@@ -78,6 +79,7 @@
             header('Pragma: public');
             header('Content-Length: ' . filesize($file));
             readfile($file);
+            exit;
         }
     ?>
 </body>

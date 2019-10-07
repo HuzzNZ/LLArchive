@@ -35,12 +35,12 @@
         $track_query = $n_albums->prepare("SELECT * FROM `$album_id` WHERE `ID` = ?");
     }
 
-    $query->bind_param("i", $album_id);
+    $query->bind_param("i", intval($album_id));
     $query->execute();
     $query_results = $query->get_result();
     $album_result = mysqli_fetch_assoc($query_results);
 
-    $track_query->bind_param("i", $track);
+    $track_query->bind_param("i", intval($track));
     $track_query->execute();
     $track_query_results = $track_query->get_result();
     $track_result = mysqli_fetch_assoc($track_query_results);

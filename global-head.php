@@ -25,7 +25,9 @@
     }
 
     $title = "";
-    $artist = "";
+    if (!isset($artist)) {
+        $artist = "";
+    }
     $solo = "";
     $rl_after = "";
     $rl_before = "";

@@ -66,6 +66,7 @@
         if ($track_result["Is_Instrumental"]) {
             if (!$album_result["Is_OST"]) {
                 $off_vocal_label = " (Off Vocal)";
+            }
         }
         $file_name = $track." "."".trim(str_replace(",", ", ", $artist))." - ".$track_result["Name"].$off_vocal_label.$file_type;
         if (file_exists($file)) {

@@ -58,7 +58,20 @@
     <meta content="🎵 <?= $track_result['Name'] ?>" property="og:title">
     <meta content="Song by <?= str_replace(",", ", ", $artist)?>" property="og:description">
     <meta content="<?= $base_url ?>/love-live/media/<?= $generation ?>/<?= $album_result['ID'] ?>/cover-small.jpg" property="og:image">
-    <?php header("Location: $base_url/love-live/media/$generation/$album_id/$track.$file_type"); ?>
+    <?php // header("Location: $base_url/love-live/media/$generation/$album_id/$track.$file_type");
+        $file = "media/$generation/$album_id/$track.$file_type";
+        if (file_exists($file)) {
+            header('Content-Description: File Transfer');
+            header('Content-Type: application/octet-stream');
+            header('Content-Disposition: attachment; filename="'.basename($file).'"');
+            header('Expires: 0');
+            header('Cache-Control: must-revalidate');
+            header('Pragma: public');
+            header('Content-Length: ' . filesize($file));
+            readfile($file);
+            exit;
+        }
+    ?>
 </head>
 <body>
 

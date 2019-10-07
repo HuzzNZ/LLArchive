@@ -58,21 +58,25 @@
     <meta content="🎵 <?= $track_result['Name'] ?>" property="og:title">
     <meta content="Song by <?= str_replace(",", ", ", $artist)?>" property="og:description">
     <meta content="<?= $base_url ?>/love-live/media/<?= $generation ?>/<?= $album_result['ID'] ?>/cover-small.jpg" property="og:image">
+</head>
+<body>
     <?php // header("Location: $base_url/love-live/media/$generation/$album_id/$track.$file_type");
         $file = "media/$generation/$album_id/$track.$file_type";
+        $off_vocal_label = "";
+        if ($track_result["Is_Instrumental"]) {
+            if (!$album_result["Is_OST"]) {
+                $off_vocal_label = " (Off Vocal)";
+        }
+        $file_name = $track." "."".trim(str_replace(",", ", ", $artist))." - ".$track_result["Name"].$off_vocal_label.$file_type;
         if (file_exists($file)) {
             header('Content-Description: File Transfer');
             header('Content-Type: application/octet-stream');
-            header('Content-Disposition: attachment; filename="'.basename($file).'"');
+            header('Content-Disposition: attachment; filename="'.$file_name.'"');
             header('Expires: 0');
             header('Cache-Control: must-revalidate');
             header('Pragma: public');
             header('Content-Length: ' . filesize($file));
             readfile($file);
-            exit;
         }
     ?>
-</head>
-<body>
-
 </body>

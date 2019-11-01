@@ -77,7 +77,7 @@ head {
 }
 
 .copy-link.small {
-    margin: 0;
+    margin: 0 0 0 3px;
 }
 
 .copy-link:hover .permalink-icon {
@@ -94,7 +94,9 @@ head {
 }
 
 .permalink-icon.small {
-    height: 14px;
+    height: 16px;
+    vertical-align: middle;
+    margin-bottom: 2px;
 }
 
 .copy-tooltip {
@@ -154,7 +156,7 @@ a.download.mp3:hover {
 }
 
 a.download.small {
-    width: 34px;
+    width: 35px;
     height: 18px;
     padding: 3px;
     margin: 0 2px;

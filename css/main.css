@@ -84,6 +84,10 @@ head {
     opacity: 1;
 }
 
+.copy-link:active .permalink-icon {
+    height: 12px;
+}
+
 .permalink-icon {
     display: inline-block;
     opacity: 0.6;

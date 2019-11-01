@@ -85,7 +85,9 @@ head {
 }
 
 .copy-link:active .permalink-icon {
-    height: 12px;
+    height: 14px;
+    margin-left: 1px;
+    margin-right: 4px;
 }
 
 .permalink-icon {

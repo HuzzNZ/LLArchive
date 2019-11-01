@@ -89,6 +89,10 @@ head {
     padding: 2px;
 }
 
+.permalink-icon.small {
+    height: 12px;
+}
+
 .copy-tooltip {
     opacity: 0;
     transition: 3s cubic-bezier(.9,.03,.69,.22);
@@ -146,10 +150,10 @@ a.download.mp3:hover {
 }
 
 a.download.small {
-    width: 40px;
+    width: 30px;
     height: 18px;
     padding: 3px;
-    margin: 0 3px;
+    margin: 0 2px;
     border-radius: 3px;
 }
 

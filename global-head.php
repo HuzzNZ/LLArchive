@@ -2,7 +2,7 @@
 
 <title>h/LoveLive!</title>
 
-<meta name="description" content="Love Live! Music Archive">
+<meta name="description" content="💽 Huzz's Love Live! Music Archive">
 <meta name="author" content="Huzz#0009">
 <meta name="theme-color" content="#7289DA">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">

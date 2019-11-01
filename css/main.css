@@ -86,7 +86,7 @@ head {
 
 .copy-link:active .permalink-icon {
     height: 14px;
-    margin-left: 4px;
+    margin-left: 1px;
     margin-right: 1px;
 }
 

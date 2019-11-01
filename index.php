@@ -7,7 +7,6 @@
         $count_total = count($results);
 
     ?>
-    ?>
     <meta content="💽 Huzz's Love Live! Music Archive" property="og:title">
     <meta content="<?= $count_total ?> albums in database so far" property="og:description">
     <meta content="<?= $base_url ?>/love-live/assets/favicon.png" property="og:image">

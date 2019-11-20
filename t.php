@@ -56,7 +56,7 @@
     <?php include "global-head.php" ?>
     <meta name="theme-color" content="#00e37d">
     <meta content="🎵 <?= $track_result['Name'] ?>" property="og:title">
-    <meta content="Song by <?= str_replace(",", ", ", $artist)?>, track <?= $track_result["ID"] ?> of the <?= $album_result["Name"] ?> album" property="og:description">
+    <meta content="Song by <?= str_replace(",", ", ", $artist)?> - **Track <?= $track_result["ID"] ?>** of the <?= $album_result["Name"] ?> album" property="og:description">
     <meta content="<?= $base_url ?>/love-live/media/<?= $generation ?>/<?= $album_result['ID'] ?>/cover-small.jpg" property="og:image">
 </head>
 <body>

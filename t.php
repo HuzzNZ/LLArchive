@@ -62,7 +62,7 @@
 <body>
     <?php
         if ($_GET["m"]) { ?>
-            <script>window.location.replace("<?= $base_url ?>/love-live/<?= $generation ?>/album?id=<?= $album_result["ID"] ?>");</script>
+            <script>window.location.href = "<?= $base_url ?>/love-live/<?= $generation ?>/album?id=<?= $album_result["ID"] ?>";</script>
     <?php
         } else {
             header("Location: $base_url/love-live/media/$generation/$album_id/$track.$file_type");

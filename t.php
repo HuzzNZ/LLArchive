@@ -56,12 +56,15 @@
     <?php include "global-head.php" ?>
     <meta name="theme-color" content="#00e37d">
     <meta content="🎵 <?= $track_result['Name'] ?>" property="og:title">
-    <meta content="Song by <?= str_replace(",", ", ", $artist)?>" property="og:description">
+    <meta content="Song by <?= str_replace(",", ", ", $artist)?>, part of the [<?= $album_result["Name"] ?>](<?= $base_url ?>/love-live/<?= $generation ?>/album?id=<?= $album_result["ID"] ?>) album" property="og:description">
     <meta content="<?= $base_url ?>/love-live/media/<?= $generation ?>/<?= $album_result['ID'] ?>/cover-small.jpg" property="og:image">
 </head>
 <body>
-    some text
     <?php
-        header("Location: $base_url/love-live/media/$generation/$album_id/$track.$file_type");
+        if ($_GET["m"]) {
+            echo "there's nothing here";
+        } else {
+            header("Location: $base_url/love-live/media/$generation/$album_id/$track.$file_type");
+        }
     ?>
 </body>

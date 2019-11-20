@@ -61,8 +61,9 @@
 </head>
 <body>
     <?php
-        if ($_GET["m"]) {
-            echo "there's nothing here";
+        if ($_GET["m"]) { ?>
+            <script>window.location.replace("<?= $base_url ?>/love-live/<?= $generation ?>/album?id=<?= $album_result["ID"] ?>");</script>
+    <?php
         } else {
             header("Location: $base_url/love-live/media/$generation/$album_id/$track.$file_type");
         }

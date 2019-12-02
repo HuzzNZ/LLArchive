@@ -61,11 +61,30 @@
 </head>
 <body>
     <?php
-        if ($_GET["m"]) { ?>
-            <script>window.location.href = "<?= $base_url ?>/love-live/<?= $generation ?>/album?id=<?= $album_result["ID"] ?>&highlight=<?= $track_result["ID"] ?>";</script>
-    <?php
-        } else {
-            header("Location: $base_url/love-live/media/$generation/$album_id/$track.$file_type");
+        function parseHeaders($headers)
+        {
+            $head = array();
+            foreach($headers as $k=>$v )
+            {
+                $t = explode(':', $v, 2);
+                if(isset($t[1]))
+                    $head[trim($t[0])] = trim($t[1]);
+                else
+                {
+                    $head[] = $v;
+                    if(preg_match("#HTTP/[0-9\.]+\s+([0-9]+)#",$v,$out))
+                        $head['response_code'] = intval($out[1]);
+                }
+            }
+            return $head;
+        }
+        $HEADERS = parseHeaders($http_response_header);
+        if (isset($HEADERS["Via"])){
+            if (strpos($HEADERS["Via"], "groovy")){
+                header("Location: $base_url/love-live/media/$generation/$album_id/$track.$file_type");
+            }
         }
     ?>
+    <script>window.location.href = "<?= $base_url ?>/love-live/<?= $generation ?>/album?id=<?= $album_result["ID"] ?>&highlight=<?= $track_result["ID"] ?>";</script>
+
 </body>

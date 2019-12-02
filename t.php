@@ -79,10 +79,8 @@
             return $head;
         }
         $HEADERS = parseHeaders($http_response_header);
-        if (isset($HEADERS["Via"])){
-            if (strpos($HEADERS["Via"], "groovy")){
-                header("Location: $base_url/love-live/media/$generation/$album_id/$track.$file_type");
-            }
+        if (!strpos($_SERVER['HTTP_USER_AGENT'], "discord")){
+            header("Location: $base_url/love-live/media/$generation/$album_id/$track.$file_type");
         }
     ?>
     <script>window.location.href = "<?= $base_url ?>/love-live/<?= $generation ?>/album?id=<?= $album_result["ID"] ?>&highlight=<?= $track_result["ID"] ?>";</script>

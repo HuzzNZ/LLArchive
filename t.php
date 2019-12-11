@@ -62,6 +62,9 @@
 <body>
     <?php
         echo $_SERVER['HTTP_USER_AGENT'];
+        if (!strpos($_SERVER['HTTP_USER_AGENT'], "Mozilla")){
+            echo "NEEDS REDIRECT";
+        }
         # if (!strpos($_SERVER['HTTP_USER_AGENT'], "Mozilla") && !strpos($_SERVER['HTTP_USER_AGENT'], "discord")){
         #    header("Location: $base_url/love-live/media/$generation/$album_id/$track.$file_type");
         # }

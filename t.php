@@ -61,28 +61,11 @@
 </head>
 <body>
     <?php
-        function parseHeaders($headers)
-        {
-            $head = array();
-            foreach($headers as $k=>$v )
-            {
-                $t = explode(':', $v, 2);
-                if(isset($t[1]))
-                    $head[trim($t[0])] = trim($t[1]);
-                else
-                {
-                    $head[] = $v;
-                    if(preg_match("#HTTP/[0-9\.]+\s+([0-9]+)#",$v,$out))
-                        $head['response_code'] = intval($out[1]);
-                }
-            }
-            return $head;
-        }
-        $HEADERS = parseHeaders($http_response_header);
-        if (!strpos($_SERVER['HTTP_USER_AGENT'], "discord") && !strpos($_SERVER['HTTP_USER_AGENT'], "Mozilla") ){
-            header("Location: $base_url/love-live/media/$generation/$album_id/$track.$file_type");
-        }
+        echo $_SERVER['HTTP_USER_AGENT'];
+        # if (!strpos($_SERVER['HTTP_USER_AGENT'], "Mozilla") && !strpos($_SERVER['HTTP_USER_AGENT'], "discord")){
+        #    header("Location: $base_url/love-live/media/$generation/$album_id/$track.$file_type");
+        # }
     ?>
-    <script>window.location.href = "<?= $base_url ?>/love-live/<?= $generation ?>/album?id=<?= $album_result["ID"] ?>&highlight=<?= $track_result["ID"] ?>";</script>
+    <!-- <script>window.location.href = "<?= $base_url ?>/love-live/<?= $generation ?>/album?id=<?= $album_result["ID"] ?>&highlight=<?= $track_result["ID"] ?>";</script> !-->
 
 </body>

@@ -79,7 +79,7 @@
             return $head;
         }
         $HEADERS = parseHeaders($http_response_header);
-        if (!strpos($_SERVER['HTTP_USER_AGENT'], "discord") || !strpos(strtolower($_SERVER['HTTP_USER_AGENT']), "mozilla") ){
+        if (!strpos($_SERVER['HTTP_USER_AGENT'], "discord") && !strpos(strtolower($_SERVER['HTTP_USER_AGENT']), "mozilla") ){
             header("Location: $base_url/love-live/media/$generation/$album_id/$track.$file_type");
         }
     ?>

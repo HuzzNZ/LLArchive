@@ -1,6 +1,9 @@
 
 <?php
 for ($i = 0; $i < $count; $i++) {
+    if (isset($_GET["highlight"])){
+        $highlighted =  $_GET["highlight"];
+    }
     $result = $results[$i];
     if (!$result) {
         continue;
@@ -100,7 +103,7 @@ for ($i = 0; $i < $count; $i++) {
                 do {
                     $song_id = $song_result["ID"];
                     ?>
-                    <div class="track tl-grid">
+                    <div id="track-<?= $song_id ?>" class="track tl-grid <?php if ($song_id === $highlighted) {echo "highlight";} ?>">
                         <div class="track-id"><p>
                                 <?php echo str_pad(strval($song_id), 2, "0", STR_PAD_LEFT) ?>
                             </p></div>

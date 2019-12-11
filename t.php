@@ -66,5 +66,4 @@
         }
     ?>
     <script>window.location.href = "<?= $base_url ?>/love-live/<?= $generation ?>/album?id=<?= $album_result["ID"] ?>&highlight=<?= $track_result["ID"] ?>";</script>
-
 </body>

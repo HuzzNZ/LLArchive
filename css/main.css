@@ -581,36 +581,36 @@ hr.main-separator {
 .track.highlight {
     border-radius: 4px;
     -webkit-animation-name: blinker;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-timing-function: linear;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-iteration-count: infinite;
 
     -moz-animation-name: blinker;
-    -moz-animation-duration: 2s;
-    -moz-animation-timing-function: linear;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: ease-in-out;
     -moz-animation-iteration-count: infinite;
 
     animation-name: blinker;
-    animation-duration: 2s;
-    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 }
 
 @-moz-keyframes blinker {
     0% {background-color: rgba(255, 255, 255, 0.08)}
-    50% {background-color: rgba(255, 255, 255, 0)}
+    50% {background-color: rgba(255, 255, 255, 0.03)}
     100% {background-color: rgba(255, 255, 255, 0.08)}
 }
 
 @-webkit-keyframes blinker {
     0% {background-color: rgba(255, 255, 255, 0.08)}
-    50% {background-color: rgba(255, 255, 255, 0)}
+    50% {background-color: rgba(255, 255, 255, 0.03)}
     100% {background-color: rgba(255, 255, 255, 0.08)}
 }
 
 @keyframes blinker {
     0% {background-color: rgba(255, 255, 255, 0.08)}
-    50% {background-color: rgba(255, 255, 255, 0)}
+    50% {background-color: rgba(255, 255, 255, 0.03)}
     100% {background-color: rgba(255, 255, 255, 0.08)}
 }
 

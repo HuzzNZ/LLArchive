@@ -597,21 +597,21 @@ hr.main-separator {
 }
 
 @-moz-keyframes blinker {
-    0% {background-color: rgba(255, 255, 255, 0.08)}
-    50% {background-color: rgba(255, 255, 255, 0.03)}
-    100% {background-color: rgba(255, 255, 255, 0.08)}
+    0% {background-color: rgba(255, 255, 255, 0.05)}
+    50% {background-color: rgba(255, 255, 255, 0.02)}
+    100% {background-color: rgba(255, 255, 255, 0.05)}
 }
 
 @-webkit-keyframes blinker {
-    0% {background-color: rgba(255, 255, 255, 0.08)}
-    50% {background-color: rgba(255, 255, 255, 0.03)}
-    100% {background-color: rgba(255, 255, 255, 0.08)}
+    0% {background-color: rgba(255, 255, 255, 0.05)}
+    50% {background-color: rgba(255, 255, 255, 0.02)}
+    100% {background-color: rgba(255, 255, 255, 0.05)}
 }
 
 @keyframes blinker {
-    0% {background-color: rgba(255, 255, 255, 0.08)}
-    50% {background-color: rgba(255, 255, 255, 0.03)}
-    100% {background-color: rgba(255, 255, 255, 0.08)}
+    0% {background-color: rgba(255, 255, 255, 0.05)}
+    50% {background-color: rgba(255, 255, 255, 0.02)}
+    100% {background-color: rgba(255, 255, 255, 0.05)}
 }
 
 .track:hover {

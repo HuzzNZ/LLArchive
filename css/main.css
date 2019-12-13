@@ -780,6 +780,13 @@ hr.main-separator {
         margin-bottom: 0;
     }
 
+
+    .list-header-mobile {
+        width: 100%;
+        height: 10px;
+        background-color: rgba(0, 6, 12, 0.09);
+        border-radius: 6px 6px 0 0;
+    }
     .track {
         height: 48px;
     }

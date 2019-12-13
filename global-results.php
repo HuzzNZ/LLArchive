@@ -110,11 +110,12 @@ for ($i = 0; $i < $count; $i++) {
                     <div class="header-title">Duration</div>
                     <div class="header-title">Download</div>
                 </div>
+                <div class="list-header-mobile mobile-only"></div>
             <?php
                 do {
                     $song_id = $song_result["ID"];
                     ?>
-                    <div id="track-<?= $song_id ?>" class="track tl-grid <?php if ($song_id === $highlighted) {echo "highlight";} if  ($song_id % 2) {echo "darker-background";}?>">
+                    <div id="track-<?= $song_id ?>" class="track tl-grid <?php if ($song_id === $highlighted) {echo "highlight";} if  (!($song_id % 2)) {echo "darker-background";}?>">
                         <div class="track-id"><p>
                                 <?php echo str_pad(strval($song_id), 2, "0", STR_PAD_LEFT) ?>
                             </p></div>

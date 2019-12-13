@@ -776,6 +776,9 @@ hr.main-separator {
         font-size: 14px;
         margin: 0;
     }
+    .comment {
+        margin-bottom: 0;
+    }
 
     .track {
         height: 48px;

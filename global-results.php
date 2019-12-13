@@ -3,6 +3,8 @@
 for ($i = 0; $i < $count; $i++) {
     if (isset($_GET["highlight"])){
         $highlighted =  $_GET["highlight"];
+    } else {
+        $highlighted = 0;
     }
     $result = $results[$i];
     if (!$result) {

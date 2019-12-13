@@ -743,6 +743,7 @@ hr.main-separator {
     }
     .result-header {
         display: block;
+        margin-bottom: 15px;
     }
     h1.title {
         font-size: 20px;
@@ -758,6 +759,19 @@ hr.main-separator {
     }
     h3.no-track {
         font-size: 14px;
+        margin: 0;
+    }
+
+    .track {
+        height: 60px;
+    }
+    .tl-grid {
+        grid-template-columns: 0.4fr 1.5fr 4fr;
+        grid-template-rows: 30px 30px;
+    }
+    .track-downloads {
+        grid-column: 2/4;
+        grid-row: 2;
     }
 }
 

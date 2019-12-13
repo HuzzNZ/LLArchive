@@ -38,6 +38,15 @@ for ($i = 0; $i < $count; $i++) {
                      onerror="this.onerror = null; this.src = '/love-live/assets/placeholder-pdp.png'"
                     <?php } ?>
                 >
+                <img class="cover-art-mobile mobile-only" id="album-<?php echo $result['ID'] ?>-cover" src='/love-live/media/<?= $generation?>/<?= $a_id ?>/cover-thumb.jpg' alt="Album <?php echo $result['ID'] ?> Cover"
+                    <?php if ($generation === "otonokizaka") {?>
+                        onerror="this.onerror = null; this.src='/love-live/assets/placeholder-sip.png'"
+                    <?php } elseif ($generation === "uranohoshi") { ?>
+                        onerror="this.onerror = null; this.src='/love-live/assets/placeholder-aqours.png'"
+                    <?php } elseif ($generation === "nijigasaki") { ?>
+                        onerror="this.onerror = null; this.src = '/love-live/assets/placeholder-pdp.png'"
+                    <?php } ?>
+                >
                 <div class="result-album-data">
                     <h1 class="title">
                         <?php echo $result['Name'] ?>

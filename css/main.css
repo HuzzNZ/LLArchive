@@ -750,8 +750,15 @@ hr.main-separator {
         padding: 13px 15px 15px 15px;
     }
     .result-header {
-        display: block;
+        display: grid;
         margin-bottom: 15px;
+        grid-template-columns: 100px 1fr;
+        grid-column-gap: 15px;
+    }
+    img.cover-art-mobile {
+        width: 100px;
+        height: auto;
+        border-radius: 3px;
     }
     h1.title {
         font-size: 20px;

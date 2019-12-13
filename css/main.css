@@ -784,13 +784,15 @@ hr.main-separator {
         max-width: 52vw;
     }
     .track-title {
+        display: grid;
         grid-template-columns: calc(100% - 12px) 6px;
         grid-column-gap: 6px;
     }
     .track-type-mobile {
         display: block;
         height: 100%;
-        width: 100%;
+        width: 6px;
+        border-radius: 3px;
     }
 }
 

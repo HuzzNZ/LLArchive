@@ -782,7 +782,7 @@ hr.main-separator {
         grid-row: 2;
     }
     .no-wrap {
-        max-width: 19vw;
+        max-width: 17.5vw;
     }
     .title-no-wrap {
         white-space: nowrap;

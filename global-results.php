@@ -133,7 +133,7 @@ for ($i = 0; $i < $count; $i++) {
                         </div>
                         <div class="track-title">
                             <div class="track-title-wrapper">
-                                <p>
+                                <p class="title-no-wrap">
                                     <?php
                                     echo $song_result['Name'];
                                     if ($song_result["Is_Instrumental"]) {
@@ -150,9 +150,11 @@ for ($i = 0; $i < $count; $i++) {
                                     }
                                     ?>
                                 </p>
-                                <p class="jp">
+                                <p class="jp title-no-wrap">
                                     <?php echo $song_result['Name_JP'] ?>
                                 </p>
+                            </div>
+                            <div class="track-type-mobile <?php if ($song_result["Is_Instrumental"]) { echo "instrumental";} if ($song_result["Is_Radio"]) { echo "radio";} ?>">
                             </div>
                         </div>
                         <div class="track-duration">

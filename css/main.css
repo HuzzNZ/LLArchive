@@ -695,8 +695,12 @@ hr.main-separator {
     margin-top: 10px;
 }
 
+.track-type-mobile {
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
-    .side-search, .nav-link, .nav-icon, .album-download, .cover-art, .list-header{
+    .side-search, .nav-link, .nav-icon, .album-download, .cover-art, .list-header, .track-type {
         display: none !important;
     }
     .nav {
@@ -772,6 +776,21 @@ hr.main-separator {
     .track-downloads {
         grid-column: 2/4;
         grid-row: 2;
+    }
+    .no-wrap {
+        max-width: 19vw;
+    }
+    .title-no-wrap {
+        max-width: 52vw;
+    }
+    .track-title {
+        grid-template-columns: calc(100% - 12px) 6px;
+        grid-column-gap: 6px;
+    }
+    .track-type-mobile {
+        display: block;
+        height: 100%;
+        width: 100%;
     }
 }
 

@@ -834,6 +834,18 @@ hr.main-separator {
         background-color: rgba(0, 0, 0, 0.06);
         border-radius: 5px;
     }
+    .mobile-downloads {
+        display: flex;
+        align-content: center;
+    }
+    .download-text {
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-style: italic;
+        font-weight: 900;
+        margin-left: 5px;
+    }
 }
 
 

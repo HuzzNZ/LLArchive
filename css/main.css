@@ -799,7 +799,7 @@ hr.main-separator {
     }
     .track-type-mobile {
         display: block;
-        height: 100%;
+        height: 6px;
         width: 6px;
         border-radius: 3px;
     }
@@ -831,6 +831,7 @@ hr.main-separator {
     }
     .darker-background {
         background-color: rgba(0, 0, 0, 0.06);
+        border-radius: 5px;
     }
 }
 

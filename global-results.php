@@ -169,7 +169,7 @@ for ($i = 0; $i < $count; $i++) {
                             </p>
                         </div>
                         <div class="mobile-downloads mobile-only">
-                            <a class="download-text">▼ Download ▼</a>
+                            <a class="download-text" href="javascript:void(0);">Download ▼</a>
                         </div>
                         <div class="track-downloads">
                             <div class="track-downloads-wrapper">

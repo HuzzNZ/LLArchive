@@ -202,7 +202,7 @@ for ($i = 0; $i < $count; $i++) {
                         </div>
                     </div>
                     <?php
-                } } while ($song_result = mysqli_fetch_assoc($song_query));
+                } while ($song_result = mysqli_fetch_assoc($song_query));
             } else { ?>
                 <h3 class="no-track">There doesn't seem to be anything here yet...</h3>
             <?php } ?>

@@ -785,6 +785,9 @@ hr.main-separator {
         max-width: 19vw;
     }
     .title-no-wrap {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         max-width: 52vw;
     }
     .track-title {

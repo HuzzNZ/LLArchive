@@ -802,6 +802,7 @@ hr.main-separator {
         height: 6px;
         width: 6px;
         border-radius: 3px;
+        align-self: start;
     }
     .track-type-mobile.instrumental {
         background-color: rgb(0, 146, 255);

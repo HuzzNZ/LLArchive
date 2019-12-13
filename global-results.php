@@ -159,7 +159,7 @@ for ($i = 0; $i < $count; $i++) {
                         </div>
                         <div class="track-duration">
                             <p class="track-duration-text">
-                                <span class="mobile-only">Duration: </span><?php
+                                <?php
                                 $minutes = intdiv($song_result['Length'], 60);
                                 $seconds = $song_result["Length"] - ($minutes * 60);
                                 echo str_pad(strval($minutes), 2, "0", STR_PAD_LEFT);

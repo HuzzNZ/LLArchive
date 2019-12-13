@@ -703,7 +703,7 @@ hr.main-separator {
     display: none;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 900px) {
     .side-search, .nav-link, .nav-icon, .album-download, .cover-art, .list-header, .track-type, .track-downloads {
         display: none !important;
     }
@@ -799,7 +799,7 @@ hr.main-separator {
     }
     .track-type-mobile {
         display: block;
-        height: 6px;
+        height: 15px;
         width: 6px;
         border-radius: 3px;
         align-self: start;

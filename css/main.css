@@ -694,3 +694,101 @@ hr.main-separator {
     font-style: italic;
     margin-top: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+    .side-search, .nav-link, .nav-icon, .album-download {
+        display: none !important;
+    }
+    .nav {
+        display: inline;
+        margin: initial;
+    }
+    .nav-wrapper {
+        width: 100vw;
+        margin-bottom: 15px;
+        height: 50px
+    }
+    .nav-logo {
+        height: 100%;
+        display: block;
+    }
+    .link-logo {
+        height: 20px;
+    }
+    .content-wrapper {
+        width: calc(100vw - 30px);
+        display: block;
+        padding: 15px;
+    }
+    .main-title {
+        font-size: 28px;
+    }
+    .result-count {
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+    hr.main-separator {
+        margin: 10px 0;
+    }
+
+    .result-wrapper {
+        width: 100%;
+    }
+    .top-strip {
+        height: 3px;
+        border-radius: 3px 3px 0 0;
+    }
+    .result {
+        padding: 20px 15px;
+    }
+    .result-header {
+        display: block;
+    }
+    h1.title {
+        font-size: 20px;
+    }
+    p.title-jp {
+        font-size: 10px;
+    }
+    h3.artist {
+        font-size: 14px;
+    }
+    p.catalog-number {
+        font-size: 11px;
+    }
+    .cover-art {
+        max-height: 100px;
+        width: auto;
+        height: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -791,6 +791,9 @@ hr.main-separator {
     .track {
         height: 48px;
     }
+    #track-1 {
+        border-radius: 0 0 3px 3px;
+    }
     .tl-grid {
         grid-template-columns: 0.45fr 1.8fr 4fr;
         grid-template-rows: 30px 18px;
@@ -849,7 +852,7 @@ hr.main-separator {
         color: #888;
     }
     .darker-background {
-        background-color: rgba(0, 0, 0, 0.06);
+        background-color: rgba(0, 0, 0, 0.045);
         border-radius: 5px;
     }
     .mobile-downloads {

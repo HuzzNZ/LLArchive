@@ -704,7 +704,7 @@ hr.main-separator {
 }
 
 @media only screen and (max-width: 600px) {
-    .side-search, .nav-link, .nav-icon, .album-download, .cover-art, .list-header, .track-type {
+    .side-search, .nav-link, .nav-icon, .album-download, .cover-art, .list-header, .track-type, .track-downloads {
         display: none !important;
     }
     .nav {

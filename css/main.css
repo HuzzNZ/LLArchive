@@ -696,7 +696,7 @@ hr.main-separator {
 }
 
 @media only screen and (max-width: 600px) {
-    .side-search, .nav-link, .nav-icon, .album-download, .cover-art {
+    .side-search, .nav-link, .nav-icon, .album-download, .cover-art, .list-header{
         display: none !important;
     }
     .nav {

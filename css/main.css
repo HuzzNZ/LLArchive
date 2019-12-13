@@ -771,12 +771,12 @@ hr.main-separator {
     }
 
     .track {
-        height: 60px;
+        height: 48px;
     }
     .tl-grid {
         grid-template-columns: 0.45fr 1.8fr 4fr;
         grid-template-rows: 30px 18px;
-        padding: 0 0 6px 5px;
+        padding: 3px 0;
     }
     .track-downloads {
         grid-column: 2/4;
@@ -820,6 +820,7 @@ hr.main-separator {
         grid-column-start: 2;
         grid-column-end: 3;
         text-transform: uppercase;
+        justify-content: initial;
         font-size: 11px;
         font-style: italic;
         font-weight: 900;

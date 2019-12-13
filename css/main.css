@@ -798,6 +798,12 @@ hr.main-separator {
         width: 6px;
         border-radius: 3px;
     }
+    .track-type-mobile.instrumental {
+        background-color: rgb(0, 146, 255);
+    }
+    .track-type-mobile.radio {
+        background-color: rgb(255, 160, 0);
+    }
     .mobile-only {
         display: initial;
     }

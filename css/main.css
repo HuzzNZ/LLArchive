@@ -696,7 +696,7 @@ hr.main-separator {
 }
 
 @media only screen and (max-width: 600px) {
-    .side-search, .nav-link, .nav-icon, .album-download {
+    .side-search, .nav-link, .nav-icon, .album-download, .cover-art {
         display: none !important;
     }
     .nav {
@@ -739,7 +739,7 @@ hr.main-separator {
         border-radius: 3px 3px 0 0;
     }
     .result {
-        padding: 20px 15px;
+        padding: 13px 15px 15px 15px;
     }
     .result-header {
         display: block;
@@ -756,10 +756,8 @@ hr.main-separator {
     p.catalog-number {
         font-size: 11px;
     }
-    .cover-art {
-        max-height: 100px;
-        width: auto;
-        height: auto;
+    h3.no-track {
+        font-size: 14px;
     }
 }
 

@@ -699,6 +699,10 @@ hr.main-separator {
     display: none;
 }
 
+.mobile-only {
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
     .side-search, .nav-link, .nav-icon, .album-download, .cover-art, .list-header, .track-type {
         display: none !important;
@@ -793,6 +797,9 @@ hr.main-separator {
         height: 100%;
         width: 6px;
         border-radius: 3px;
+    }
+    .mobile-only {
+        display: initial;
     }
 }
 

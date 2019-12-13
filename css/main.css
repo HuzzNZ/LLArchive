@@ -836,7 +836,7 @@ hr.main-separator {
     }
     .mobile-downloads {
         display: flex;
-        align-content: center;
+        align-items: center;
     }
     .download-text {
         display: inline-block;
@@ -845,6 +845,7 @@ hr.main-separator {
         font-style: italic;
         font-weight: 900;
         margin-left: 5px;
+        color: #888;
     }
 }
 

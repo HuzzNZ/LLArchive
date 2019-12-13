@@ -829,6 +829,9 @@ hr.main-separator {
     .track-duration-text, .track-duration-text span {
         color: #888;
     }
+    .darker-background {
+        background-color: rgba(0, 0, 0, 0.06);
+    }
 }
 
 

@@ -776,7 +776,7 @@ hr.main-separator {
     .tl-grid {
         grid-template-columns: 0.45fr 1.8fr 4fr;
         grid-template-rows: 30px 18px;
-        padding: 3px 0;
+        padding: 5px 0;
     }
     .track-downloads {
         grid-column: 2/4;
@@ -795,7 +795,7 @@ hr.main-separator {
         display: grid;
         grid-template-columns: calc(100% - 12px) 6px;
         grid-column-gap: 6px;
-        padding-right: 3px;
+        padding-right: 5px;
     }
     .track-type-mobile {
         display: block;

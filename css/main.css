@@ -980,7 +980,7 @@ div.mobile-dropdown, div.mobile-hamburger {
     .mobile-downloads-box {
         display: none;
         height: 45px;
-        background: rgba(0, 0, 0, 0.1);
+        background: rgb(43, 45, 51);
         width: calc(100% - 10px);
         grid-column-start: 1;
         grid-column-end: 5;

@@ -704,7 +704,7 @@ hr.main-separator {
 }
 
 @media only screen and (max-width: 900px) {
-    .side-search, .nav-link, .nav-icon, .album-download, .cover-art, .list-header, .track-type, .track-downloads {
+    .side-search, .nav-link, .nav-icon, #search-top-strip, .album-download, .cover-art, .list-header, .track-type, .track-downloads {
         display: none !important;
     }
     .nav {
@@ -730,10 +730,14 @@ hr.main-separator {
         width: 38px;
         height: 38px;
         position: absolute;
-        right: 6px;
         top: 6px;
     }
-
+    .mobile-hamburger.left {
+        left: 6px;
+    }
+    .mobile-hamburger.right {
+        right: 6px;
+    }
     .mobile-hamburger-link {
         height: 100%;
         width: 100%;
@@ -746,16 +750,22 @@ hr.main-separator {
         height: 21px;
     }
 
-    div.mobile-dropdown-nav {
+    div.mobile-dropdown {
         display: none;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, 32px);
         height: auto;
-        background-color: rgba(10, 10, 10, 0.62);
         margin: 0 6px;
         border-radius: 0 0 8px 8px;
         box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.25);
         padding-bottom: 14px;
+    }
+    div.mobile-dropdown-search {
+        background-color: rgba(10, 10, 10, 0.67);
+        padding-top: 6px;
+    }
+    div.mobile-dropdown-nav {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 32px);
+        background-color: rgba(10, 10, 10, 0.62);
     }
     .mobile-dropdown-nav-element {
         justify-content: start !important;
@@ -789,6 +799,28 @@ hr.main-separator {
     #mobile-link-3, #mobile-link-6 {
         grid-row: 3;
     }
+
+    .search-wrapper, .search {
+        display: block !important;
+    }
+    .search-wrapper {
+        background-color: initial;
+        margin-bottom: 0;
+    }
+    .search {
+        padding: 15px;
+        width: calc(100% - 30px);
+    }
+    label {
+        background-color: rgba(245, 245, 245, 0.1);
+    }
+    .search hr {
+        color:  #eee;
+    }
+    .form-body-hr {
+        opacity: 0.75;
+    }
+
     .content-wrapper {
         width: calc(100vw - 30px);
         display: block;

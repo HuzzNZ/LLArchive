@@ -179,7 +179,7 @@ for ($i = 0; $i < $count; $i++) {
                             </p>
                         </div>
                         <div class="mobile-downloads mobile-only">
-                            <a class="download-text" id="<?= $result["Parent"] ?><?= $album_id ?>-<?= $song_id ?>-dt" href="javascript:toggleDownloadable(<?= $result["Parent"] ?>, <?= $album_id ?>, <?= $song_id ?>)">Download ▼</a>
+                            <a class="download-text" id="<?= $result["Parent"] ?><?= $album_id ?>-<?= $song_id ?>-dt" href="javascript:toggleDownloadable('<?= $result["Parent"] ?>', '<?= $album_id ?>', '<?= $song_id ?>')">Download ▼</a>
                         </div>
                         <div class="track-downloads">
                             <div class="track-downloads-wrapper">

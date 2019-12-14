@@ -218,8 +218,13 @@ for ($i = 0; $i < $count; $i++) {
                             </div>
                         </div>
                         <div class="mobile-downloads-box mobile-only" id="<?= $result["Parent"] ?><?= $album_id ?>-<?= $song_id ?>-md">
-                            <div class="mobile-downloads-inner-box mobile-dl-flac"></div>
+                            <div class="mobile-downloads-inner-box mobile-dl-flac">
+                                <p class="md-text">· FLAC Lossless</p>
+                                <a class="mobile-download-button md-flac">.flac</a>
+                            </div>
                             <div class="mobile-downloads-inner-box mobile-dl-mp3"></div>
+                            <p class="md-text">· MP3 320kbps</p>
+                            <a class="mobile-download-button md-mp3">.mp3</a>
                         </div>
                     </div>
                     <?php
@@ -248,8 +253,8 @@ for ($i = 0; $i < $count; $i++) {
                 dt.innerHTML = "Download ▼"
             } else {
                 md.style.display = "grid";
-                mg.style.gridTemplateRows = "30px 18px 50px";
-                mg.style.height = "98px";
+                mg.style.gridTemplateRows = "30px 18px 40px";
+                mg.style.height = "88px";
                 dt.innerHTML = "Download ▲"
         }
     }

@@ -985,7 +985,8 @@ div.mobile-dropdown, div.mobile-hamburger {
     }
     .mobile-downloads-box {
         display: none;
-        height: 45px;
+        grid-template-columns: 1fr 1fr;
+        height: 35px;
         background: rgb(43, 45, 51);
         width: calc(100% - 10px);
         grid-column-start: 1;
@@ -993,6 +994,31 @@ div.mobile-dropdown, div.mobile-hamburger {
         margin: 5px 5px 0 5px;
         box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.12);
         border-radius: 5px;
+    }
+    .mobile-downloads-inner-box {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+    }
+    .md-text {
+        font-size: 11px;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-style: italic;
+        color: #ccc;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+    .mobile-download-button {
+        background: gray;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        margin: 5px;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
     }
 }
 

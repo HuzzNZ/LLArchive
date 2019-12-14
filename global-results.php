@@ -239,12 +239,12 @@ for ($i = 0; $i < $count; $i++) {
     function toggleDownloadable (album, track){
         let md = document.getElementById(album + "-" + track + "-md");
         let mg = document.getElementById(album + "-" + track);
-            if (md.style.display === "block") {
+            if (md.style.display === "grid") {
                 md.style.display = "none";
                 mg.style.gridTemplateRows = "30px 18px";
                 mg.style.height = "48px";
             } else {
-                md.style.display = "block";
+                md.style.display = "grid";
                 mg.style.gridTemplateRows = "30px 18px 50px";
                 mg.style.height = "98px";
         }

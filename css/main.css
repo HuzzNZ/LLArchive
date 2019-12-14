@@ -899,6 +899,9 @@ div.mobile-dropdown, div.mobile-hamburger {
     .track {
         height: 48px;
     }
+    .track:hover {
+        background-color: initial;
+    }
     #track-1 {
         border-radius: 0 0 3px 3px;
     }

@@ -131,7 +131,7 @@ a.download {
     text-underline: none;
 }
 
-a.download.flac {
+a.download.flac, a.md-flac {
     background: #ee0979;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #945c30, #8f3e69);
     background: linear-gradient(to right, #945c30, #8f3e69);
@@ -151,7 +151,7 @@ a.download.cue:hover {
     background: linear-gradient(to right, #4758af, #ff00cc);
 }
 
-a.download.mp3 {
+a.download.mp3, a.md-mp3 {
     background: #ff00cc;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #008a79, #689a32);
     background: linear-gradient(to right, #008a79, #689a32);;

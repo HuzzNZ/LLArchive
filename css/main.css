@@ -700,7 +700,11 @@ hr.main-separator {
 }
 
 .mobile-only {
-    display: none !important;
+    display: none;
+}
+
+div.mobile-dropdown, div.mobile-hamburger {
+    display: none;
 }
 
 @media only screen and (max-width: 900px) {
@@ -726,7 +730,8 @@ hr.main-separator {
 
     /* Element | https://localhost/love-live/# */
 
-    .mobile-hamburger {
+    div.mobile-hamburger {
+        display: block;
         width: 38px;
         height: 38px;
         position: absolute;

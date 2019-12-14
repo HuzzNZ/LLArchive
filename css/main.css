@@ -728,8 +728,6 @@ div.mobile-dropdown, div.mobile-hamburger {
         height: 20px;
     }
 
-    /* Element | https://localhost/love-live/# */
-
     div.mobile-hamburger {
         display: block;
         width: 38px;
@@ -898,7 +896,9 @@ div.mobile-dropdown, div.mobile-hamburger {
     }
     .track {
         height: 48px;
-        pointer-events: none;
+    }
+    .track:hover {
+        background-color: initial;
     }
     #track-1 {
         border-radius: 0 0 3px 3px;

@@ -218,7 +218,8 @@ for ($i = 0; $i < $count; $i++) {
                             </div>
                         </div>
                         <div class="mobile-downloads-box mobile-only" id="<?= $result["Parent"] ?><?= $album_id ?>-<?= $song_id ?>-md">
-
+                            <div class="mobile-downloads-inner-box mobile-dl-flac"></div>
+                            <div class="mobile-downloads-inner-box mobile-dl-mp3"></div>
                         </div>
                     </div>
                     <?php

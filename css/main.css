@@ -172,6 +172,7 @@ a.download.small {
 a.download.locked, a.locked {
     background: linear-gradient(to right, #6e6b6a, #787d7f) !important;
     cursor: not-allowed;
+    pointer-events: none;
 }
 
 .nav-wrapper {

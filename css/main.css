@@ -980,12 +980,12 @@ div.mobile-dropdown, div.mobile-hamburger {
     .mobile-downloads-box {
         display: none;
         height: 45px;
-        background: rgba(0, 0, 0, 0.15);
-        width: 100%;
+        background: rgba(0, 0, 0, 0.1);
+        width: calc(100% - 10px);
         grid-column-start: 1;
         grid-column-end: 5;
-        margin-top: 5px;
-        box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.15);
+        margin: 5px 5px 0 5px;
+        box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.12);
         border-radius: 5px;
     }
 }

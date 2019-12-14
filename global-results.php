@@ -219,11 +219,11 @@ for ($i = 0; $i < $count; $i++) {
                         </div>
                         <div class="mobile-downloads-box mobile-only" id="<?= $result["Parent"] ?><?= $album_id ?>-<?= $song_id ?>-md">
                             <div class="mobile-downloads-inner-box mobile-dl-flac">
-                                <p class="md-text">· Lossless (<?php echo human_filesize(filesize("/love-live/media/$generation/$album_id/$song_id.flac")); ?>)</p>
+                                <p class="md-text">· Lossless</p>
                                 <a class="mobile-download-button md-flac">.flac</a>
                             </div>
                             <div class="mobile-downloads-inner-box mobile-dl-mp3">
-                                <p class="md-text">· MP3 (<?php echo human_filesize(filesize("/love-live/media/$generation/$album_id/$song_id.mp3")); ?>)</p>
+                                <p class="md-text">· MP3 (320kbps)</p>
                                 <a class="mobile-download-button md-mp3">.mp3</a>
                             </div>
                         </div>

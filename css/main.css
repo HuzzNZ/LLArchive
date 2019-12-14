@@ -898,9 +898,7 @@ div.mobile-dropdown, div.mobile-hamburger {
     }
     .track {
         height: 48px;
-    }
-    .track:hover {
-        background-color: inherit;
+        pointer-events: none;
     }
     #track-1 {
         border-radius: 0 0 3px 3px;
@@ -1018,7 +1016,7 @@ div.mobile-dropdown, div.mobile-hamburger {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 12px;
+        font-size: 13px;
     }
 }
 

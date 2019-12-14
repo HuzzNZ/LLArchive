@@ -222,9 +222,10 @@ for ($i = 0; $i < $count; $i++) {
                                 <p class="md-text">· FLAC Lossless</p>
                                 <a class="mobile-download-button md-flac">.flac</a>
                             </div>
-                            <div class="mobile-downloads-inner-box mobile-dl-mp3"></div>
-                            <p class="md-text">· MP3 320kbps</p>
-                            <a class="mobile-download-button md-mp3">.mp3</a>
+                            <div class="mobile-downloads-inner-box mobile-dl-mp3">
+                                <p class="md-text">· MP3 320kbps</p>
+                                <a class="mobile-download-button md-mp3">.mp3</a>
+                            </div>
                         </div>
                     </div>
                     <?php

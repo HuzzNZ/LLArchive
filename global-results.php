@@ -115,7 +115,7 @@ for ($i = 0; $i < $count; $i++) {
                 do {
                     $song_id = $song_result["ID"];
                     ?>
-                    <div id="<?= $album_id ?>-<?= $song_id ?>" class="track tl-grid <?php if ($song_id === $highlighted) {echo "highlight";} if  ($song_id % 2) {echo "darker-background";}?>">
+                    <div id="<?= $result["Parent"] ?><?= $album_id ?>-<?= $song_id ?>" class="track tl-grid <?php if ($song_id === $highlighted) {echo "highlight";} if  ($song_id % 2) {echo "darker-background";}?>">
                         <div class="track-id"><p>
                                 <?php echo str_pad(strval($song_id), 2, "0", STR_PAD_LEFT) ?>
                             </p></div>
@@ -179,7 +179,7 @@ for ($i = 0; $i < $count; $i++) {
                             </p>
                         </div>
                         <div class="mobile-downloads mobile-only">
-                            <a class="download-text" href="javascript:toggleDownloadable(<?= $album_id ?>, <?= $song_id ?>)">Download ▼</a>
+                            <a class="download-text" id="<?= $result["Parent"] ?><?= $album_id ?>-<?= $song_id ?>-dt" href="javascript:toggleDownloadable(<?= $result["Parent"] ?>, <?= $album_id ?>, <?= $song_id ?>)">Download ▼</a>
                         </div>
                         <div class="track-downloads">
                             <div class="track-downloads-wrapper">
@@ -217,7 +217,7 @@ for ($i = 0; $i < $count; $i++) {
                                 </a>
                             </div>
                         </div>
-                        <div class="mobile-downloads-box mobile-only" id="<?= $album_id ?>-<?= $song_id ?>-md">
+                        <div class="mobile-downloads-box mobile-only" id="<?= $result["Parent"] ?><?= $album_id ?>-<?= $song_id ?>-md">
 
                         </div>
                     </div>
@@ -236,17 +236,20 @@ for ($i = 0; $i < $count; $i++) {
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script>
     new ClipboardJS('.copy-link');
-    function toggleDownloadable (album, track){
-        let md = document.getElementById(album + "-" + track + "-md");
-        let mg = document.getElementById(album + "-" + track);
+    function toggleDownloadable (generation, album, track){
+        let md = document.getElementById(generation + album + "-" + track + "-md");
+        let mg = document.getElementById(generation + album + "-" + track);
+        let dt = document.getElementById(generation + album + "-" + track + "-dt");
             if (md.style.display === "grid") {
                 md.style.display = "none";
                 mg.style.gridTemplateRows = "30px 18px";
                 mg.style.height = "48px";
+                dt.innerHTML = "Download ▼"
             } else {
                 md.style.display = "grid";
                 mg.style.gridTemplateRows = "30px 18px 50px";
                 mg.style.height = "98px";
+                dt.innerHTML = "Download ▲"
         }
     }
 </script>

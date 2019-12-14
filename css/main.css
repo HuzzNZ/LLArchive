@@ -169,7 +169,7 @@ a.download.small {
     border-radius: 3px;
 }
 
-a.download.locked {
+a.download.locked, a.locked {
     background: linear-gradient(to right, #6e6b6a, #787d7f) !important;
     cursor: not-allowed;
 }

@@ -44,19 +44,19 @@
                 <a class="mobile-nav-link" href="/love-live/search">・Search</a>
             </div>
             <div class="mobile-only mobile-dropdown-nav-element" id="mobile-link-2">
-                <a class="mobile-nav-link" href="/love-live/search">・Random</a>
+                <a class="mobile-nav-link" href="/love-live/random">・Random</a>
             </div>
             <div class="mobile-only mobile-dropdown-nav-element" id="mobile-link-3">
-                <a class="mobile-nav-link" href="/love-live/search">・Recent</a>
+                <a class="mobile-nav-link" href="/love-live/recent">・Recent</a>
             </div>
             <div class="mobile-only mobile-dropdown-nav-element" id="mobile-link-4">
-                <a class="mobile-nav-link" href="/love-live/search">・Otonokizaka</a>
+                <a class="mobile-nav-link" href="/love-live/otonokizaka/all">・Otonokizaka</a>
             </div>
             <div class="mobile-only mobile-dropdown-nav-element"  id="mobile-link-5">
-                <a class="mobile-nav-link" href="/love-live/search">・Uranohoshi</a>
+                <a class="mobile-nav-link" href="/love-live/uranohoshi/all">・Uranohoshi</a>
             </div>
             <div class="mobile-only mobile-dropdown-nav-element" id="mobile-link-6">
-                <a class="mobile-nav-link" href="/love-live/search">・Nijigasaki</a>
+                <a class="mobile-nav-link" href="/love-live/nijigasaki/all">・Nijigasaki</a>
             </div>
         </div>
     </div>

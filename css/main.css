@@ -730,8 +730,8 @@ hr.main-separator {
         width: 38px;
         height: 38px;
         position: absolute;
-        right: 5px;
-        top: 5px;
+        right: 6px;
+        top: 6px;
     }
 
     .mobile-hamburger-link {
@@ -749,9 +749,9 @@ hr.main-separator {
     div.mobile-dropdown-nav {
         display: none;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, 36px);
+        grid-template-rows: repeat(3, 32px);
         height: auto;
-        background-color: rgba(10, 10, 10, 0.57);
+        background-color: rgba(10, 10, 10, 0.62);
         margin: 0 6px;
         border-radius: 0 0 8px 8px;
         box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.25);

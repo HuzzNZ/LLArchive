@@ -978,7 +978,7 @@ div.mobile-dropdown, div.mobile-hamburger {
         color: #888;
     }
     .mobile-downloads-box {
-        display: block;
+        display: none;
         height: 45px;
         background: rgba(0, 0, 0, 0.15);
         width: 100%;

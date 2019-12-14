@@ -220,11 +220,38 @@ for ($i = 0; $i < $count; $i++) {
                         <div class="mobile-downloads-box mobile-only" id="<?= $result["Parent"] ?><?= $album_id ?>-<?= $song_id ?>-md">
                             <div class="mobile-downloads-inner-box mobile-dl-flac">
                                 <p class="md-text">· Lossless</p>
-                                <a class="mobile-download-button md-flac">.flac</a>
+                                <a class="mobile-download-button md-flac"
+                                   href="/love-live/media/<?php echo $generation ?>/<?php echo $result['ID'] ?>/<?php echo $song_id ?>.flac"
+                                   download="<?php echo $song_id ?>. <?php
+                                   if ($song_result["Artist"]) {
+                                       echo trim(str_replace(",", ", ", $song_result["Artist"]));
+                                   } else {
+                                       echo trim(str_replace(",", ", ", $result["Artist"]));
+                                   }
+                                   ?> - <?php echo str_replace("\"", "&quot;", $song_result['Name']);
+
+                                   if ($song_result["Is_Instrumental"]) {
+                                       if (!$result["Is_OST"]) {
+                                           echo " (Off Vocal)";
+                                       }
+                                   } ?>.flac">.flac</a>
                             </div>
                             <div class="mobile-downloads-inner-box mobile-dl-mp3">
                                 <p class="md-text">· MP3 (320kbps)</p>
-                                <a class="mobile-download-button md-mp3">.mp3</a>
+                                <a class="mobile-download-button md-mp3"
+                                   href="/love-live/media/<?php echo $generation ?>/<?= $result['ID'] ?>/<?= $song_id ?>.mp3"
+                                   download="<?php echo $song_id ?>. <?php
+                                   if ($song_result["Artist"]) {
+                                       echo trim(str_replace(",", ", ", $song_result["Artist"]));
+                                   } else {
+                                       echo trim(str_replace(",", ", ", $result["Artist"]));
+                                   }
+                                   ?> - <?php echo str_replace("\"", "&quot;", $song_result['Name']);
+                                   if ($song_result["Is_Instrumental"]) {
+                                       if (!$result["Is_OST"]) {
+                                           echo " (Off Vocal)";
+                                       }
+                                   } ?>.mp3">.mp3</a>
                             </div>
                         </div>
                     </div>

@@ -82,7 +82,7 @@
             y.style.background = "rgba(0, 0, 0, 0.05)";
         } else {
             x.style.display = "grid";
-            y.style.background = "rgba(0, 0, 0, 0.15)";
+            y.style.background = "rgba(0, 0, 0, 0.2)";
         }
     }
     function toggleSearchVisibility() {
@@ -97,7 +97,7 @@
             y.style.background = "rgba(0, 0, 0, 0.05)";
         } else {
             x.style.display = "block";
-            y.style.background = "rgba(0, 0, 0, 0.15)";
+            y.style.background = "rgba(0, 0, 0, 0.2)";
         }
     }
 </script>

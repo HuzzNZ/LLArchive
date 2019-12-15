@@ -183,7 +183,7 @@ for ($i = 0; $i < $count; $i++) {
                         </div>
                         <div class="track-downloads">
                             <div class="track-downloads-wrapper">
-                                <a class="download flac small"
+                                <a class="download flac small <?php if (!$song_result['Length']){echo "locked";} ?>"
                                    href="/love-live/media/<?php echo $generation ?>/<?php echo $result['ID'] ?>/<?php echo $song_id ?>.flac"
                                    download="<?php echo $song_id ?>. <?php
                                        if ($song_result["Artist"]) {
@@ -198,7 +198,7 @@ for ($i = 0; $i < $count; $i++) {
                                            echo " (Off Vocal)";
                                        }
                                    } ?>.flac">.flac</a>
-                                <a class="download mp3 small"
+                                <a class="download mp3 small <?php if (!$song_result['Length']){echo "locked";} ?>"
                                    href="/love-live/media/<?php echo $generation ?>/<?= $result['ID'] ?>/<?= $song_id ?>.mp3"
                                    download="<?php echo $song_id ?>. <?php
                                        if ($song_result["Artist"]) {
@@ -220,7 +220,7 @@ for ($i = 0; $i < $count; $i++) {
                         <div class="mobile-downloads-box mobile-only" id="<?= $result["Parent"] ?><?= $album_id ?>-<?= $song_id ?>-md">
                             <div class="mobile-downloads-inner-box mobile-dl-flac">
                                 <p class="md-text">· Lossless</p>
-                                <a class="mobile-download-button md-flac"
+                                <a class="mobile-download-button md-flac <?php if (!$song_result['Length']){echo "locked";} ?>"
                                    href="/love-live/media/<?php echo $generation ?>/<?php echo $result['ID'] ?>/<?php echo $song_id ?>.flac"
                                    download="<?php echo $song_id ?>. <?php
                                    if ($song_result["Artist"]) {
@@ -238,7 +238,7 @@ for ($i = 0; $i < $count; $i++) {
                             </div>
                             <div class="mobile-downloads-inner-box mobile-dl-mp3">
                                 <p class="md-text">· MP3 (320kbps)</p>
-                                <a class="mobile-download-button md-mp3"
+                                <a class="mobile-download-button md-mp3 <?php if (!$song_result['Length']){echo "locked";} ?>"
                                    href="/love-live/media/<?php echo $generation ?>/<?= $result['ID'] ?>/<?= $song_id ?>.mp3"
                                    download="<?php echo $song_id ?>. <?php
                                    if ($song_result["Artist"]) {

@@ -186,12 +186,14 @@ for ($i = 0; $i < $count; $i++) {
                                 <a class="download flac small <?php if (!$song_result['Length']){echo "locked";} ?>"
                                    href="/love-live/media/<?php echo $generation ?>/<?php echo $result['ID'] ?>/<?php echo $song_id ?>.flac"
                                    download="<?php echo $song_id ?>. <?php
-                                       if ($song_result["Artist"]) {
-                                           echo trim(str_replace(",", ", ", $song_result["Artist"]));
-                                       } else {
-                                           echo trim(str_replace(",", ", ", $result["Artist"]));
+                                       if (!$result["Is_OST"]) {
+                                           if ($song_result["Artist"]) {
+                                               echo trim(str_replace(",", ", ", $song_result["Artist"]));
+                                           } else {
+                                               echo trim(str_replace(",", ", ", $result["Artist"]));
+                                           }
                                        }
-                                   ?> - <?php echo str_replace("\"", "&quot;", $song_result['Name']);
+                                   ?><?php if(!$result["Is_OST"]) {echo " - ";} ?><?php echo str_replace("\"", "&quot;", $song_result['Name']);
 
                                    if ($song_result["Is_Instrumental"]) {
                                        if (!$result["Is_OST"]) {
@@ -201,12 +203,14 @@ for ($i = 0; $i < $count; $i++) {
                                 <a class="download mp3 small <?php if (!$song_result['Length']){echo "locked";} ?>"
                                    href="/love-live/media/<?php echo $generation ?>/<?= $result['ID'] ?>/<?= $song_id ?>.mp3"
                                    download="<?php echo $song_id ?>. <?php
-                                       if ($song_result["Artist"]) {
-                                           echo trim(str_replace(",", ", ", $song_result["Artist"]));
-                                       } else {
-                                           echo trim(str_replace(",", ", ", $result["Artist"]));
+                                       if (!$result["Is_OST"]) {
+                                           if ($song_result["Artist"]) {
+                                               echo trim(str_replace(",", ", ", $song_result["Artist"]));
+                                           } else {
+                                               echo trim(str_replace(",", ", ", $result["Artist"]));
+                                           }
                                        }
-                                   ?> - <?php echo str_replace("\"", "&quot;", $song_result['Name']);
+                                   ?><?php if(!$result["Is_OST"]) {echo " - ";} ?><?php echo str_replace("\"", "&quot;", $song_result['Name']);
                                    if ($song_result["Is_Instrumental"]) {
                                        if (!$result["Is_OST"]) {
                                            echo " (Off Vocal)";
@@ -223,12 +227,14 @@ for ($i = 0; $i < $count; $i++) {
                                 <a class="mobile-download-button md-flac <?php if (!$song_result['Length']){echo "locked";} ?>"
                                    href="/love-live/media/<?php echo $generation ?>/<?php echo $result['ID'] ?>/<?php echo $song_id ?>.flac"
                                    download="<?php echo $song_id ?>. <?php
-                                   if ($song_result["Artist"]) {
-                                       echo trim(str_replace(",", ", ", $song_result["Artist"]));
-                                   } else {
-                                       echo trim(str_replace(",", ", ", $result["Artist"]));
-                                   }
-                                   ?> - <?php echo str_replace("\"", "&quot;", $song_result['Name']);
+                                       if (!$result["Is_OST"]) {
+                                           if ($song_result["Artist"]) {
+                                               echo trim(str_replace(",", ", ", $song_result["Artist"]));
+                                           } else {
+                                               echo trim(str_replace(",", ", ", $result["Artist"]));
+                                           }
+                                       }
+                                   ?><?php if(!$result["Is_OST"]) {echo " - ";} ?><?php echo str_replace("\"", "&quot;", $song_result['Name']);
 
                                    if ($song_result["Is_Instrumental"]) {
                                        if (!$result["Is_OST"]) {
@@ -241,12 +247,14 @@ for ($i = 0; $i < $count; $i++) {
                                 <a class="mobile-download-button md-mp3 <?php if (!$song_result['Length']){echo "locked";} ?>"
                                    href="/love-live/media/<?php echo $generation ?>/<?= $result['ID'] ?>/<?= $song_id ?>.mp3"
                                    download="<?php echo $song_id ?>. <?php
-                                   if ($song_result["Artist"]) {
-                                       echo trim(str_replace(",", ", ", $song_result["Artist"]));
-                                   } else {
-                                       echo trim(str_replace(",", ", ", $result["Artist"]));
-                                   }
-                                   ?> - <?php echo str_replace("\"", "&quot;", $song_result['Name']);
+                                       if (!$result["Is_OST"]) {
+                                           if ($song_result["Artist"]) {
+                                               echo trim(str_replace(",", ", ", $song_result["Artist"]));
+                                           } else {
+                                               echo trim(str_replace(",", ", ", $result["Artist"]));
+                                           }
+                                       }
+                                   ?><?php if(!$result["Is_OST"]) {echo " - ";} ?><?php echo str_replace("\"", "&quot;", $song_result['Name']);
                                    if ($song_result["Is_Instrumental"]) {
                                        if (!$result["Is_OST"]) {
                                            echo " (Off Vocal)";

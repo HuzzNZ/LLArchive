@@ -55,7 +55,7 @@
     <title>h/LoveLive! - Track</title>
     <?php include "global-head.php" ?>
     <meta name="theme-color" content="#00e37d">
-    <meta content="🎵 │ <?php echo addslashes($result['Name']) ?> <?php if($track_result["Is_Instrumental"] && !$album_result["Is_OST"]){echo "(Off Vocal)";} ?>" property="og:title">
+    <meta content="🎵 │ <?php echo addslashes($result['Name']); ?> <?php if($track_result["Is_Instrumental"] && !$album_result["Is_OST"]){echo "(Off Vocal)";} ?>" property="og:title">
     <meta content='<?php if ($track_result["Is_Radio"] == 1){echo "Radio Drama";} else {echo "Song";} ?> by <?= str_replace("'", "&apos;", str_replace(",", ", ", $artist))?> - Track <?= $track_result["ID"] ?> of "<?= $album_result["Name"] ?>"' property="og:description">
     <meta content="<?= $base_url ?>/love-live/media/<?= $generation ?>/<?= $album_result['ID'] ?>/cover.jpg" property="og:image">
 </head>

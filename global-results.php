@@ -193,7 +193,7 @@ for ($i = 0; $i < $count; $i++) {
                                                echo trim(str_replace(",", ", ", $result["Artist"]));
                                            }
                                        }
-                                   ?><?php if(!$result["Is_OST"]) {echo " - ";} ?><?php echo str_replace("\"", "&quot;", $song_result['Name']);
+                                   ?><?php if(!$result["Is_OST"] || !$song_result["Is_Instrumental"]) {echo " - ";} ?><?php echo str_replace("\"", "&quot;", $song_result['Name']);
 
                                    if ($song_result["Is_Instrumental"]) {
                                        if (!$result["Is_OST"]) {
@@ -210,7 +210,7 @@ for ($i = 0; $i < $count; $i++) {
                                                echo trim(str_replace(",", ", ", $result["Artist"]));
                                            }
                                        }
-                                   ?><?php if(!$result["Is_OST"]) {echo " - ";} ?><?php echo str_replace("\"", "&quot;", $song_result['Name']);
+                                   ?><?php if(!$result["Is_OST"] || !$song_result["Is_Instrumental"]) {echo " - ";} ?><?php echo str_replace("\"", "&quot;", $song_result['Name']);
                                    if ($song_result["Is_Instrumental"]) {
                                        if (!$result["Is_OST"]) {
                                            echo " (Off Vocal)";
@@ -234,7 +234,7 @@ for ($i = 0; $i < $count; $i++) {
                                                echo trim(str_replace(",", ", ", $result["Artist"]));
                                            }
                                        }
-                                   ?><?php if(!$result["Is_OST"]) {echo " - ";} ?><?php echo str_replace("\"", "&quot;", $song_result['Name']);
+                                   ?><?php if(!$result["Is_OST"] || !$song_result["Is_Instrumental"]) {echo " - ";} ?><?php echo str_replace("\"", "&quot;", $song_result['Name']);
 
                                    if ($song_result["Is_Instrumental"]) {
                                        if (!$result["Is_OST"]) {
@@ -254,7 +254,7 @@ for ($i = 0; $i < $count; $i++) {
                                                echo trim(str_replace(",", ", ", $result["Artist"]));
                                            }
                                        }
-                                   ?><?php if(!$result["Is_OST"]) {echo " - ";} ?><?php echo str_replace("\"", "&quot;", $song_result['Name']);
+                                   ?><?php if(!$result["Is_OST"] || !$song_result["Is_Instrumental"]) {echo " - ";} ?><?php echo str_replace("\"", "&quot;", $song_result['Name']);
                                    if ($song_result["Is_Instrumental"]) {
                                        if (!$result["Is_OST"]) {
                                            echo " (Off Vocal)";

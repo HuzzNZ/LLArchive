@@ -2,7 +2,7 @@
 <head>
     <?php
         include "db-config/db-connect.php";
-        $sql = "SELECT * FROM `albums` ORDER BY `ID`";
+        $sql = "SELECT * FROM `albums` ORDER BY `albums`.`Release_Date` ASC";
         $query_results = mysqli_query($o_album_meta, $sql);
         $count = mysqli_num_rows($query_results);
         $results = array();

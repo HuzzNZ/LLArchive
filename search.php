@@ -161,8 +161,8 @@
                 Search
             </h1>
             <hr class="main-separator">
-            <p>Find your favourite Love Live albums - they're all here on this website! <b>FLAC & MP3 320kbps</b> downloads to
-                the riiiiiiiiiight~ <br><br>There might even be raw <b>FLAC+CUE</b> album downloads too!</p>
+            <p>Find your favourite Love Live albums - they're all here on this website! <b>FLAC & MP3 320kbps</b> downloads are
+                on the right! <br><br><b>FLAC+CUE</b> downloads might exist for certain albums.</p>
             <h3>Search by Keyword:</h3>
             <p class="indent">Search for albums by keyword on the right sidebar!<br><br>Note that the title only returns
                 results for album titles, for example: The song <b>SKY JOURNEY</b>, which is part of the <b>HAPPY PARTY TRAIN</b>

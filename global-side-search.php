@@ -29,6 +29,9 @@
                         <option>CYaRon!</option>
                         <option>AZALEA</option>
                         <option>Guilty Kiss</option>
+                        <option>A·ZU·NA</option>
+                        <option>QU4RTZ</option>
+                        <option>DiverDiva</option>
                     </optgroup>
                 </select>
             </label>

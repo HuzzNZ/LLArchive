@@ -28,6 +28,15 @@ head {
     z-index: 1000000;
 }
 
+p .special {
+    color: #f07776;
+}
+
+.spacer-20px {
+    height: 20px;
+    width: 100%;
+}
+
 .inline {
     display: inline;
 }
@@ -188,7 +197,7 @@ a.download.locked, a.locked {
     background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     -webkit-box-shadow: 0 -12px 20px 12px #222;
     -moz-box-shadow: 0 -12px 20px 12px #222;
-    box-shadow: 15px 15px 15px #262626;
+    box-shadow: 15px 15px 15px rgba(24, 24, 24, 0.6);
     margin-bottom: 50px;
     z-index: 98;
 }
@@ -472,14 +481,14 @@ hr.main-separator {
 }
 
 .main-content.text-only a {
-    color: #ffcb7c;
+    color: rgb(248, 163, 150);
     font-style: italic;
     font-weight: bold;
     text-decoration: none;
 }
 
 .main-content.text-only a:hover {
-    color: #ffa100;
+    color: #ff6c60;
 }
 
 .main-content.text-only h3 {

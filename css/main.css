@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Product+Sans:300,400,400i,700,700i');
 
 * {
-    font-family: Lato, sans-serif;
+    font-family: "Product Sans", sans-serif;
     color: #eee;
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ a {
 }
 
 body {
-    background-color: #36393f;
+    background-color: #303235;
 }
 
 h1 {
@@ -178,14 +178,17 @@ a.download.locked, a.locked {
 .nav-wrapper {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 84%;
+    margin-left: 7%;
+    margin-right: 7%;
+    border-radius: 0 0 15px 15px;
     height: 70px;
-    background: #4568DC;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #FC5C7D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     -webkit-box-shadow: 0 -12px 20px 12px #222;
     -moz-box-shadow: 0 -12px 20px 12px #222;
-    box-shadow: 0 -12px 20px 12px #222;
+    box-shadow: 15px 15px 15px #262626;
     margin-bottom: 50px;
     z-index: 98;
 }
@@ -196,11 +199,15 @@ a.download.locked, a.locked {
 }
 
 .nav {
-    margin: 0 100px;
+    margin: 0 3%;
     height: 100%;
     display: grid;
     z-index: 9898;
-    grid-template-columns: 2.3fr repeat(3, 0.7fr) 0.5fr repeat(3, 0.27fr) 0.5fr repeat(4, 0.33fr) 1fr
+    grid-template-columns: 1.3fr 0.3fr repeat(3, 0.6fr) 0.4fr 0.5fr 0.07fr repeat(2, 0.5fr) 0.7fr repeat(4, 0.33fr) 0.4fr
+}
+
+.nav-logo {
+    height: 100%;
 }
 
 .nav div {
@@ -217,8 +224,9 @@ a.download.locked, a.locked {
 
 .nav-link {
     opacity: 0.7;
+    color: #fff;
     display: block;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 400;
     text-decoration: none;
     transition: 100ms;
@@ -229,8 +237,22 @@ a.download.locked, a.locked {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
+.nav-link.generation {
+    height: 80%;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    margin-top: 10%;
+}
+
+.nav-gen-top {
+    font-size: 11px;
+    font-weight: 700;
+
+}
+
 .link-logo {
     transition: 100ms;
+    height: 100%;
 }
 
 .link-icon {
@@ -246,7 +268,7 @@ a.download.locked, a.locked {
 }
 
 .website-logo {
-    height: 25px;
+    height: 45%;
 }
 
 .link-icon {
@@ -717,16 +739,19 @@ div.mobile-dropdown, div.mobile-hamburger {
         margin: initial;
     }
     .nav-wrapper {
+        margin-left: 0;
+        margin-right: 0;
         width: 100vw;
         margin-bottom: 15px;
-        height: 50px
+        height: 50px;
+        border-radius: initial;
     }
     .nav-logo {
         height: 100%;
         display: block;
     }
     .link-logo {
-        height: 20px;
+        height: 25px;
     }
 
     div.mobile-hamburger {

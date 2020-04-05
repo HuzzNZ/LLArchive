@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Product+Sans:300,400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700&display=swap&subset=japanese');
 
 * {
-    font-family: "Product Sans", sans-serif;
+    font-family: "Product Sans", "Noto Sans JP", sans-serif;
     color: #eee;
     margin: 0;
     padding: 0;

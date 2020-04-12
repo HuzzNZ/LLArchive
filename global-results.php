@@ -67,8 +67,12 @@ for ($i = 0; $i < $count; $i++) {
                     </p>
                     <p class="release-date">
                         <?php
-                            $date  = date_create($result['Release_Date']);
-                            echo date_format($date,"F jS, Y");
+                            if ($result['Release_Date']) {
+                                $date = date_create($result['Release_Date']);
+                                echo date_format($date, "F jS, Y");
+                            } else {
+                            	echo "TBA";
+                            }
                         ?>
                     </p>
                     <p class="comment">

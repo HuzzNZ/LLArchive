@@ -1,4 +1,6 @@
 <!DOCTYPE HTML>
+<?php include "global-lang.php" ?>
+<html lang="<?= LANG ?>">
 <head>
     <?php
         include "db-config/db-connect.php";
@@ -32,4 +34,5 @@
     </div>
 </div>
 </body>
+</html>
 

@@ -1,4 +1,6 @@
 <!DOCTYPE HTML>
+<?php include "global-lang.php" ?>
+<html lang="<?= LANG ?>">
 <head>
     <?php
     include "uranohoshi/db-config/db-connect.php";

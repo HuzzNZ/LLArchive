@@ -1,4 +1,6 @@
 <!DOCTYPE HTML>
+<?php include "global-lang.php" ?>
+<html lang="<?= LANG ?>">
 <head>
     <title>h/LoveLive! - Nijigasaki</title>
     <?php include "../global-head.php" ?>
@@ -14,4 +16,4 @@
     </div>
 </div>
 </body>
-
+</html>

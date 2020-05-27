@@ -10,10 +10,14 @@
     define("_FOUND", "があります");
 
     define("_HOME", "ホームページ");
+    define("_HOME_WELCOME", "Huzzの「ラブライブ！」のCDアーカイブへようこそ！");
 
     define("_SEARCH", "検索");
     define("_SEARCH_TITLE", "検索");
     define("_SEARCH_HINT", "すべての検索結果");
+
+    define("_NO_RESULT_TITLE", "検索結果が見つかりませんでした。");
+    define("_NO_RESULT_HINT", "誤字、脱字がないかを確認してみて。");
 
     define("_RANDOM", "ランダム");
     define("_RANDOM_TITLE", "ランダムに選択のアルバム");
@@ -41,3 +45,39 @@
     define("_CS_CATALOG", "カタログ番号（例えばLACM-14950）");
 
     define("_SEARCH_GO", "検索！");
+
+    define("_UNIT_MAIN", "メイン");
+    define("_UNIT_RIVAL", "ライバル");
+    define("_UNIT_SUB", "ユニット");
+
+    define("_HONOKA", "高坂穂乃果");
+    define("_ELI", "絢瀬絵里");
+    define("_KOTORI", "南ことり");
+    define("_UMI", "園田海未");
+    define("_RIN", "星空凛");
+    define("_MAKI", "西木野真姫");
+    define("_NOZOMI", "東條希");
+    define("_HANAYO", "小泉花陽");
+    define("_NICO", "矢澤にこ");
+
+    define("_CHIKA", "高海千歌");
+    define("_RIKO", "桜内梨子");
+    define("_KANAN", "松浦果南");
+    define("_DIA", "黒澤ダイヤ");
+    define("_YOU", "渡辺曜");
+    define("_YOSHIKO", "津島善子");
+    define("_HANAMARU", "国木田花丸");
+    define("_MARI", "小原鞠莉");
+    define("_RUBY", "黒澤ルビィ");
+
+    define("_NHS_IDOL_CLUB", "虹ヶ咲スクールアイドル同好会");
+
+    define("_AYUMU", "上原歩夢");
+    define("_KASUMI", "中須かすみ");
+    define("_SHIZUKU", "大阪しずく");
+    define("_KARIN", "朝香果林");
+    define("_AI", "宮下愛");
+    define("_KANATA", "近江彼方");
+    define("_SETSUNA", "優木せつ菜");
+    define("_EMMA", "エマ・ヴェルデ");
+    define("_RINA", "天王寺璃奈");

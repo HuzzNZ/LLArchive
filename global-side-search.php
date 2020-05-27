@@ -13,16 +13,16 @@
             <label>
                 <select name="artist">
                     <option selected></option>
-                    <optgroup label="Main Units">
+                    <optgroup label="<?= _UNIT_MAIN ?>">
                         <option>μ's</option>
                         <option>Aqours</option>
-                        <option>Nijigasaki High School Idol Club</option>
+                        <option><?= _NHS_IDOL_CLUB ?></option>
                     </optgroup>
-                    <optgroup label="Side Units">
+                    <optgroup label="<?= _UNIT_RIVAL ?>">
                         <option>A-RISE</option>
                         <option>Saint Aqours Snow</option>
                     </optgroup>
-                    <optgroup label="Subunits">
+                    <optgroup label="<?= _UNIT_SUB ?>">
                         <option>Printemps</option>
                         <option>lily white</option>
                         <option>BiBi</option>
@@ -40,37 +40,37 @@
                 <select name="solo">
                     <option selected></option>
                     <optgroup label="μ's">
-                        <option>Honoka Kousaka</option>
-                        <option>Kotori Minami</option>
-                        <option>Umi Sonoda</option>
-                        <option>Hanayo Koizumi</option>
-                        <option>Rin Hoshizora</option>
-                        <option>Maki Nishikino</option>
-                        <option>Nico Yazawa</option>
-                        <option>Eli Ayase</option>
-                        <option>Nozomi Toujou</option>
+                        <option value="Honoka Kousaka"><?= _HONOKA ?></option>
+                        <option value="Eli Ayase"><?= _ELI ?></option>
+                        <option value="Kotori Minami"><?= _KOTORI ?></option>
+                        <option value="Umi Sonoda"><?= _UMI ?></option>
+                        <option value="Rin Hoshizora"><?= _RIN ?></option>
+                        <option value="Maki Nishikino"><?= _MAKI ?></option>
+                        <option value="Nozomi Toujou"><?= _NOZOMI ?></option>
+                        <option value="Hanayo Koizumi"><?= _HANAYO ?></option>
+                        <option value="Nico Yazawa"><?= _NICO ?></option>
                     </optgroup>
                     <optgroup label="Aqours">
-                        <option>Chika Takami</option>
-                        <option>You Watanabe</option>
-                        <option>Riko Sakurauchi</option>
-                        <option>Hanamaru Kunikida</option>
-                        <option>Yoshiko Tsushima</option>
-                        <option>Ruby Kurosawa</option>
-                        <option>Mari Ohara</option>
-                        <option>Dia Kurosawa</option>
-                        <option>Kanan Matsuura</option>
+                        <option value="Chika Takami"><?= _CHIKA ?></option>
+	                    <option value="Riko Sakurauchi"><?= _RIKO ?></option>
+	                    <option value="Kanan Matsuura"><?= _KANAN ?></option>
+	                    <option value="Dia Kurosawa"><?= _DIA ?></option>
+                        <option value="You Watanabe"><?= _YOU ?></option>
+	                    <option value="Yoshiko Tsushima"><?= _YOSHIKO ?></option>
+                        <option value="Hanamaru Kunikida"><?= _HANAMARU ?></option>
+                        <option value="Mari Ohara"><?= _MARI ?></option>
+	                    <option value="Ruby Kurosawa"><?= _RUBY ?></option>
                     </optgroup>
-                    <optgroup label="Nijigasaki High School Idol Club">
-                        <option>Ayumu Uehara</option>
-                        <option>Setsuna Yuki</option>
-                        <option>Ai Miyashita</option>
-                        <option>Shizuku Osaka</option>
-                        <option>Rina Tennoji</option>
-                        <option>Kasumi Nakasu</option>
-                        <option>Karin Asaka</option>
-                        <option>Emma Verde</option>
-                        <option>Kanata Konoe</option>
+                    <optgroup label="<?= _NHS_IDOL_CLUB ?>">
+                        <option value="Ayumu Uehara"><?= _AYUMU ?></option>
+	                    <option value="Kasumi Nakasu"><?= _KASUMI ?></option>
+	                    <option value="Shizuku Osaka"><?= _SHIZUKU ?></option>
+	                    <option value="Karin Asaka"><?= _KARIN ?></option>
+	                    <option value="Ai Miyashita"><?= _AI ?></option>
+	                    <option value="Kanata Konoe"><?= _KANATA ?></option>
+                        <option value="Setsuna Yuki"><?= _SETSUNA ?></option>
+	                    <option value="Emma Verde"><?= _EMMA ?></option>
+                        <option value="Rina Tennoji"><?= _RINA ?></option>
                     </optgroup>
                 </select>
             </label>

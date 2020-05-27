@@ -23,14 +23,16 @@
     <div class="main-content text-only">
         <h1 class="main-title" id="<?php if (LANG == "ja"){ echo "ja-l"; } ?>"><?= _HOME ?></h1>
         <hr class="main-separator">
-        <p><b>Welcome to Huzz's Love Live CD Archive Website!</b></p><br>
+	    <p><b><?= _HOME_WELCOME ?></b></p><br>
         <img src="assets/banner.png" alt="Website Banner" style="max-width: 100%;">
         <div class="spacer-20px"></div>
+        <p class="no-nihongo-lol">ページにこれ以降は日本語ではありません。</p><br>
         <p>This website is being maintained by <b>Huzz</b>. All the latest albums/singles released on CD under
         the Love Live! project labels will be archived here.</p>
-        <h3>Update 2020/04/05:</h3>
-        <p class="indent">This website has been refreshed with a new font and some new CSS! Feel free to look around, or give
-        any suggestions by finding me below.</p>
+        <h3>Update 2020/05/28:</h3>
+        <p class="indent">Early-stage Japanese Localization is now avaliable for the site, with more features like Language Switching to come soon.</p>
+        <br>
+        <p class="indent">（ベータの）日本語のサイトが利用可能になりました！</p>
         <hr class="main-separator">
         <h3>Find me here!</h3>
         <p class="indent">

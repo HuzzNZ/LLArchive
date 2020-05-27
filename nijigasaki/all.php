@@ -27,7 +27,9 @@
     </div>
     <div class="main-content">
         <h1 class="main-title">
-            Nijigasaki - All Albums
+	        <h1 class="main-title" id="<?php if (LANG == "ja"){ echo "ja-l"; } ?>">
+                <?= _NIJIGASAKI ?><?php if (!LANG == "ja"){ echo " - "; } ?><?= _ALL_ALBUMS ?>
+            </h1>
         </h1>
         <hr class="main-separator">
         <?php include "../global-check-results.php"; ?>

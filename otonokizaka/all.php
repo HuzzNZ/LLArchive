@@ -26,9 +26,9 @@
         <?php include "../global-side-search.php"; ?>
     </div>
     <div class="main-content">
-        <h1 class="main-title">
-            Otonokizaka - All Albums
-        </h1>
+	    <h1 class="main-title" id="<?php if (LANG == "ja"){ echo "ja-l"; } ?>">
+            <?= _OTONOKIZAKA ?><?php if (!LANG == "ja"){ echo " - "; } ?><?= _ALL_ALBUMS ?>
+	    </h1>
         <hr class="main-separator">
         <?php include "../global-check-results.php"; ?>
     </div>

@@ -17,7 +17,8 @@
 
     define("_RANDOM", "Random");
     define("_RANDOM_TITLE", "Randomly Selected");
-    define("_RANDOM_BOTTOM", "Out of a total of {a} albums");
+    define("_RANDOM_BOTTOM1", "Out of a total of");
+    define("_RANDOM_BOTTOM2", "albums");
 
     define("_RECENT", "Recent");
     define("_RECENT_TITLE", "Recently Released");

@@ -68,11 +68,9 @@
         <?php include "global-side-search.php"; ?>
     </div>
     <div class="main-content">
-        <h1 class="main-title">
-            Recently Released
-        </h1>
+        <h1 class="main-title" id="<?php if (LANG == "ja"){ echo "ja-l"; } ?>"><?= _RECENT_TITLE ?></h1>
         <hr class="main-separator">
-        <span class="result-count has-header normal-weight small-text">Sorted by Release Date -&nbsp;</span>
+        <span class="result-count has-header normal-weight small-text"><?= _RECENT_BOTTOM ?><?php if (!LANG == "ja"){ echo " -&nbsp;"; } ?></span>
         <?php include "global-check-results.php"; ?>
     </div>
 </div>

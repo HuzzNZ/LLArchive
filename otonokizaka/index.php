@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<?php include "global-lang.php" ?>
+<?php include "../global-lang.php" ?>
 <html lang="<?= LANG ?>">
 <head>
     <title>h/LoveLive! - Otonokizaka</title>

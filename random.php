@@ -25,11 +25,11 @@
         <?php include "global-side-search.php"; ?>
     </div>
     <div class="main-content">
-        <h1 class="main-title">
-            Randomly Selected
+        <h1 class="main-title" id="<?php if (LANG == "ja"){ echo "ja-l"; } ?>">
+            <?= _RANDOM_TITLE ?>
         </h1>
         <hr class="main-separator">
-        <span class="result-count has-header normal-weight small-text">Out of a total of</span>
+        <span class="result-count has-header normal-weight small-text"><?= _RANDOM_BOTTOM1 ?></span>
         <?php include "global-check-results.php"; ?>
     </div>
 </div>

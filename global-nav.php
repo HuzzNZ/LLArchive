@@ -17,9 +17,9 @@
             </a>
         </div>
         <div></div>
-        <a class="nav-link" id="link-1" href="/love-live/search">Search</a>
-        <a class="nav-link" id="link-2" href="/love-live/random">Random</a>
-        <a class="nav-link" id="link-3" href="/love-live/recent">Recent</a>
+        <a class="nav-link" id="link-1" href="/love-live/search"><?= _SEARCH ?></a>
+        <a class="nav-link" id="link-2" href="/love-live/random"><?= _RANDOM ?></a>
+        <a class="nav-link" id="link-3" href="/love-live/recent"><?= _RECENT ?></a>
         <div></div>
         <a class="nav-link generation" id="link-4" href="/love-live/otonokizaka/all">
             <div class="nav-gen-top">Otonokizaka</div>
@@ -57,22 +57,22 @@
         </div>
         <div class="mobile-dropdown mobile-dropdown-nav mobile-only" id="mobile-dropdown-nav">
             <div class="mobile-only mobile-dropdown-nav-element" id="mobile-link-1">
-                <a class="mobile-nav-link" href="/love-live/search">・Search</a>
+                <a class="mobile-nav-link" href="/love-live/search">・<?= _SEARCH ?></a>
             </div>
             <div class="mobile-only mobile-dropdown-nav-element" id="mobile-link-2">
-                <a class="mobile-nav-link" href="/love-live/random">・Random</a>
+                <a class="mobile-nav-link" href="/love-live/random">・<?= _RANDOM ?></a>
             </div>
             <div class="mobile-only mobile-dropdown-nav-element" id="mobile-link-3">
-                <a class="mobile-nav-link" href="/love-live/recent">・Recent</a>
+                <a class="mobile-nav-link" href="/love-live/recent">・<?= _RECENT ?></a>
             </div>
             <div class="mobile-only mobile-dropdown-nav-element" id="mobile-link-4">
-                <a class="mobile-nav-link" href="/love-live/otonokizaka/all">・Otonokizaka</a>
+                <a class="mobile-nav-link" href="/love-live/otonokizaka/all">・<?= _OTONOKIZAKA ?></a>
             </div>
             <div class="mobile-only mobile-dropdown-nav-element"  id="mobile-link-5">
-                <a class="mobile-nav-link" href="/love-live/uranohoshi/all">・Uranohoshi</a>
+                <a class="mobile-nav-link" href="/love-live/uranohoshi/all">・<?= _URANOHOSHI ?></a>
             </div>
             <div class="mobile-only mobile-dropdown-nav-element" id="mobile-link-6">
-                <a class="mobile-nav-link" href="/love-live/nijigasaki/all">・Nijigasaki</a>
+                <a class="mobile-nav-link" href="/love-live/nijigasaki/all">・<?= _NIJIGASAKI ?></a>
             </div>
         </div>
         <div class="mobile-dropdown mobile-dropdown-search mobile-only" id="mobile-dropdown-search">

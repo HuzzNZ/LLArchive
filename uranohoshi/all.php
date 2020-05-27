@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<?php include "global-lang.php" ?>
+<?php include "../global-lang.php" ?>
 <html lang="<?= LANG ?>">
 <head>
     <?php
@@ -26,7 +26,7 @@
         <?php include "../global-side-search.php"; ?>
     </div>
     <div class="main-content">
-        <h1 class="main-title">
+        <h1 class="main-title ">
             Uranohoshi - All Albums
         </h1>
         <hr class="main-separator">

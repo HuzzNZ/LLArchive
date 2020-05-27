@@ -13,10 +13,10 @@
         <?php include "global-side-search.php"; ?>
     </div>
     <div class="main-content text-only">
-        <h1 class="main-title">About</h1>
+        <h1 class="main-title" id="<?php if (LANG == "ja"){ echo "ja-l"; } ?>"><?= _ABOUT?></h1>
         <hr class="main-separator">
-        <p>Page not implemented yet :(</p>
+        <p><?= _NOT_IMPLEMENTED ?></p>
     </div>
 </div>
 </body>
-
+</html>

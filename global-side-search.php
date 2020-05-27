@@ -1,15 +1,15 @@
 <div class="search-wrapper">
     <div class="top-strip" id="search-top-strip"></div>
-    <div class="search">
-        <h1>Keyword Search</h1>
+    <div class="search" id="<?php if (LANG == "ja"){ echo "ja-l"; } ?>">
+        <h1><?= _KS_TITLE ?></h1>
         <hr>
         <form action="/love-live/search" method="GET">
-            <h3 class="form-label">Album Title</h3>
+            <h3 class="form-label"><?= _KS_ALBUM_TITLE ?></h3>
             <label>
                 <input type="text" name="title" value="<?php if ($title != "%") { echo str_replace("%", "", $title); } ?>">
             </label>
             <hr class="form-body-hr">
-            <h3 class="form-label">By Artist</h3>
+            <h3 class="form-label"><?= _KS_ARTIST ?></h3>
             <label>
                 <select name="artist">
                     <option selected></option>
@@ -35,7 +35,7 @@
                     </optgroup>
                 </select>
             </label>
-            <h3 class="form-label">...or with Solo/Duo/Trios including</h3>
+            <h3 class="form-label"><?= _KS_SDT ?></h3>
             <label>
                 <select name="solo">
                     <option selected></option>
@@ -75,16 +75,16 @@
                 </select>
             </label>
             <hr class="form-body-hr">
-            <h3 class="form-label">Released after</h3>
+            <h3 class="form-label"><?= _KS_RELEASED_AFTER ?></h3>
             <label class="date-label">
                 <input class="date-input" type="date" name="rl_after" value="<?php if ($rl_after != "1970-01-01") { echo $rl_after; } ?>" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
             </label>
-            <h3 class="form-label">..and/or before</h3>
+            <h3 class="form-label"><?= _KS_RELEASED_BEFORE ?></h3>
             <label class="date-label">
                 <input class="date-input" type="date" name="rl_before" value="<?php if ($rl_before != "2069-12-31") { echo $rl_before; } ?>" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
             </label>
             <label class="submit">
-                <input type="submit" value="Go!">
+                <input type="submit" value="<?= _SEARCH_GO ?>">
             </label>
         </form>
     </div>
@@ -92,16 +92,16 @@
 
 <div class="search-wrapper">
     <div class="top-strip" id="search-top-strip"></div>
-    <div class="search">
-        <h1>Catalog Search</h1>
+    <div class="search" id="<?php if (LANG == "ja"){ echo "ja-l"; } ?>">
+        <h1><?= _CS_TITLE ?></h1>
         <hr>
         <form action="/love-live/search" method="GET">
-            <h3 class="form-label">Catalog Number</h3>
+            <h3 class="form-label"><?= _CS_CATALOG ?></h3>
             <label>
                 <input name="catalog" value="<?php echo $catalog ?>" type="text" required>
             </label>
             <label class="submit">
-                <input type="submit" value="Go!">
+                <input type="submit" value="<?= _SEARCH_GO ?>">
             </label>
         </form>
     </div>

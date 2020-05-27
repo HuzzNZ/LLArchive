@@ -153,16 +153,12 @@
         <?php include "global-side-search.php"; ?>
     </div>
     <div class="main-content <?php if ($has_query) {null;} else {echo "text-only";} ?>">
-        <!--
-        <h1 class="results-title">Feature not implemented yet! :(</h1>
-        <p class="tip">Please check back later.</p> -->
         <?php if ($has_query){
             include "global-check-results.php";
         } else { ?>
-            <h1 class="main-title">
-                Search
-            </h1>
+            <h1 class="main-title" id="<?php if (LANG == "ja"){ echo "ja-l"; } ?>"><?= _SEARCH_TITLE?></h1>
             <hr class="main-separator">
+            <p class="no-nihongo-lol">ページにこれ以降は日本語ではありません。</p><br>
             <p>Find your favourite Love Live albums - they're all here on this website! <b>FLAC & MP3 320kbps</b> downloads are
                 on the right! <br><br><b>FLAC+CUE</b> downloads might exist for certain albums.</p>
             <h3>Search by Keyword:</h3>

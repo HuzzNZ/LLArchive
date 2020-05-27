@@ -127,6 +127,11 @@ p .special {
     transition: 100ms;
 }
 
+.no-nihongo-lol {
+    font-weight: 600 !important;
+    color: #fff !important;
+}
+
 a.download {
     border-radius: 5px;
     width: 56px;
@@ -345,6 +350,10 @@ span.result-count.has-header {
     font-style: italic;
 }
 
+.search#ja-l h1 {
+    font-style: normal;
+}
+
 .search hr {
     color: #999;
     width: 50%;
@@ -358,6 +367,11 @@ span.result-count.has-header {
     font-style: italic;
     margin-top: 12px;
     margin-bottom: 5px;
+}
+
+#ja-l .form-label {
+    font-style: normal;
+    font-weight: 400;
 }
 
 label {
@@ -459,6 +473,10 @@ option {
 .main-title {
     font-size: 38px;
     font-style: italic;
+}
+
+.main-title#ja-l {
+    font-style: normal;
 }
 
 hr.main-separator {

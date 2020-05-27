@@ -16,10 +16,11 @@
     define("_SEARCH_HINT", "すべての検索結果");
 
     define("_RANDOM", "ランダム");
-    define("_RANDOM_TITLE", "ランダムに選択");
-    define("_RANDOM_BOTTOM1", "全{a}アルバム中の");
+    define("_RANDOM_TITLE", "ランダムに選択のアルバム");
+    define("_RANDOM_BOTTOM1", "全");
+    define("_RANDOM_BOTTOM2", "アルバム中");
 
-    define("_RECENT", "最近");
+    define("_RECENT", "最近発売");
     define("_RECENT_TITLE", "最近のリリース");
     define("_RECENT_BOTTOM", "発売日順");
 
@@ -37,6 +38,6 @@
     define("_KS_RELEASED_BEFORE", "発売日がこの前");
 
     define("_CS_TITLE", "カタログで検索");
-    define("_CS_CATALOG", "カタログ番号（例えば「LACM-14950」）");
+    define("_CS_CATALOG", "カタログ番号（例えばLACM-14950）");
 
     define("_SEARCH_GO", "検索！");

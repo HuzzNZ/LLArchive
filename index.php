@@ -21,7 +21,7 @@
         <?php include "global-side-search.php"; ?>
     </div>
     <div class="main-content text-only">
-        <h1 class="main-title">Home</h1>
+        <h1 class="main-title" id="<?php if (LANG == "ja"){ echo "ja-l"; } ?>"><?= _HOME ?></h1>
         <hr class="main-separator">
         <p><b>Welcome to Huzz's Love Live CD Archive Website!</b></p><br>
         <img src="assets/banner.png" alt="Website Banner" style="max-width: 100%;">

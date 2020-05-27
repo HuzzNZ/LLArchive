@@ -88,8 +88,8 @@
         } else {
 
             # OTONOKIZAKA QUERY
-            $o_query = $o_album_meta->prepare("SELECT * FROM `albums` WHERE (CONVERT(`Name` USING utf8) LIKE ?) AND ((CONVERT(`Artist` USING utf8) LIKE ?) OR (CONVERT(`Artist` USING utf8) LIKE ?)) AND `Release_Date` BETWEEN ? AND ? ORDER BY `Release_Date` DESC");
-            $o_query->bind_param("sssss", $title, $artist, $solo, $rl_after, $rl_before);
+            $o_query = $o_album_meta->prepare("SELECT * FROM `albums` WHERE ((CONVERT(`Name` USING utf8) LIKE ?) OR (CONVERT(`Name_JP` USING utf8) LIKE ?)) AND ((CONVERT(`Artist` USING utf8) LIKE ?) OR (CONVERT(`Artist` USING utf8) LIKE ?)) AND `Release_Date` BETWEEN ? AND ? ORDER BY `Release_Date` DESC");
+            $o_query->bind_param("ssssss", $title,$title, $artist, $solo, $rl_after, $rl_before);
             $o_query->execute();
             $o_query_results = $o_query->get_result();
             $single_result = mysqli_fetch_assoc($o_query_results);
@@ -99,8 +99,8 @@
                 $single_result = mysqli_fetch_assoc($o_query_results));
 
             # URANOHOSHI QUERY
-            $u_query = $u_album_meta->prepare("SELECT * FROM `albums` WHERE (CONVERT(`Name` USING utf8) LIKE ?) AND ((CONVERT(`Artist` USING utf8) LIKE ?) OR (CONVERT(`Artist` USING utf8) LIKE ?)) AND `Release_Date` BETWEEN ? AND ? ORDER BY `Release_Date` DESC");
-            $u_query->bind_param("sssss", $title, $artist, $solo, $rl_after, $rl_before);
+            $u_query = $u_album_meta->prepare("SELECT * FROM `albums` WHERE ((CONVERT(`Name` USING utf8) LIKE ?) OR (CONVERT(`Name_JP` USING utf8) LIKE ?)) AND ((CONVERT(`Artist` USING utf8) LIKE ?) OR (CONVERT(`Artist` USING utf8) LIKE ?)) AND `Release_Date` BETWEEN ? AND ? ORDER BY `Release_Date` DESC");
+            $u_query->bind_param("ssssss", $title,$title, $artist, $solo, $rl_after, $rl_before);
             $u_query->execute();
             $u_query_results = $u_query->get_result();
             $single_result = mysqli_fetch_assoc($u_query_results);
@@ -110,8 +110,8 @@
                 $single_result = mysqli_fetch_assoc($u_query_results));
 
             # NIJIGASAKI QUERY
-            $n_query = $n_album_meta->prepare("SELECT * FROM `albums` WHERE (CONVERT(`Name` USING utf8) LIKE ?) AND ((CONVERT(`Artist` USING utf8) LIKE ?) OR (CONVERT(`Artist` USING utf8) LIKE ?)) AND `Release_Date` BETWEEN ? AND ? ORDER BY `Release_Date` DESC");
-            $n_query->bind_param("sssss", $title, $artist, $solo, $rl_after, $rl_before);
+            $n_query = $n_album_meta->prepare("SELECT * FROM `albums` WHERE ((CONVERT(`Name` USING utf8) LIKE ?) OR (CONVERT(`Name_JP` USING utf8) LIKE ?)) AND ((CONVERT(`Artist` USING utf8) LIKE ?) OR (CONVERT(`Artist` USING utf8) LIKE ?)) AND `Release_Date` BETWEEN ? AND ? ORDER BY `Release_Date` DESC");
+            $n_query->bind_param("ssssss", $title,$title, $artist, $solo, $rl_after, $rl_before);
             $n_query->execute();
             $n_query_results = $n_query->get_result();
             $single_result = mysqli_fetch_assoc($n_query_results);

@@ -19,6 +19,18 @@
     define("_NO_RESULT_TITLE", "No Results Found!");
     define("_NO_RESULT_HINT", "Perhaps try a different keyword, or check your spelling?");
 
+    define("_TBA", "TBA");
+
+    define("_NUMBER", "No.");
+    define("_ARTIST", "Artist");
+    define("_TRACK_TITLE", "Track Title");
+    define("_DURATION", "Duration");
+    define("_DOWNLOAD", "Download");
+
+    define("_RADIO_DRAMA", "RADIO DRAMA");
+
+    define("_NOTHING_YET", "There doesn't seen to be anything here yet...");
+
     define("_RANDOM", "Random");
     define("_RANDOM_TITLE", "Randomly Selected");
     define("_RANDOM_BOTTOM1", "Out of a total of");

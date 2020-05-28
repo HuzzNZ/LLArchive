@@ -19,6 +19,18 @@
     define("_NO_RESULT_TITLE", "検索結果が見つかりませんでした。");
     define("_NO_RESULT_HINT", "誤字、脱字がないかを確認してみて。");
 
+    define("_TBA", "発売日未定");
+
+    define("_NUMBER", "#");
+    define("_ARTIST", "アーティスト");
+    define("_TRACK_TITLE", "タイトル");
+    define("_DURATION", "時間");
+    define("_DOWNLOAD", "ダウンロード");
+
+    define("_RADIO_DRAMA", "ラジオドラマ");
+
+    define("_NOTHING_YET", "まだ、何もありません。");
+
     define("_RANDOM", "ランダム");
     define("_RANDOM_TITLE", "ランダムに選択のアルバム");
     define("_RANDOM_BOTTOM1", "全");

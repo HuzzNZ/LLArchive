@@ -26,7 +26,9 @@
 	    <p><b><?= _HOME_WELCOME ?></b></p><br>
         <img src="assets/banner.png" alt="Website Banner" style="max-width: 100%;">
         <div class="spacer-20px"></div>
-        <p class="no-nihongo-lol">ページにこれ以降は日本語ではありません。</p><br>
+        <?php if (LANG == "ja") { ?>
+		    <p class="no-nihongo-lol">ページにこれ以降は日本語ではありません。</p><br>
+        <?php }?>
         <p>This website is being maintained by <b>Huzz</b>. All the latest albums/singles released on CD under
         the Love Live! project labels will be archived here.</p>
         <h3>Update 2020/05/28:</h3>

@@ -19,7 +19,7 @@ for ($i = 0; $i < $count; $i++) {
         $placeholder_image = "/love-live/assets/placeholder-aqours.png";
     } elseif ($result["Parent"] === "n") {
         $generation = "nijigasaki";
-        $placeholder_image = "/love-live/assets/placeholder-pdp.png";
+        $placeholder_image = "/love-live/assets/placeholder-niji.png";
     } else {
         echo $result["Parent"];
     }
@@ -35,7 +35,7 @@ for ($i = 0; $i < $count; $i++) {
                     <?php } elseif ($generation === "uranohoshi") { ?>
                      onerror="this.onerror = null; this.src='/love-live/assets/placeholder-aqours.png'"
                     <?php } elseif ($generation === "nijigasaki") { ?>
-                     onerror="this.onerror = null; this.src = '/love-live/assets/placeholder-pdp.png'"
+                     onerror="this.onerror = null; this.src = '/love-live/assets/placeholder-niji.png'"
                     <?php } ?>
                 >
                 <img class="cover-art-mobile mobile-only" id="album-<?php echo $result['ID'] ?>-cover" src='/love-live/media/<?= $generation?>/<?= $a_id ?>/cover-thumb.jpg' alt="Album <?php echo $result['ID'] ?> Cover"
@@ -44,18 +44,38 @@ for ($i = 0; $i < $count; $i++) {
                     <?php } elseif ($generation === "uranohoshi") { ?>
                         onerror="this.onerror = null; this.src='/love-live/assets/placeholder-aqours.png'"
                     <?php } elseif ($generation === "nijigasaki") { ?>
-                        onerror="this.onerror = null; this.src = '/love-live/assets/placeholder-pdp.png'"
+                        onerror="this.onerror = null; this.src = '/love-live/assets/placeholder-niji.png'"
                     <?php } ?>
                 >
                 <div class="result-album-data">
                     <h1 class="title">
-                        <?php echo $result['Name'] ?>
+                        <?php
+                        if (LANG == "ja") {
+                        	if ($result['Name_JP']) {
+                        		echo $result['Name_JP'];
+                        	} else {
+                        		echo $result['Name'];
+                        	}
+                        } else {
+                        	echo $result['Name'];
+                        }
+                        ?>
                     </h1>
                     <p class="title-jp">
-                        <?php echo $result['Name_JP'] ?>
+                        <?php if (LANG != "ja") { echo $result['Name_JP']; } ?>
                     </p>
                     <h3 class="artist">
-                        <?php echo trim(str_replace(",", ", ", $result['Artist']))?>
+                        <?php
+                        if (LANG == "ja") {
+                        	if ($result['Artist_JP']) {
+                                echo trim(str_replace(",", "、", $result['Artist_JP']));
+                            } else {
+                                echo trim(str_replace(",", ", ", $result['Artist']));
+	                        }
+                        } else {
+                        	echo trim(str_replace(",", ", ", $result['Artist']));
+                        }
+                        ?>
                     </h3>
                     <p class="catalog-number">
                         <?php if ($result['Catalog_Number']){
@@ -69,14 +89,20 @@ for ($i = 0; $i < $count; $i++) {
                         <?php
                             if ($result['Release_Date']) {
                                 $date = date_create($result['Release_Date']);
-                                echo date_format($date, "F jS, Y");
+	                            if (LANG == "ja") {
+                                    echo date_format($date, "YY年mm月DD日");
+                                } else {
+                                    echo date_format($date, "F jS, Y");
+                                }
                             } else {
-                            	echo "TBA";
+                            	echo _TBA;
                             }
                         ?>
                     </p>
                     <p class="comment">
-                        *<?php echo $result['Comments'] ?>
+	                    <?php if (LANG != "ja") { ?>
+	                        *<?php echo $result['Comments'] ?>
+	                    <?php } ?>
                     </p>
                     <div class="album-download">
                         <img class="download-icon" alt="Download Icon" src="/love-live/assets/download.png">
@@ -108,11 +134,11 @@ for ($i = 0; $i < $count; $i++) {
             <?php
             if ($song_result) { ?>
                 <div class="list-header tl-grid">
-                    <div class="header-title">No.</div>
-                    <div class="header-title">Artist</div>
-                    <div class="header-title">Track Title</div>
-                    <div class="header-title">Duration</div>
-                    <div class="header-title">Download</div>
+                    <div class="header-title"><?= _NUMBER ?></div>
+                    <div class="header-title"><?= _ARTIST ?></div>
+                    <div class="header-title"><?= _TRACK_TITLE ?></div>
+                    <div class="header-title"><?= _DURATION ?></div>
+                    <div class="header-title"><?= _DOWNLOAD ?></div>
                 </div>
                 <div class="list-header-mobile mobile-only"></div>
             <?php
@@ -127,19 +153,32 @@ for ($i = 0; $i < $count; $i++) {
                             <div class="track-artist-wrapper">
                                 <p class="no-wrap">
                                     <?php
-                                    if ($song_result["Artist"]) {
-                                        echo trim(str_replace(",", ", ", $song_result["Artist"]));
+				                    if (LANG == "ja") {
+                                        if ($song_result["Artist_JP"]) {
+                                            echo trim(str_replace(",", ", ", $song_result["Artist_JP"]));
+                                        } else {
+                                        	if ($result["Artist_JP"]) {
+                                                echo trim(str_replace(",", ", ", $result["Artist_JP"]));
+                                            } else {
+                                                echo trim(str_replace(",", ", ", $result["Artist"]));
+	                                        }
+                                        }
                                     } else {
-                                        echo trim(str_replace(",", ", ", $result["Artist"]));
-                                    }
-                                    ?>
+                                        if ($song_result["Artist"]) {
+                                            echo trim(str_replace(",", ", ", $song_result["Artist"]));
+                                        } else {
+                                            echo trim(str_replace(",", ", ", $result["Artist"]));
+                                        }
+                                    }?>
                                 </p>
                                 <p class="jp no-wrap">
                                     <?php
-                                    if ($song_result["Artist_JP"]) {
-                                        echo trim(str_replace(",", ", ", $song_result["Artist_JP"]));
-                                    } else {
-                                        echo trim(str_replace(",", ", ", $result["Artist_JP"]));
+				                    if (LANG != "ja") {
+                                        if ($song_result["Artist_JP"]) {
+                                            echo trim(str_replace(",", ", ", $song_result["Artist_JP"]));
+                                        } else {
+                                            echo trim(str_replace(",", ", ", $result["Artist_JP"]));
+                                        }
                                     }
                                     ?>
                                 </p>
@@ -149,7 +188,15 @@ for ($i = 0; $i < $count; $i++) {
                             <div class="track-title-wrapper">
                                 <p class="title-no-wrap">
                                     <?php
-                                    echo $song_result['Name'];
+				                    if (LANG == "ja") {
+				                    	if ($song_result['Name_JP']) {
+                                            echo $song_result['Name_JP'];
+                                        } else {
+                                            echo $song_result['Name'];
+					                    }
+                                    } else {
+                                        echo $song_result['Name'];
+				                    }
                                     if ($song_result["Is_Instrumental"]) {
                                         if ($result["Is_OST"]) {
                                             ?>
@@ -159,13 +206,17 @@ for ($i = 0; $i < $count; $i++) {
                                         <? }}
                                     if ($song_result["Is_Radio"]) {
                                         ?>
-                                        <span class="track-type radio">RADIO DRAMA</span>
+                                        <span class="track-type radio"><?= _RADIO_DRAMA ?></span>
                                         <?php
                                     }
                                     ?>
                                 </p>
                                 <p class="jp title-no-wrap">
-                                    <?php echo $song_result['Name_JP'] ?>
+                                    <?php
+                                    if (LANG != "ja") {
+                                    	echo $song_result['Name_JP'];
+                                    }
+                                    ?>
                                 </p>
                             </div>
                             <div class="track-type-mobile <?php if ($song_result["Is_Instrumental"]) { echo "instrumental";} if ($song_result["Is_Radio"]) { echo "radio";} ?>">
@@ -270,7 +321,7 @@ for ($i = 0; $i < $count; $i++) {
                     <?php
                 } while ($song_result = mysqli_fetch_assoc($song_query));
             } else { ?>
-                <h3 class="no-track">There doesn't seem to be anything here yet...</h3>
+                <h3 class="no-track"><?= _NOTHING_YET ?></h3>
             <?php } ?>
             </div>
         </div>
@@ -290,12 +341,12 @@ for ($i = 0; $i < $count; $i++) {
                 md.style.display = "none";
                 mg.style.gridTemplateRows = "30px 18px";
                 mg.style.height = "48px";
-                dt.innerHTML = "Download ▼"
+                dt.innerHTML = <?= _DOWNLOAD." ▼" ?>;
             } else {
                 md.style.display = "grid";
                 mg.style.gridTemplateRows = "30px 18px 40px";
                 mg.style.height = "88px";
-                dt.innerHTML = "Download ▲"
+                dt.innerHTML = <?= _DOWNLOAD." ▲" ?>;
         }
     }
 </script>

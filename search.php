@@ -158,7 +158,9 @@
         } else { ?>
             <h1 class="main-title" id="<?php if (LANG == "ja"){ echo "ja-l"; } ?>"><?= _SEARCH_TITLE?></h1>
             <hr class="main-separator">
-            <p class="no-nihongo-lol">ページにこれ以降は日本語ではありません。</p><br>
+            <?php if (LANG == "ja") { ?>
+                <p class="no-nihongo-lol">ページにこれ以降は日本語ではありません。</p><br>
+            <?php } ?>
             <p>Find your favourite Love Live albums - they're all here on this website! <b>FLAC & MP3 320kbps</b> downloads are
                 on the right! <br><br><b>FLAC+CUE</b> downloads might exist for certain albums.</p>
             <h3>Search by Keyword:</h3>

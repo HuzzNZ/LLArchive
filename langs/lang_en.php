@@ -19,6 +19,8 @@
     define("_NO_RESULT_TITLE", "No Results Found!");
     define("_NO_RESULT_HINT", "Perhaps try a different keyword, or check your spelling?");
 
+    define("_RELEASE_DATE", "Release Date");
+
     define("_TBA", "TBA");
 
     define("_NUMBER", "No.");

@@ -90,7 +90,7 @@ for ($i = 0; $i < $count; $i++) {
                             if ($result['Release_Date']) {
                                 $date = date_create($result['Release_Date']);
 	                            if (LANG == "ja") {
-                                    echo date_format($date, "Y年n月j日");
+                                    echo _RELEASE_DATE."　".date_format($date, "Y年n月j日");
                                 } else {
                                     echo date_format($date, "F jS, Y");
                                 }

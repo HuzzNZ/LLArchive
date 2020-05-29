@@ -34,7 +34,7 @@
 
     define("_PRESS_TO_COPY_ALBUM", "アルバムのリンクをコピーするには押してください");
     define("_PRESS_TO_COPY_MP3", "MP3のリンクをコピーするには押してください");
-    define("_COPIED", "コピーしました");
+    define("_COPIED", "コピーした");
 
     define("_NOTHING_YET", "まだ、何もありません。");
 

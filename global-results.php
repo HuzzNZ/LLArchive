@@ -90,7 +90,7 @@ for ($i = 0; $i < $count; $i++) {
                             if ($result['Release_Date']) {
                                 $date = date_create($result['Release_Date']);
 	                            if (LANG == "ja") {
-                                    echo _RELEASE_DATE."　".date_format($date, "Y年n月j日");
+                                    echo _RELEASE_DATE." ".date_format($date, "Y年n月j日");
                                 } else {
                                     echo date_format($date, "F jS, Y");
                                 }
@@ -153,23 +153,27 @@ for ($i = 0; $i < $count; $i++) {
                             <div class="track-artist-wrapper">
                                 <p class="no-wrap">
                                     <?php
+                                    $disp_artist = "";
 				                    if (LANG == "ja") {
                                         if ($song_result["Artist_JP"]) {
-                                            echo trim(str_replace(",", ", ", $song_result["Artist_JP"]));
-                                        } else {
+                                            $disp_artist = trim(str_replace(",", "、", $song_result["Artist_JP"]));
+                                        } elseif ($song_result["Artist"]) {
+                                            $disp_artist = trim(str_replace(",", ", ", $song_result["Artist"]));
+                                        } else
                                         	if ($result["Artist_JP"]) {
-                                                echo trim(str_replace(",", ", ", $result["Artist_JP"]));
+                                                $disp_artist = trim(str_replace(",", "、", $result["Artist_JP"]));
                                             } else {
-                                                echo trim(str_replace(",", ", ", $result["Artist"]));
+                                                $disp_artist = trim(str_replace(",", ", ", $result["Artist"]));
 	                                        }
-                                        }
                                     } else {
-                                        if ($song_result["Artist"]) {
-                                            echo trim(str_replace(",", ", ", $song_result["Artist"]));
-                                        } else {
-                                            echo trim(str_replace(",", ", ", $result["Artist"]));
+	                                    if ($song_result["Artist"]) {
+	                                        $disp_artist = trim(str_replace(",", ", ", $song_result["Artist"]));
+	                                    } else {
+	                                        $disp_artist = trim(str_replace(",", ", ", $result["Artist"]));
                                         }
-                                    }?>
+                                    }
+				                    echo $disp_artist;
+				                    ?>
                                 </p>
                                 <p class="jp no-wrap">
                                     <?php
@@ -188,15 +192,17 @@ for ($i = 0; $i < $count; $i++) {
                             <div class="track-title-wrapper">
                                 <p class="title-no-wrap">
                                     <?php
+                                    $disp_title = "";
 				                    if (LANG == "ja") {
 				                    	if ($song_result['Name_JP']) {
-                                            echo $song_result['Name_JP'];
+                                            $disp_title = $song_result['Name_JP'];
                                         } else {
-                                            echo $song_result['Name'];
+                                            $disp_title = $song_result['Name'];
 					                    }
                                     } else {
-                                        echo $song_result['Name'];
+                                        $disp_title = $song_result['Name'];
 				                    }
+				                    echo $disp_title;
                                     if ($song_result["Is_Instrumental"]) {
                                         if ($result["Is_OST"]) {
                                             ?>
@@ -242,30 +248,22 @@ for ($i = 0; $i < $count; $i++) {
                                    href="/love-live/media/<?php echo $generation ?>/<?php echo $result['ID'] ?>/<?php echo $song_id ?>.flac"
                                    download="<?php echo $song_id ?>. <?php
                                        if (!$result["Is_OST"] || !$song_result["Is_Instrumental"]) {
-                                           if ($song_result["Artist"]) {
-                                               echo trim(str_replace(",", ", ", $song_result["Artist"]));
-                                           } else {
-                                               echo trim(str_replace(",", ", ", $result["Artist"]));
-                                           }
+                                           echo $disp_artist;
                                        }
-                                   ?><?php if(!$result["Is_OST"] || !$song_result["Is_Instrumental"]) {echo " - ";} ?><?php echo str_replace("\"", "&quot;", $song_result['Name']);
+                                   ?><?php if(!$result["Is_OST"] || !$song_result["Is_Instrumental"]) {echo " - ";} ?><?php echo str_replace("\"", "&quot;", $disp_title);
 
                                    if ($song_result["Is_Instrumental"]) {
                                        if (!$result["Is_OST"]) {
-                                           echo " (Off Vocal)";
+                                           echo " "._LEFT_PARENTHESES."Off Vocal"._RIGHT_PARENTHESES;
                                        }
                                    } ?>.flac">.flac</a>
                                 <a class="download mp3 small <?php if (!$song_result['Length']){echo "locked";} ?>"
                                    href="/love-live/media/<?php echo $generation ?>/<?= $result['ID'] ?>/<?= $song_id ?>.mp3"
                                    download="<?php echo $song_id ?>. <?php
                                        if (!$result["Is_OST"] || !$song_result["Is_Instrumental"]) {
-                                           if ($song_result["Artist"]) {
-                                               echo trim(str_replace(",", ", ", $song_result["Artist"]));
-                                           } else {
-                                               echo trim(str_replace(",", ", ", $result["Artist"]));
-                                           }
+                                           echo $disp_artist;
                                        }
-                                   ?><?php if(!$result["Is_OST"] || !$song_result["Is_Instrumental"]) {echo " - ";} ?><?php echo str_replace("\"", "&quot;", $song_result['Name']);
+                                   ?><?php if(!$result["Is_OST"] || !$song_result["Is_Instrumental"]) {echo " - ";} ?><?php echo str_replace("\"", "&quot;", $disp_title);
                                    if ($song_result["Is_Instrumental"]) {
                                        if (!$result["Is_OST"]) {
                                            echo " (Off Vocal)";
@@ -283,13 +281,9 @@ for ($i = 0; $i < $count; $i++) {
                                    href="/love-live/media/<?php echo $generation ?>/<?php echo $result['ID'] ?>/<?php echo $song_id ?>.flac"
                                    download="<?php echo $song_id ?>. <?php
                                        if (!$result["Is_OST"] || !$song_result["Is_Instrumental"]) {
-                                           if ($song_result["Artist"]) {
-                                               echo trim(str_replace(",", ", ", $song_result["Artist"]));
-                                           } else {
-                                               echo trim(str_replace(",", ", ", $result["Artist"]));
-                                           }
+                                           echo $disp_artist
                                        }
-                                   ?><?php if(!$result["Is_OST"] || !$song_result["Is_Instrumental"]) {echo " - ";} ?><?php echo str_replace("\"", "&quot;", $song_result['Name']);
+                                   ?><?php if(!$result["Is_OST"] || !$song_result["Is_Instrumental"]) {echo " - ";} ?><?php echo str_replace("\"", "&quot;", $disp_title);
 
                                    if ($song_result["Is_Instrumental"]) {
                                        if (!$result["Is_OST"]) {
@@ -303,13 +297,9 @@ for ($i = 0; $i < $count; $i++) {
                                    href="/love-live/media/<?php echo $generation ?>/<?= $result['ID'] ?>/<?= $song_id ?>.mp3"
                                    download="<?php echo $song_id ?>. <?php
                                        if (!$result["Is_OST"] || !$song_result["Is_Instrumental"]) {
-                                           if ($song_result["Artist"]) {
-                                               echo trim(str_replace(",", ", ", $song_result["Artist"]));
-                                           } else {
-                                               echo trim(str_replace(",", ", ", $result["Artist"]));
-                                           }
+                                           echo $disp_artist
                                        }
-                                   ?><?php if(!$result["Is_OST"] || !$song_result["Is_Instrumental"]) {echo " - ";} ?><?php echo str_replace("\"", "&quot;", $song_result['Name']);
+                                   ?><?php if(!$result["Is_OST"] || !$song_result["Is_Instrumental"]) {echo " - ";} ?><?php echo str_replace("\"", "&quot;", $disp_title);
                                    if ($song_result["Is_Instrumental"]) {
                                        if (!$result["Is_OST"]) {
                                            echo " (Off Vocal)";

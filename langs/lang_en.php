@@ -32,6 +32,10 @@
     define("_INSTRUMENTAL", "INSTRUMENTAL");
     define("_RADIO_DRAMA", "RADIO DRAMA");
 
+    define("_PRESS_TO_COPY_ALBUM", "Click to copy link to Album");
+    define("_PRESS_TO_COPY_MP3", "Click to copy link to MP3");
+    define("_COPIED", "Link copied!");
+
     define("_NOTHING_YET", "There doesn't seen to be anything here yet...");
 
     define("_RANDOM", "Random");

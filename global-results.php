@@ -109,10 +109,10 @@ for ($i = 0; $i < $count; $i++) {
                         <a class="download flac <?php if ($result["Has_CUE"] != 1) {echo "locked";}?>" <?php if ($result["Has_CUE"]) {?>href="/love-live/media/<?php echo $generation ?>/<?php echo $result['ID'] ?>/cd.flac" download="<?php echo $result['Catalog_Number'] ?>.flac"<?php } ?>>.flac</a>
                         <a class="download cue <?php if ($result["Has_CUE"] != 1) {echo "locked";}?>" <?php if ($result["Has_CUE"]) {?>href="/love-live/media/<?php echo $generation ?>/<?php echo $result['ID'] ?>/cd.cue" download="<?php echo $result['Catalog_Number'] ?>.cue"<?php } ?>>.cue</a>
                         <div class="permalink-wrapper">
-                            <a class="copy-link" title="Copy Permalink" data-clipboard-text="<?php echo $base_url ?>/love-live/<?php echo $generation ?>/album?id=<?php echo $result['ID'] ?>" href="javascript:void(0);">
+                            <a class="copy-link" title="<?= _PRESS_TO_COPY_ALBUM ?>" data-clipboard-text="<?php echo $base_url ?>/love-live/<?php echo $generation ?>/album?id=<?php echo $result['ID'] ?>" href="javascript:void(0);">
                                 <img class="permalink-icon" alt="Link Icon" src="/love-live/assets/link.png">
                             </a>
-                            <p class="copy-tooltip">Copied to Clipboard!</p>
+                            <p class="copy-tooltip"><?= _COPIED ?></p>
                         </div>
                     </div>
                 </div>

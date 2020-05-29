@@ -269,7 +269,7 @@ for ($i = 0; $i < $count; $i++) {
                                            echo " (Off Vocal)";
                                        }
                                    } ?>.mp3">.mp3</a>
-                                <a class="copy-link small" title="Press to copy direct link to MP3" data-clipboard-text="<?php echo $base_url ?>/love-live/t?a=<?php echo $generation[0] ?><?php echo $result['ID'] ?>&t=<?= $song_id ?>" href="javascript:void(0);">
+                                <a class="copy-link small" title="<?= _PRESS_TO_COPY_MP3 ?>" data-clipboard-text="<?php echo $base_url ?>/love-live/t?a=<?php echo $generation[0] ?><?php echo $result['ID'] ?>&t=<?= $song_id ?>" href="javascript:void(0);">
                                     <img class="permalink-icon small" alt="Link Icon" src="/love-live/assets/link.png">
                                 </a>
                             </div>

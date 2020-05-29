@@ -281,7 +281,7 @@ for ($i = 0; $i < $count; $i++) {
                                    href="/love-live/media/<?php echo $generation ?>/<?php echo $result['ID'] ?>/<?php echo $song_id ?>.flac"
                                    download="<?php echo $song_id ?>. <?php
                                        if (!$result["Is_OST"] || !$song_result["Is_Instrumental"]) {
-                                           echo $disp_artist
+                                           echo $disp_artist;
                                        }
                                    ?><?php if(!$result["Is_OST"] || !$song_result["Is_Instrumental"]) {echo " - ";} ?><?php echo str_replace("\"", "&quot;", $disp_title);
 
@@ -297,7 +297,7 @@ for ($i = 0; $i < $count; $i++) {
                                    href="/love-live/media/<?php echo $generation ?>/<?= $result['ID'] ?>/<?= $song_id ?>.mp3"
                                    download="<?php echo $song_id ?>. <?php
                                        if (!$result["Is_OST"] || !$song_result["Is_Instrumental"]) {
-                                           echo $disp_artist
+                                           echo $disp_artist;
                                        }
                                    ?><?php if(!$result["Is_OST"] || !$song_result["Is_Instrumental"]) {echo " - ";} ?><?php echo str_replace("\"", "&quot;", $disp_title);
                                    if ($song_result["Is_Instrumental"]) {

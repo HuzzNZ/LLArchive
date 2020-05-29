@@ -29,6 +29,7 @@
     define("_DURATION", "Duration");
     define("_DOWNLOAD", "Download");
 
+    define("_INSTRUMENTAL", "INSTRUMENTAL");
     define("_RADIO_DRAMA", "RADIO DRAMA");
 
     define("_NOTHING_YET", "There doesn't seen to be anything here yet...");

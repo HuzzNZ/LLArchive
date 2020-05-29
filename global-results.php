@@ -206,7 +206,7 @@ for ($i = 0; $i < $count; $i++) {
                                     if ($song_result["Is_Instrumental"]) {
                                         if ($result["Is_OST"]) {
                                             ?>
-                                            <span class="track-type instrumental">INSTRUMENTAL</span>
+                                            <span class="track-type instrumental"><?= _INSTRUMENTAL ?></span>
                                         <? } else { ?>
                                             <span class="track-type instrumental">OFF VOCAL</span>
                                         <? }}

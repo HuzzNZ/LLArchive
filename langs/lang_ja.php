@@ -29,6 +29,7 @@
     define("_DURATION", "時間");
     define("_DOWNLOAD", "ダウンロード");
 
+    define("_INSTRUMENTAL", "インストゥルメンタル");
     define("_RADIO_DRAMA", "ラジオドラマ ");
 
     define("_NOTHING_YET", "まだ、何もありません。");

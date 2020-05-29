@@ -100,6 +100,10 @@ p .special {
     margin-right: 1px;
 }
 
+.copy-link:active .permalink-icon.small {
+    height: 14px;
+}
+
 .permalink-icon {
     display: inline-block;
     opacity: 0.6;

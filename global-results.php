@@ -331,12 +331,12 @@ for ($i = 0; $i < $count; $i++) {
                 md.style.display = "none";
                 mg.style.gridTemplateRows = "30px 18px";
                 mg.style.height = "48px";
-                dt.innerHTML = <?= _DOWNLOAD." ▼" ?>;
+                dt.innerHTML = "<?= _DOWNLOAD." ▼" ?>";
             } else {
                 md.style.display = "grid";
                 mg.style.gridTemplateRows = "30px 18px 40px";
                 mg.style.height = "88px";
-                dt.innerHTML = <?= _DOWNLOAD." ▲" ?>;
+                dt.innerHTML = "<?= _DOWNLOAD." ▲" ?>";
         }
     }
 </script>

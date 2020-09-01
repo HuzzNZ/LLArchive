@@ -16,23 +16,23 @@
 <meta name="author" content="Huzz#0009">
 <meta name="theme-color" content="#7289DA">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta content="huzz.io/love-live" property="og:site_name">
+<meta content="huzz.pw/love-live" property="og:site_name">
 <link rel="stylesheet" type="text/css" href="/love-live/css/main.css">
 <link rel="icon" type="png/ico" href="/love-live/assets/favicon.png">
 
-<?php $base_url = "https://huzz.io" ;
+<?php $base_url = "http://huzz.pw" ;
 
-    if (!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] !== 'on') {
-        if(!headers_sent()) {
-            header("Status: 301 Moved Permanently");
-            header(sprintf(
-                'Location: https://%s%s',
-                $_SERVER['HTTP_HOST'],
-                $_SERVER['REQUEST_URI']
-            ));
-            exit();
-        }
-    }
+//    if (!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] !== 'on') {
+//        if(!headers_sent()) {
+//            header("Status: 301 Moved Permanently");
+//            header(sprintf(
+//                'Location: https://%s%s',
+//                $_SERVER['HTTP_HOST'],
+//                $_SERVER['REQUEST_URI']
+//            ));
+//            exit();
+//        }
+//    }
 
     $title = "";
     if (!isset($artist)) {

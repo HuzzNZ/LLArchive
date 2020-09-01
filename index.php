@@ -31,14 +31,13 @@
         <?php }?>
         <p>This website is being maintained by <b>Huzz</b>. All the latest albums/singles released on CD under
         the Love Live! project labels will be archived here.</p>
-        <h3>Update 2020/05/28:</h3>
-        <p class="indent">Early-stage Japanese Localization is now avaliable for the site, with more features like Language Switching to come soon.</p>
+        <h3>Update 2020/09/02:</h3>
+        <p class="indent"><b>huzz.io</b> has temporarily moved to <b>huzz.pw</b>. This is because I currently can't afford to renew the domain. Please use this URL for the timebeing. Whenever I can renew huzz.io again, this URL will redirect to it.</p>
         <br>
-        <p class="indent">（ベータの）日本語のサイトが利用可能になりました！</p>
         <hr class="main-separator">
         <h3>Find me here!</h3>
         <p class="indent">
-            <u>Twitter</u>: <a href="https://twitter.com/HuzzNZ">@HuzzNZ</a><br>
+            <u>Twitter</u>: <a href="https://twitter.com/HuzzuDesu">@HuzzuDesu</a><br>
             <u>Discord</u>: <b><i>Huzz#0009</i></b></p>
         <br>
         <p>Currently, this website has <b><?= $count_total ?> albums</b> archived so far!</p>

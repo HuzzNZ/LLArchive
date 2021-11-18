@@ -1,5 +1,5 @@
 # LL Archive
-A website to archive all the songs released in the Love Live! franchise. The website is no longer live and a rewrite @ 
+A website to archive all the songs released in the Love Live! franchise. The website is no longer live, and was rewritten @ [Raburadio](https://github.com/HuzzNZ/Raburadio) 
 ## Framework
 PHP, MySQL
 ## Preview
